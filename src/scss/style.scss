@@ -1,0 +1,16 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+.decstop-app {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}

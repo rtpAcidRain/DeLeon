@@ -1,0 +1,50 @@
+.heading {
+  &__h1 {
+    background: linear-gradient(95.81deg, #21b3b3 22.61%, #3362be 80.36%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 1.21875em;
+  }
+  &__h2 {
+    font-style: italic;
+    font-weight: 800;
+    font-size: 2.5rem;
+    line-height: 1.225em;
+    letter-spacing: 0.01em;
+    background: linear-gradient(90deg, #399892 25%, #375fbe 80.58%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  &__h3 {
+    font-style: italic;
+    font-weight: 700;
+    font-size: 2.25rem;
+    line-height: 2.222222222222222em;
+    letter-spacing: 0.07em;
+    color: #ffffff;
+    margin: 0 auto;
+  }
+  &__h4 {
+    font-style: italic;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 30px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  &__h5 {
+  }
+  &__h6 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.285714285714286em;
+    color: #ffffff;
+  }
+}

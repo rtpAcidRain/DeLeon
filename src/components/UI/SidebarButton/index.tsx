@@ -3,6 +3,7 @@ import styles from './sidebarButton.module.scss';
 
 type Props = {
   children: ReactNode;
+  onClick?: () => void;
 };
 
 const SidebarButton: FC<Props> = ({ children, ...props }) => {

@@ -3,9 +3,12 @@ import Heading from '../../UI/Heading';
 import SectionButtons from '../../UI/SectionButtons';
 
 import styles from './homeSection.module.scss';
-import coin from '../../../images/cryptocoin.png';
+import coin from '../../../assets/images/cryptocoin.png';
+import { useContext } from 'react';
+import { AppContext } from '../../App';
 
-const HomeSection = ({ setCurrentSection }: any) => {
+const HomeSection = () => {
+  const { setCurrentSection } = useContext(AppContext);
   return (
     <Section>
       <div className={styles.container}>

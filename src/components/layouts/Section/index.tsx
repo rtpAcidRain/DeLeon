@@ -6,13 +6,7 @@ type Props = {
 };
 
 const Section: FC<Props> = ({ children }) => {
-  return (
-    <section className={styles.section}>
-      {/* <i className={styles.pagination__buttonPrev}></i> */}
-      {children}
-      {/* <i className={styles.pagination__buttonNext}></i> */}
-    </section>
-  );
+  return <section className={styles.section}>{children}</section>;
 };
 
 export default Section;

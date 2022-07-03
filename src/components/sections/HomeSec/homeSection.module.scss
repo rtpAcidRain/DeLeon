@@ -16,7 +16,11 @@
     margin: auto 0 auto auto;
     height: 100%;
     max-height: 560px;
+    max-width: 1046px;
     align-items: center;
+    position: relative;
+    top: -35px;
+    left: -31px;
     .leftContent {
       display: flex;
       flex-direction: column;

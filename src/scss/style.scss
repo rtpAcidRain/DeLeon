@@ -3,6 +3,12 @@
   margin: 0;
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
+  border: 0;
+}
+
+button {
+  background: none;
+  cursor: pointer;
 }
 
 ::-webkit-scrollbar {
@@ -14,7 +20,7 @@
   height: 100vh;
   overflow-x: hidden;
   overflow-y: scroll;
-  background: center / 100% 100% no-repeat url('../images/background.png'), #c4c4c4;
+  background: center / 100% 100% no-repeat url('../assets/images/background.png'), #c4c4c4;
   display: flex;
 }
 main {
@@ -22,8 +28,23 @@ main {
 
   .scroll-container {
     height: 100vh;
-    overflow-x: hidden;
-    overflow-y: hidden;
+    overflow: hidden;
     scroll-snap-type: y mandatory;
+  }
+}
+
+.scroll__button {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background: none;
+  border: 0;
+  cursor: pointer;
+  &--prev {
+    top: 25px;
+  }
+  &--next {
+    bottom: 25px;
+    transform: rotate(180deg);
   }
 }

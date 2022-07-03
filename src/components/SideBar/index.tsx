@@ -1,17 +1,14 @@
-import { FC } from 'react';
+import { FC, useContext } from 'react';
 import Heading from '../UI/Heading';
 import SidebarButton from '../UI/SidebarButton';
 
 import styles from './sideBar.module.scss';
-import logo from '../../images/logo.png';
-import mailImage from '../../images/mail.svg';
+import logo from '../../assets/images/logo.png';
+import mailImage from '../../assets/images/mail.svg';
+import { AppContext } from '../App';
 
-type Props = {
-  currentSection: number;
-  setCurrentSection: (idx: number) => void;
-};
-
-const SideBar: FC<Props> = ({ currentSection, setCurrentSection }) => {
+const SideBar = () => {
+  const { currentSection, setCurrentSection } = useContext(AppContext);
   const sections = [
     'Главная',
     'Видео',

@@ -1,20 +1,24 @@
 {
   "files": {
-    "main.css": "/DeLeon/static/css/main.ed72685b.css",
-    "main.js": "/DeLeon/static/js/main.661b11f9.js",
-    "static/media/videoPreview.jpg": "/DeLeon/static/media/videoPreview.b92807623ab26aeac718.jpg",
-    "static/media/background.png": "/DeLeon/static/media/background.62521a758acd19e4c500.png",
-    "static/media/cryptocoin.png": "/DeLeon/static/media/cryptocoin.1360cb7db1d0beccea3a.png",
-    "static/media/logo.png": "/DeLeon/static/media/logo.71429a5bf0ede73dcdaf.png",
-    "static/media/mail.svg": "/DeLeon/static/media/mail.07386b59792be16cb1935f4b1530c281.svg",
-    "index.html": "/DeLeon/index.html",
-    "static/media/play.svg": "/DeLeon/static/media/play.5db44b732af42037a0022d4c62c73f3c.svg",
-    "static/media/pause.svg": "/DeLeon/static/media/pause.0c98607961e469faa16e94e195475d1d.svg",
-    "main.ed72685b.css.map": "/DeLeon/static/css/main.ed72685b.css.map",
-    "main.661b11f9.js.map": "/DeLeon/static/js/main.661b11f9.js.map"
+    "main.css": "/static/css/main.ca73e631.css",
+    "main.js": "/static/js/main.e2911914.js",
+    "static/media/video.mp4": "/static/media/video.279d440f8daa4d6dfd2e.mp4",
+    "static/media/videoPreview.jpg": "/static/media/videoPreview.b92807623ab26aeac718.jpg",
+    "static/media/background.png": "/static/media/background.62521a758acd19e4c500.png",
+    "static/media/cryptocoin.png": "/static/media/cryptocoin.1360cb7db1d0beccea3a.png",
+    "static/media/x5logo.svg": "/static/media/x5logo.e5e42c8d96c5b7c02631e2c99955b3bd.svg",
+    "static/media/logo.png": "/static/media/logo.71429a5bf0ede73dcdaf.png",
+    "static/media/airlineslogo.svg": "/static/media/airlineslogo.5d93beeb6c2c26cc121ad967e6dc8143.svg",
+    "static/media/mail.svg": "/static/media/mail.07386b59792be16cb1935f4b1530c281.svg",
+    "index.html": "/index.html",
+    "static/media/applelogo.svg": "/static/media/applelogo.c4cb0d58551b06820572f6b711f6ffa1.svg",
+    "static/media/play.svg": "/static/media/play.5db44b732af42037a0022d4c62c73f3c.svg",
+    "static/media/pause.svg": "/static/media/pause.0c98607961e469faa16e94e195475d1d.svg",
+    "main.ca73e631.css.map": "/static/css/main.ca73e631.css.map",
+    "main.e2911914.js.map": "/static/js/main.e2911914.js.map"
   },
   "entrypoints": [
-    "static/css/main.ed72685b.css",
-    "static/js/main.661b11f9.js"
+    "static/css/main.ca73e631.css",
+    "static/js/main.e2911914.js"
   ]
 }

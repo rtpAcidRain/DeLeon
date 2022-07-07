@@ -1,24 +1,31 @@
 {
   "files": {
-    "main.css": "/DeLeon/static/css/main.8f8a18ff.css",
-    "main.js": "/DeLeon/static/js/main.219456a3.js",
-    "static/media/video.mp4": "/DeLeon/static/media/video.279d440f8daa4d6dfd2e.mp4",
-    "static/media/videoPreview.jpg": "/DeLeon/static/media/videoPreview.b92807623ab26aeac718.jpg",
-    "static/media/background.png": "/DeLeon/static/media/background.62521a758acd19e4c500.png",
-    "static/media/cryptocoin.png": "/DeLeon/static/media/cryptocoin.1360cb7db1d0beccea3a.png",
-    "static/media/x5logo.svg": "/DeLeon/static/media/x5logo.e5e42c8d96c5b7c02631e2c99955b3bd.svg",
-    "static/media/logo.png": "/DeLeon/static/media/logo.71429a5bf0ede73dcdaf.png",
-    "static/media/airlineslogo.svg": "/DeLeon/static/media/airlineslogo.5d93beeb6c2c26cc121ad967e6dc8143.svg",
-    "static/media/mail.svg": "/DeLeon/static/media/mail.07386b59792be16cb1935f4b1530c281.svg",
-    "index.html": "/DeLeon/index.html",
-    "static/media/applelogo.svg": "/DeLeon/static/media/applelogo.c4cb0d58551b06820572f6b711f6ffa1.svg",
-    "static/media/play.svg": "/DeLeon/static/media/play.5db44b732af42037a0022d4c62c73f3c.svg",
-    "static/media/pause.svg": "/DeLeon/static/media/pause.0c98607961e469faa16e94e195475d1d.svg",
-    "main.8f8a18ff.css.map": "/DeLeon/static/css/main.8f8a18ff.css.map",
-    "main.219456a3.js.map": "/DeLeon/static/js/main.219456a3.js.map"
+    "main.css": "/static/css/main.27611d68.css",
+    "main.js": "/static/js/main.fa1c38bf.js",
+    "static/media/video.mp4": "/static/media/video.279d440f8daa4d6dfd2e.mp4",
+    "static/media/videoPreview.jpg": "/static/media/videoPreview.b92807623ab26aeac718.jpg",
+    "static/media/background.png": "/static/media/background.62521a758acd19e4c500.png",
+    "static/media/cryptocoin.png": "/static/media/cryptocoin.1360cb7db1d0beccea3a.png",
+    "static/media/author.png": "/static/media/author.8790e370debad9cd18b6.png",
+    "static/media/x5logo.svg": "/static/media/x5logo.e5e42c8d96c5b7c02631e2c99955b3bd.svg",
+    "static/media/whale.svg": "/static/media/whale.3a075d3bb2e1cd9dff96007221a21915.svg",
+    "static/media/logo.png": "/static/media/logo.71429a5bf0ede73dcdaf.png",
+    "static/media/airlineslogo.svg": "/static/media/airlineslogo.5d93beeb6c2c26cc121ad967e6dc8143.svg",
+    "static/media/shark.svg": "/static/media/shark.d6489245cc301f4083257d3aa13860d7.svg",
+    "static/media/road.svg": "/static/media/road.5c4e1235ac52debb6c3bb202489732dd.svg",
+    "static/media/hamster.svg": "/static/media/hamster.7270fceea0e03cbfa14ec7cb15167554.svg",
+    "static/media/star.svg": "/static/media/star.e0a197fc04f5e877a4a4.svg",
+    "static/media/mail.svg": "/static/media/mail.07386b59792be16cb1935f4b1530c281.svg",
+    "index.html": "/index.html",
+    "static/media/applelogo.svg": "/static/media/applelogo.c4cb0d58551b06820572f6b711f6ffa1.svg",
+    "static/media/bonuseBack.svg": "/static/media/bonuseBack.8ca50cb9f9d2966dd28c7bbc5d9b4506.svg",
+    "static/media/play.svg": "/static/media/play.5db44b732af42037a0022d4c62c73f3c.svg",
+    "static/media/pause.svg": "/static/media/pause.0c98607961e469faa16e94e195475d1d.svg",
+    "main.27611d68.css.map": "/static/css/main.27611d68.css.map",
+    "main.fa1c38bf.js.map": "/static/js/main.fa1c38bf.js.map"
   },
   "entrypoints": [
-    "static/css/main.8f8a18ff.css",
-    "static/js/main.219456a3.js"
+    "static/css/main.27611d68.css",
+    "static/js/main.fa1c38bf.js"
   ]
 }

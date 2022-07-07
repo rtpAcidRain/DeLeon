@@ -1,0 +1,59 @@
+.heading {
+  &__h1 {
+    background: linear-gradient(95.81deg, #21b3b3 22.61%, #3362be 80.36%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 1.21875em;
+  }
+  &__h2 {
+    font-style: italic;
+    font-weight: 800;
+    font-size: 2.5rem;
+    line-height: 1.225em;
+    letter-spacing: 0.01em;
+    background: linear-gradient(90deg, #399892 25%, #375fbe 80.58%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  &__h3 {
+    font-style: italic;
+    font-weight: 700;
+    font-size: 2.25rem;
+    line-height: 1.222222222222222em;
+    letter-spacing: 0.07em;
+    color: #ffffff;
+    margin: 82px auto 0;
+    text-align: center;
+  }
+  &__h4 {
+    font-style: italic;
+    font-weight: 700;
+    font-size: 1.5625rem;
+    line-height: 1.2em;
+    background: linear-gradient(180deg, var(--tarif_color) 0%, #ffffff 144.12%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-align: center;
+  }
+  &__h5 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.8125rem;
+    line-height: 1.230769230769231em;
+    text-align: center;
+    color: #ffffff;
+  }
+  &__h6 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.75rem;
+    line-height: 1.25em;
+    color: #ffffff;
+  }
+}

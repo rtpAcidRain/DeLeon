@@ -1,0 +1,13 @@
+export { default as HomeSection } from './HomeSection';
+export { default as VideoSection } from './VideoSection';
+export { default as WhatYouTake } from './WhatYouTake';
+export { default as WillKnow } from './WillKnow';
+export { default as OurProgram } from './OurProgram';
+export { default as TarifSection } from './TarifSection';
+export { default as AuthorSection } from './AuthorSection';
+export { default as StuffSection } from './StuffSection';
+export { default as LearningFormatSection } from './LearningFormatSection';
+export { default as BonuseSection } from './BonuseSection';
+export { default as Partners } from './Partners';
+export { default as ReviewSection } from './ReviewSection';
+export { default as FaqSection } from './FaqSection';

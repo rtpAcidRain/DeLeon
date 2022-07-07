@@ -4,6 +4,11 @@
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
   border: 0;
+  color: #d8d8d8;
+}
+
+a {
+  text-decoration: unset;
 }
 
 button {
@@ -15,36 +20,41 @@ button {
   width: 0;
 }
 
+ol,
+ul {
+  list-style-type: none;
+}
+
 .decstop-app {
+  min-width: 960px;
+
   width: 100vw;
   height: 100vh;
-  overflow-x: hidden;
-  overflow-y: scroll;
+  overflow: hidden;
   background: center / 100% 100% no-repeat url('../assets/images/background.png'), #c4c4c4;
   display: flex;
-}
-main {
-  width: 100%;
-
-  .scroll-container {
-    height: 100vh;
-    overflow: hidden;
-    scroll-snap-type: y mandatory;
+  main {
+    width: 100%;
+    .section {
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      scroll-snap-align: start;
+      scroll-snap-stop: always;
+      object-fit: cover;
+      .container {
+        height: 100vh;
+        max-width: 1440px;
+        max-height: 800px;
+        width: 100%;
+        display: flex;
+        margin: auto;
+        flex-direction: column;
+      }
+    }
   }
 }
 
-.scroll__button {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  background: none;
-  border: 0;
-  cursor: pointer;
-  &--prev {
-    top: 25px;
-  }
-  &--next {
-    bottom: 25px;
-    transform: rotate(180deg);
-  }
-}
+@import './styles/landing/buttons', './styles/landing/heading', './styles/landing/sidebar',
+  './styles/landing/videoplayer', './styles/landing/scroll', './styles/landing/tables',
+  './styles//landing/sections';

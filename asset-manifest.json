@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/DeLeon/static/css/main.f51ec52d.css",
-    "main.js": "/DeLeon/static/js/main.77873991.js",
+    "main.js": "/DeLeon/static/js/main.07ee2a85.js",
     "static/media/video.mp4": "/DeLeon/static/media/video.279d440f8daa4d6dfd2e.mp4",
     "static/media/videoPreview.jpg": "/DeLeon/static/media/videoPreview.b92807623ab26aeac718.jpg",
     "static/media/background.png": "/DeLeon/static/media/background.62521a758acd19e4c500.png",
@@ -22,10 +22,10 @@
     "static/media/play.svg": "/DeLeon/static/media/play.5db44b732af42037a0022d4c62c73f3c.svg",
     "static/media/pause.svg": "/DeLeon/static/media/pause.0c98607961e469faa16e94e195475d1d.svg",
     "main.f51ec52d.css.map": "/DeLeon/static/css/main.f51ec52d.css.map",
-    "main.77873991.js.map": "/DeLeon/static/js/main.77873991.js.map"
+    "main.07ee2a85.js.map": "/DeLeon/static/js/main.07ee2a85.js.map"
   },
   "entrypoints": [
     "static/css/main.f51ec52d.css",
-    "static/js/main.77873991.js"
+    "static/js/main.07ee2a85.js"
   ]
 }

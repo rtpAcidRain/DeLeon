@@ -1,0 +1,57 @@
+.button {
+  &__section {
+    background: linear-gradient(110.51deg, #00fff0 -12.74%, #3362be 90.2%);
+    border-radius: 8px;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 0.9375rem;
+    line-height: 1.2em;
+    padding: 0.9333333333333333em 2.266666666666667em;
+    cursor: pointer;
+    color: #ffffff;
+  }
+
+  &__sidebar {
+    border: 1px solid rgba(0, 255, 240, 0.6);
+    border-radius: 6px;
+    background: none;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.625rem;
+    line-height: 1.2em;
+    padding: 0.9em 2em;
+    margin-bottom: 20px;
+    display: block;
+    cursor: pointer;
+  }
+
+  &__scroll {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background: none;
+    border: 0;
+    z-index: 9999;
+    cursor: pointer;
+    &--up {
+      top: 25px;
+    }
+    &--down {
+      bottom: 25px;
+      transform: rotate(180deg);
+    }
+    &--left {
+      width: 45px;
+      top: 50%;
+      transform: translateY(-50%) rotate(-90deg);
+      left: 0;
+    }
+    &--right {
+      width: 45px;
+      top: 50%;
+      left: unset;
+      transform: translateY(-50%) rotate(90deg);
+      right: 0;
+    }
+  }
+}

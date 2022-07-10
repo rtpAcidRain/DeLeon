@@ -57,7 +57,7 @@ const SideBar: FC<Props> = ({ ChangeSection, currentSection }) => {
           <div className="sidebar__buttons">
             <SidebarButton>Вход</SidebarButton>
             <SidebarButton>Проверка NFT</SidebarButton>
-            <SidebarButton>Записаться на курс</SidebarButton>
+            <SidebarButton onClick={() => ChangeSection(5)}>Записаться на курс</SidebarButton>
             <a href="mailto:admin@amdin" className="mail">
               <img src={mailImage} alt="email" className="emailImage" />
               Email

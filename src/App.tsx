@@ -1,5 +1,4 @@
 import { useCallback, useEffect, useRef, useState, WheelEvent } from 'react';
-import debounce from 'lodash.debounce';
 
 import useWheel from './hooks/useWheel';
 import SideBar from './components/SideBar';
@@ -26,19 +25,13 @@ function App() {
   const [currentSection, setCurrentSection] = useState<number>(0);
   const scrollRef = useRef<HTMLDivElement>(null);
   const onSckroll = useWheel();
+  const animation = useRef(true);
 
-  const onWheel = useCallback(
-    (event: WheelEvent<HTMLDivElement>) => {
+  const onWheel = (event: WheelEvent<HTMLDivElement>) => {
+    if (!animation.current) {
       onSckroll({ event, scrollRef, currentSection, setCurrentSection });
-    },
-    [currentSection],
-  );
-  // const onWheel = useCallback(
-  //   debounce((event: WheelEvent<HTMLDivElement>) => {
-  //     onSckroll({ event, scrollRef, currentSection, setCurrentSection });
-  //   }, 500),
-  //   [currentSection],
-  // );
+    }
+  };
 
   const ChangeSection = useCallback((idx: any) => {
     setCurrentSection(idx);
@@ -67,7 +60,12 @@ function App() {
   }, []);
 
   useEffect(() => {
+    animation.current = true;
     scrollRef.current?.children[currentSection].scrollIntoView({ behavior: 'smooth' });
+    setTimeout(() => {
+      console.log('sss');
+      animation.current = false;
+    }, 700);
   }, [currentSection]);
 
   return (

@@ -116,8 +116,160 @@
 .will-know {
   max-width: 1185px;
   width: 100%;
-  margin-top: 39px;
-  margin-left: 254px;
+  height: 507px;
+  margin: 39px 0 0 254px;
+  position: relative;
+  .composition {
+    position: relative;
+    margin: 8px 0 0 139px;
+    width: 704px;
+    height: 461px;
+    .line {
+      position: absolute;
+      &--1 {
+        left: 141px;
+        top: 0;
+      }
+      &--2 {
+        top: 136px;
+        right: 0;
+      }
+      &--3 {
+        right: 140px;
+        bottom: 0;
+      }
+      &--4 {
+        top: 121px;
+        left: 0;
+      }
+    }
+    .arch {
+      position: absolute;
+      &--1 {
+        top: 101px;
+        right: 106px;
+        transform: scale(-1, 1);
+      }
+      &--2 {
+        bottom: 123px;
+        right: 93px;
+      }
+      &--3 {
+        left: 232px;
+        bottom: 75px;
+        transform: scale(-1, 1);
+      }
+    }
+    .stand {
+      margin: auto;
+      position: absolute;
+      width: 91px;
+      &__container {
+        display: flex;
+        flex-direction: column;
+        width: 91px;
+        .title {
+          font-style: italic;
+          font-weight: 700;
+          font-size: 0.5rem;
+          line-height: 1.25em;
+          text-align: center;
+          color: #ffffff;
+        }
+
+        .basement {
+          position: relative;
+          width: 91px;
+          height: 150px;
+          .icon {
+            position: absolute;
+            top: 2px;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+          .light {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+        }
+      }
+      &-bitcoin {
+        top: 110px;
+        left: 319px;
+      }
+      &-nft {
+        top: 0px;
+        left: 156px;
+      }
+      &-safety {
+        top: 22px;
+        right: 195px;
+      }
+      &-operation {
+        top: 105px;
+        left: 33px;
+      }
+      &-mining {
+        bottom: 0;
+        left: 332px;
+      }
+      &-wallet {
+        top: 138px;
+        right: 1px;
+      }
+    }
+  }
+  .text {
+    font-weight: 500;
+    position: absolute;
+    letter-spacing: 0.07em;
+    &--big {
+      font-size: 20px;
+      line-height: 24px;
+    }
+    &--small {
+      font-size: 18px;
+      line-height: 22px;
+    }
+    &-1 {
+      top: 0;
+      left: 9px;
+      max-width: 305px;
+      width: 100%;
+    }
+    &-2 {
+      top: 3px;
+      right: 276px;
+      max-width: 265px;
+      width: 100%;
+    }
+    &-3 {
+      top: 105px;
+      right: 0;
+      max-width: 357px;
+      width: 100%;
+    }
+    &-4 {
+      bottom: 25px;
+      right: 27px;
+      max-width: 438px;
+      width: 100%;
+    }
+    &-5 {
+      bottom: 0;
+      left: 233px;
+      max-width: 280px;
+      width: 100%;
+    }
+    &-6 {
+      bottom: 148px;
+      left: 0;
+      max-width: 305px;
+      width: 100%;
+    }
+  }
 }
 // ---------------------------------------------------->
 
@@ -217,20 +369,29 @@
     --tarif_color: #375fbe;
     --tarif_linear-color: linear-gradient(180deg, var(--tarif_tarif_color) 38.24%, #ffffff 132.35%);
     --circle-background: #182236;
+    background: top 0 left 24px no-repeat url('../../../assets/images/tarif/blueLeftDec.svg'),
+      top 0 right 24px no-repeat url('../../../assets/images/tarif/blueRightDec.svg'),
+      var(--tarif_background-color);
   }
   &--middle {
     --tarif_background-color: rgba(182, 24, 222, 0.1);
     --tarif_color: #b618de;
     --tarif_linear-color: linear-gradient(180deg, var(--tarif_color) 0%, #ffffff 144.12%);
     --circle-background: #3a1e31;
+    background: top 0 left 24px no-repeat url('../../../assets/images/tarif/purpleLeftDec.svg'),
+      top 0 right 24px no-repeat url('../../../assets/images/tarif/purpleRightDec.svg'),
+      var(--tarif_background-color);
   }
   &--max {
     --tarif_background-color: rgba(255, 251, 44, 0.1);
     --tarif_color: #fffd93;
     --tarif_linear-color: linear-gradient(181.77deg, var(--tarif_color) 1.5%, #ffffff 169.87%);
     --circle-background: #3a3519;
+    background: top 0 left 24px no-repeat url('../../../assets/images/tarif/yelloLeftDec.svg'),
+      top 0 right 24px no-repeat url('../../../assets/images/tarif/yelloRightDec.svg'),
+      var(--tarif_background-color);
   }
-  background: var(--tarif_background-color);
+
   backdrop-filter: blur(7px);
   border-radius: 8px;
   &__container {

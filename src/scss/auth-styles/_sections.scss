@@ -42,6 +42,11 @@
       margin-bottom: 14px;
     }
   }
+  @media screen and (max-width: 1439px) {
+    top: unset;
+    left: unset;
+    margin: auto;
+  }
 }
 // ---------------------------------------------------->
 
@@ -51,6 +56,10 @@
   height: 100%;
   padding-left: 240px;
   display: flex;
+  @media screen and (max-width: 1439px) {
+    padding-left: unset;
+    margin: auto;
+  }
 }
 // ---------------------------------------------------->
 
@@ -107,6 +116,11 @@
           color: #c6c6c6;
         }
       }
+    }
+  }
+  @media screen and (max-width: 1439px) {
+    .content {
+      margin: 54px auto auto auto;
     }
   }
 }
@@ -270,6 +284,9 @@
       width: 100%;
     }
   }
+  @media screen and (max-width: 1439px) {
+    margin: 39px auto auto;
+  }
 }
 // ---------------------------------------------------->
 
@@ -349,6 +366,9 @@
       letter-spacing: 0.005em;
     }
   }
+  @media screen and (max-width: 1439px) {
+    margin: auto;
+  }
 }
 // ---------------------------------------------------->
 
@@ -360,6 +380,9 @@
   column-gap: 77px;
   margin-left: 229px;
   padding: 0 50px;
+  @media screen and (max-width: 1439px) {
+    margin: auto;
+  }
 }
 
 .tarif {
@@ -369,8 +392,9 @@
     --tarif_color: #375fbe;
     --tarif_linear-color: linear-gradient(180deg, var(--tarif_tarif_color) 38.24%, #ffffff 132.35%);
     --circle-background: #182236;
-    background: top 0 left 24px no-repeat url('../../../assets/images/tarif/blueLeftDec.svg'),
-      top 0 right 24px no-repeat url('../../../assets/images/tarif/blueRightDec.svg'),
+    background: top 0 left 24px no-repeat
+        url('../../view/auth/auth-assets/images/tarif/blueLeftDec.svg'),
+      top 0 right 24px no-repeat url('../../view/auth/auth-assets/images/tarif/blueRightDec.svg'),
       var(--tarif_background-color);
   }
   &--middle {
@@ -378,8 +402,9 @@
     --tarif_color: #b618de;
     --tarif_linear-color: linear-gradient(180deg, var(--tarif_color) 0%, #ffffff 144.12%);
     --circle-background: #3a1e31;
-    background: top 0 left 24px no-repeat url('../../../assets/images/tarif/purpleLeftDec.svg'),
-      top 0 right 24px no-repeat url('../../../assets/images/tarif/purpleRightDec.svg'),
+    background: top 0 left 24px no-repeat
+        url('../../view/auth/auth-assets/images/tarif/purpleLeftDec.svg'),
+      top 0 right 24px no-repeat url('../../view/auth/auth-assets/images/tarif/purpleRightDec.svg'),
       var(--tarif_background-color);
   }
   &--max {
@@ -387,8 +412,9 @@
     --tarif_color: #fffd93;
     --tarif_linear-color: linear-gradient(181.77deg, var(--tarif_color) 1.5%, #ffffff 169.87%);
     --circle-background: #3a3519;
-    background: top 0 left 24px no-repeat url('../../../assets/images/tarif/yelloLeftDec.svg'),
-      top 0 right 24px no-repeat url('../../../assets/images/tarif/yelloRightDec.svg'),
+    background: top 0 left 24px no-repeat
+        url('../../view/auth/auth-assets/images/tarif/yelloLeftDec.svg'),
+      top 0 right 24px no-repeat url('../../view/auth/auth-assets/images/tarif/yelloRightDec.svg'),
       var(--tarif_background-color);
   }
 
@@ -529,7 +555,7 @@
   overflow: hidden;
   padding: 39px 14px 0 33px;
   margin-top: 44px;
-  background: top -62px right 47px / 678.34px 610.56px no-repeat url('../../../assets/images/star.svg'),
+  background: top -62px right 47px / 678.34px 610.56px no-repeat url('../../view/auth/auth-assets/images/star.svg'),
     rgba(55, 95, 190, 0.3);
   &__image {
     display: flex;
@@ -606,6 +632,9 @@
       }
     }
   }
+  @media screen and (max-width: 1439px) {
+    margin: 44px auto auto;
+  }
 }
 // ---------------------------------------------------->
 
@@ -658,6 +687,10 @@
     &__poop {
       position: absolute;
     }
+  }
+  @media screen and (max-width: 1439px) {
+    margin: 30px auto auto;
+    width: 100%;
   }
 }
 // ---------------------------------------------------->
@@ -720,6 +753,9 @@
       margin-left: 15px;
     }
   }
+  @media screen and (max-width: 1439px) {
+    margin: 98px auto auto;
+  }
 }
 // ---------------------------------------------------->
 
@@ -731,6 +767,9 @@
   width: 100%;
   margin: 61px 0 0 254px;
   display: flex;
+  @media screen and (max-width: 1439px) {
+    margin: 61px auto auto;
+  }
 }
 .bonuse {
   &__container {
@@ -818,6 +857,9 @@
   &__items {
     max-width: 1190px;
     margin: auto;
+  }
+  @media screen and (max-width: 1439px) {
+    margin: 126px auto auto;
   }
 }
 .review {

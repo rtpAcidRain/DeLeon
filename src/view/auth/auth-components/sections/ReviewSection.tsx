@@ -5,7 +5,7 @@ import Section from '../layouts/Section';
 import Heading from '../UI/Heading';
 import Review from '../Review';
 
-import reviews from '../../assets/data/reviews.json';
+import reviews from '../../auth-assets/data/reviews.json';
 
 import 'swiper/css';
 import 'swiper/css/navigation';

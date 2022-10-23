@@ -2,7 +2,7 @@ import React from 'react';
 import Section from '../layouts/Section';
 import Heading from '../UI/Heading';
 
-import questions from '../../assets/data/questioins.json';
+import questions from '../../auth-assets/data/questioins.json';
 import Faq from '../Faq';
 
 type Props = {};

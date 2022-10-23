@@ -1,7 +1,7 @@
 import React from 'react';
 import Heading from './UI/Heading';
 
-import { shark, hamster, whale } from '../assets/images/tarif';
+import { shark, hamster, whale } from '../auth-assets/images/tarif';
 import TarifStar from './UI/TarifStar';
 import SectionButtons from './UI/SectionButtons';
 

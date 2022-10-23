@@ -1,7 +1,7 @@
 import React, { FC, useState } from 'react';
 
-import playSvg from '../assets/images/play.svg';
-import pauseSvg from '../assets/images/pause.svg';
+import playSvg from '../auth-assets/images/play.svg';
+import pauseSvg from '../auth-assets/images/pause.svg';
 
 type Props = {
   preview: string;

@@ -2,15 +2,15 @@ import React from 'react';
 import Section from '../layouts/Section';
 import Heading from '../UI/Heading';
 
-import line from '../../assets/images/willKnow/dashes.png';
-import arch from '../../assets/images/willKnow/arch.svg';
+import line from '../../auth-assets/images/willKnow/dashes.png';
+import arch from '../../auth-assets/images/willKnow/arch.svg';
 
-import * as bitcoin from '../../assets/images/willKnow/bitcoin';
-import * as nft from '../../assets/images/willKnow/nft';
-import * as safety from '../../assets/images/willKnow/safety';
-import * as operation from '../../assets/images/willKnow/operation';
-import * as mining from '../../assets/images/willKnow/mining';
-import * as wallet from '../../assets/images/willKnow/wallets';
+import * as bitcoin from '../../auth-assets/images/willKnow/bitcoin';
+import * as nft from '../../auth-assets/images/willKnow/nft';
+import * as safety from '../../auth-assets/images/willKnow/safety';
+import * as operation from '../../auth-assets/images/willKnow/operation';
+import * as mining from '../../auth-assets/images/willKnow/mining';
+import * as wallet from '../../auth-assets/images/willKnow/wallets';
 
 const WillKnow: React.FC = React.memo(() => {
   return (

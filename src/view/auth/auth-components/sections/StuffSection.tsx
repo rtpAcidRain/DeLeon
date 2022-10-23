@@ -18,7 +18,7 @@ import {
   five1,
   five2,
   five3,
-} from '../../assets/images/stuff__poops';
+} from '../../auth-assets/images/stuff__poops';
 
 const StuffSection = React.memo(() => {
   return (

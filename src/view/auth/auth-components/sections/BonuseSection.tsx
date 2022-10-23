@@ -2,7 +2,7 @@ import React from 'react';
 import Section from '../layouts/Section';
 import Heading from '../UI/Heading';
 
-import bonuseBakc from '../../assets/images/bonuseBack.svg';
+import bonuseBakc from '../../auth-assets/images/bonuseBack.svg';
 
 type Props = {};
 

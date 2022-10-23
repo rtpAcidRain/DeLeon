@@ -1,0 +1,26 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  border: 0;
+  color: #d8d8d8;
+}
+
+a {
+  text-decoration: unset;
+}
+
+button {
+  background: none;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+ol,
+ul {
+  list-style-type: none;
+}

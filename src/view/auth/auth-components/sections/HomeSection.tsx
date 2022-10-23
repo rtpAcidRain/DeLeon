@@ -2,7 +2,7 @@ import Section from '../layouts/Section';
 import Heading from '../UI/Heading';
 import SectionButtons from '../UI/SectionButtons';
 
-import coin from '../../assets/images/cryptocoin.png';
+import coin from '../../auth-assets/images/cryptocoin.png';
 import React, { FC } from 'react';
 
 type Props = {

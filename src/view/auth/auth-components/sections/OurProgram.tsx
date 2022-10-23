@@ -2,7 +2,7 @@ import React from 'react';
 import Section from '../layouts/Section';
 import Heading from '../UI/Heading';
 
-import road from '../../assets/images/Program/road.svg';
+import road from '../../auth-assets/images/Program/road.svg';
 
 const OurProgram: React.FC = React.memo(() => {
   return (

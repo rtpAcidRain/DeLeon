@@ -2,9 +2,9 @@ import React from 'react';
 import Section from '../layouts/Section';
 import Heading from '../UI/Heading';
 
-import appleLogo from '../../assets/images/applelogo.svg';
-import airlineLogo from '../../assets/images/airlineslogo.svg';
-import xfiveLogo from '../../assets/images/x5logo.svg';
+import appleLogo from '../../auth-assets/images/applelogo.svg';
+import airlineLogo from '../../auth-assets/images/airlineslogo.svg';
+import xfiveLogo from '../../auth-assets/images/x5logo.svg';
 
 type Props = {};
 

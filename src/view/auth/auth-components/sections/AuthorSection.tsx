@@ -2,8 +2,8 @@ import React from 'react';
 import Section from '../layouts/Section';
 import Heading from '../UI/Heading';
 
-import authorImage from '../../assets/images/author.png';
-import { calendar, dollar, electricity, settings } from '../../assets/images/authorSection';
+import authorImage from '../../auth-assets/images/author.png';
+import { calendar, dollar, electricity, settings } from '../../auth-assets/images/authorSection';
 
 const AuthorSection: React.FC = React.memo(() => {
   return (

@@ -53,6 +53,7 @@ function Auth() {
     );
 
     return () => {
+      // eslint-disable-next-line
       scrollRef.current?.removeEventListener('wheel', (event) => {
         event.preventDefault();
       });

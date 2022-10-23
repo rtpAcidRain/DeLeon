@@ -13,6 +13,7 @@ type Props = {
 
 const VideoPlayer: FC<Props> = React.memo(
   ({ preview, videoInMp = '', videoInWebm = '', width = '640px', height = '270px' }) => {
+    // eslint-disable-next-line
     const [player, setPlayer] = useState<boolean>(false);
 
     return (

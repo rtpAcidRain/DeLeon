@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import Heading from './UI/Heading';
+import { H5 } from './UI/Heading';
 
 type Props = {
   question: string;
@@ -9,7 +9,7 @@ type Props = {
 const Faq: FC<Props> = React.memo(({ question, answer }) => {
   return (
     <article className="quesiton__item">
-      <Heading level={5}>{question}</Heading>
+      <H5>{question}</H5>
       <p className="answer">{answer}</p>
     </article>
   );

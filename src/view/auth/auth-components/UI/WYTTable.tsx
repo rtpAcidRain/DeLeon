@@ -1,5 +1,5 @@
 import React, { FC, ReactNode } from 'react';
-import Heading from './Heading';
+import { H6 } from './Heading';
 
 type Props = {
   title: string;
@@ -91,7 +91,7 @@ const WYTTable: FC<Props> = ({ title, tablecount, children }) => {
               />
             </svg>
           )}
-          <Heading level={6}>{title}</Heading>
+          <H6>{title}</H6>
         </div>
       </header>
       <main>{children}</main>

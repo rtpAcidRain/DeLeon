@@ -1,13 +1,13 @@
 import React from 'react';
 import Section from '../layouts/Section';
-import Heading from '../UI/Heading';
+import { H3 } from '../UI/Heading';
 
 type Props = {};
 
 const LearningFormatSection: React.FC<Props> = React.memo((props: Props) => {
   return (
     <Section>
-      <Heading>Формат обучения</Heading>
+      <H3>Формат обучения</H3>
       <div className="learning">
         <div className="learning__container">
           <div className="learning__item learning__item--green">

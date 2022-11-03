@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import Section from '../layouts/Section';
-import Heading from '../UI/Heading';
+import { H3 } from '../UI/Heading';
 import WYTTable from '../UI/WYTTable';
 
 type Props = {};
@@ -9,7 +9,7 @@ const WhatYouTake: FC<Props> = React.memo(() => {
   return (
     <Section>
       <div className="whatyoutake-section">
-        <Heading>Чего же вы ждете? Начните прямо сейчас!</Heading>
+        <H3>Чего же вы ждете? Начните прямо сейчас!</H3>
         <div className="content">
           <div className="graphs">
             <WYTTable title="Рыночные данные BTC" tablecount={'first'}>

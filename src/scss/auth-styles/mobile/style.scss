@@ -1,0 +1,97 @@
+@import '../global';
+
+// html {
+//   @media screen and (max-width: 567px) {
+//     font-size: 8px;
+//   }
+// }
+
+.mobile-auth {
+  justify-content: center;
+  main {
+    overflow-y: scroll;
+    width: 100%;
+    .section {
+      width: 100%;
+
+      &:first-child {
+        min-height: 100vh;
+        padding: 2rem 0;
+        .content--right {
+          display: flex;
+          align-items: center;
+          height: unset;
+          * {
+            width: 100%;
+          }
+          @media screen and (max-width: 910px) {
+            display: none;
+          }
+        }
+      }
+      &:not(:first-child) {
+        padding: 1.5rem 1rem;
+      }
+
+      .container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        margin: auto;
+        flex-direction: column;
+
+        @media screen and (max-width: 567px) {
+          max-width: 300px;
+        }
+
+        // SECTIONS
+
+        .whatyoutake-section {
+          @media screen and (max-width: 1030px) {
+            .content__text {
+              margin-left: 20px;
+              .text {
+                &--first {
+                  left: -0;
+                }
+                &--second {
+                  top: 18px;
+                }
+                &--third {
+                  top: 42px;
+                  left: 0;
+                  margin-left: auto;
+                  max-width: 450px;
+                }
+                &--fourth {
+                  top: 60px;
+                  left: 0;
+                }
+              }
+            }
+          }
+          @media screen and (max-width: 910px) {
+            .content__text {
+              .text {
+                margin: 0 0 0.5em 0;
+                text-align: start;
+                &--first {
+                  position: static;
+                }
+                &--second {
+                  position: static;
+                }
+                &--third {
+                  position: static;
+                }
+                &--fourth {
+                  position: static;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

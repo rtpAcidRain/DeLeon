@@ -1,5 +1,7 @@
-import shark from './shark.svg';
-import hamster from './hamster.svg';
-import whale from './whale.svg';
+import { LowerIco } from './lower/icon';
+import { MiddleIco } from './middle/icon';
+import { MaxIco } from './max/icon';
+import { RightDec } from './rightDec';
+import { LeftDec } from './leftDec';
 
-export { shark, hamster, whale };
+export { LowerIco, MiddleIco, MaxIco, RightDec, LeftDec };

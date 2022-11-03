@@ -1,6 +1,6 @@
 import React from 'react';
 import Section from '../layouts/Section';
-import Heading from '../UI/Heading';
+import { H3 } from '../UI/Heading';
 
 import {
   poopMoon,
@@ -23,7 +23,7 @@ import {
 const StuffSection = React.memo(() => {
   return (
     <Section>
-      <Heading>Наша команда</Heading>
+      <H3>Наша команда</H3>
       <div className="stuff">
         <div className="stuff__row">
           <div className="stuff__item item">

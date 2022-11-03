@@ -1,6 +1,6 @@
 import React from 'react';
 import Section from '../layouts/Section';
-import Heading from '../UI/Heading';
+import { H3 } from '../UI/Heading';
 
 import questions from '../../auth-assets/data/questioins.json';
 import Faq from '../Faq';
@@ -11,7 +11,7 @@ const FaqSection: React.FC<Props> = React.memo(() => {
   return (
     <Section>
       <div className="faq__container">
-        <Heading>Часто задаваемые вопросы</Heading>
+        <H3>Часто задаваемые вопросы</H3>
         <div className="quesiton__items">
           {questions.map((el) => (
             <Faq key={el.id} question={el.question} answer={el.answer} />

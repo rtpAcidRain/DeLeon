@@ -1,9 +1,10 @@
 import { FC } from 'react';
-import Heading from './UI/Heading';
-import SidebarButton from './UI/SidebarButton';
+import { H6 } from './UI/Heading';
+import { SidebarButton } from '../../../styles/auth/Buttons';
 
 import logo from '../auth-assets/images/logo.png';
 import mailImage from '../auth-assets/images/mail.svg';
+import { isDesktop, isMobile, isTablet } from 'react-device-detect';
 
 type Props = {
   ChangeSection: (idx: number) => void;
@@ -29,9 +30,12 @@ const sections = [
 const SideBar: FC<Props> = ({ ChangeSection, currentSection }) => {
   return (
     <>
-      <div className="sidebar-toggle">
-        <p>Меню</p>
-      </div>
+      {isDesktop && (
+        <div className="sidebar-toggle">
+          <p>Меню</p>
+        </div>
+      )}
+      {isMobile || isTablet ? <div className="toggle"></div> : <></>}
       <aside className="sidebar">
         <div className="sidebar__container">
           <div className="sidebar__logo logo">
@@ -39,7 +43,7 @@ const SideBar: FC<Props> = ({ ChangeSection, currentSection }) => {
               <img src={logo} alt="De Leon" />
             </picture>
             <div className="logo__heading">
-              <Heading level={6}>DE LEON UNIVERSITY</Heading>
+              <H6>DE LEON UNIVERSITY</H6>
             </div>
           </div>
 

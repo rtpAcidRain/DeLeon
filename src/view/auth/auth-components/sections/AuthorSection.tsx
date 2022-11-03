@@ -1,6 +1,6 @@
 import React from 'react';
 import Section from '../layouts/Section';
-import Heading from '../UI/Heading';
+import { H2, H3 } from '../UI/Heading';
 
 import authorImage from '../../auth-assets/images/author.png';
 import { calendar, dollar, electricity, settings } from '../../auth-assets/images/authorSection';
@@ -8,14 +8,14 @@ import { calendar, dollar, electricity, settings } from '../../auth-assets/image
 const AuthorSection: React.FC = React.memo(() => {
   return (
     <Section>
-      <Heading>Автор курса</Heading>
+      <H3>Автор курса</H3>
       <div className="course-autor">
         <img className="course-author__image" src={authorImage} alt="author" />
 
         <div className="course-author__content">
           <div className="information">
             {' '}
-            <Heading level={2}>Создатель</Heading>
+            <H2>Создатель</H2>
             <div className="skill">Интелект</div>
             <div className="information__text text__container">
               <p className="text__item">

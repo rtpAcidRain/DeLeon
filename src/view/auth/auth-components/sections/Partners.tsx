@@ -1,31 +1,29 @@
 import React from 'react';
 import Section from '../layouts/Section';
-import Heading from '../UI/Heading';
+import { H3 } from '../UI/Heading';
 
-import appleLogo from '../../auth-assets/images/applelogo.svg';
-import airlineLogo from '../../auth-assets/images/airlineslogo.svg';
-import xfiveLogo from '../../auth-assets/images/x5logo.svg';
+import { AirLinesIco, ApploIco, X5Ico } from '../../auth-assets/svg/icons';
 
 type Props = {};
 
 const Partners: React.FC<Props> = React.memo((props: Props) => {
   return (
     <Section>
-      <Heading>Партнеры</Heading>
+      <H3>Партнеры</H3>
       <div className="partners">
         <div className="partner__back plate">
           <div className="partner__front plate">
-            <img className="partner__logo" src={appleLogo} alt="icon" />
+            <ApploIco className="partner__logo" />
           </div>
         </div>
         <div className="partner__back plate">
           <div className="partner__front plate">
-            <img className="partner__logo" src={airlineLogo} alt="icon" />
+            <AirLinesIco className="partner__logo" />
           </div>
         </div>
         <div className="partner__back plate">
           <div className="partner__front plate">
-            <img className="partner__logo" src={xfiveLogo} alt="icon" />
+            <X5Ico className="partner__logo" />
           </div>
         </div>
       </div>

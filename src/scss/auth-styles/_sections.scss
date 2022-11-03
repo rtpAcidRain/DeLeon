@@ -1,65 +1,9 @@
-// Главная
-.home-section {
-  width: 100%;
-  max-width: 1046px;
-  height: 100%;
-  max-height: 560px;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 1.25rem;
-  line-height: 1.2em;
-  letter-spacing: 0.05em;
-  display: flex;
-  margin: auto 0 auto auto;
-  position: relative;
-  top: -35px;
-  left: -31px;
-  &__content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-    max-width: 533px;
-    .buttons {
-      display: flex;
-      max-width: 507px;
-      justify-content: space-between;
-    }
-  }
-
-  .content {
-    &__text {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      max-height: 450px;
-      height: 100%;
-    }
-  }
-  .list {
-    list-style-type: disc;
-    &__item {
-      margin-bottom: 14px;
-    }
-  }
-  @media screen and (max-width: 1439px) {
-    top: unset;
-    left: unset;
-    margin: auto;
-  }
-}
-// ---------------------------------------------------->
-
 // Видео
 .video-section {
   width: 100%;
   height: 100%;
   padding-left: 240px;
   display: flex;
-  @media screen and (max-width: 1439px) {
-    padding-left: unset;
-    margin: auto;
-  }
 }
 // ---------------------------------------------------->
 
@@ -73,7 +17,7 @@
   .content {
     display: flex;
     justify-content: space-between;
-    margin: 54px 68px auto auto;
+    margin: 3.375rem 68px auto auto;
     max-width: 1050px;
     &__text {
       .text {
@@ -116,11 +60,6 @@
           color: #c6c6c6;
         }
       }
-    }
-  }
-  @media screen and (max-width: 1439px) {
-    .content {
-      margin: 54px auto auto auto;
     }
   }
 }
@@ -240,12 +179,12 @@
     position: absolute;
     letter-spacing: 0.07em;
     &--big {
-      font-size: 20px;
-      line-height: 24px;
+      font-size: 1.25rem;
+      line-height: 120%;
     }
     &--small {
-      font-size: 18px;
-      line-height: 22px;
+      font-size: 1.125rem;
+      line-height: 120%;
     }
     &-1 {
       top: 0;
@@ -284,9 +223,6 @@
       width: 100%;
     }
   }
-  @media screen and (max-width: 1439px) {
-    margin: 39px auto auto;
-  }
 }
 // ---------------------------------------------------->
 
@@ -301,7 +237,7 @@
   position: relative;
   .road {
     bottom: 0;
-    position: absolute;
+    position: relative;
     display: block;
     left: 163px;
     &__arrow {
@@ -325,7 +261,8 @@
     }
   }
   &__item {
-    padding: 30px 0 21px 27px;
+    font-size: 0.625rem;
+    padding: 3em 0.5em 2.1em 2.7em;
     background: linear-gradient(89.45deg, rgba(5, 7, 36, 0.8) 10.89%, rgba(61, 23, 55, 0.8) 90.63%);
     border: 2px solid #3c2146;
     border-radius: 22px;
@@ -344,6 +281,7 @@
   }
   .program-item {
     &--first {
+      bottom: 306px;
     }
     &--second {
       left: 50%;
@@ -366,181 +304,42 @@
       letter-spacing: 0.005em;
     }
   }
-  @media screen and (max-width: 1439px) {
-    margin: auto;
-  }
 }
 // ---------------------------------------------------->
 
 // Тарифы
-.tarifs {
-  margin-top: 51px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 77px;
-  margin-left: 229px;
-  padding: 0 50px;
-  @media screen and (max-width: 1439px) {
-    margin: auto;
-  }
-}
 
 .tarif {
-  padding: 45px 10px 17px;
-  &--lover {
-    --tarif_background-color: rgba(19, 58, 133, 0.1);
-    --tarif_color: #375fbe;
-    --tarif_linear-color: linear-gradient(180deg, var(--tarif_tarif_color) 38.24%, #ffffff 132.35%);
-    --circle-background: #182236;
-    background: top 0 left 24px no-repeat
-        url('../../view/auth/auth-assets/images/tarif/blueLeftDec.svg'),
-      top 0 right 24px no-repeat url('../../view/auth/auth-assets/images/tarif/blueRightDec.svg'),
-      var(--tarif_background-color);
-  }
-  &--middle {
-    --tarif_background-color: rgba(182, 24, 222, 0.1);
-    --tarif_color: #b618de;
-    --tarif_linear-color: linear-gradient(180deg, var(--tarif_color) 0%, #ffffff 144.12%);
-    --circle-background: #3a1e31;
-    background: top 0 left 24px no-repeat
-        url('../../view/auth/auth-assets/images/tarif/purpleLeftDec.svg'),
-      top 0 right 24px no-repeat url('../../view/auth/auth-assets/images/tarif/purpleRightDec.svg'),
-      var(--tarif_background-color);
-  }
-  &--max {
-    --tarif_background-color: rgba(255, 251, 44, 0.1);
-    --tarif_color: #fffd93;
-    --tarif_linear-color: linear-gradient(181.77deg, var(--tarif_color) 1.5%, #ffffff 169.87%);
-    --circle-background: #3a3519;
-    background: top 0 left 24px no-repeat
-        url('../../view/auth/auth-assets/images/tarif/yelloLeftDec.svg'),
-      top 0 right 24px no-repeat url('../../view/auth/auth-assets/images/tarif/yelloRightDec.svg'),
-      var(--tarif_background-color);
-  }
-
-  backdrop-filter: blur(7px);
-  border-radius: 8px;
-  &__container {
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-  }
-  &__header {
-    margin-bottom: 9px;
-    .icon {
-      position: relative;
-      text-align: center;
-      width: 153px;
-      height: 153px;
-      border-radius: 50%;
-      background: var(--circle-background);
-      margin: 11px auto 0;
-      display: flex;
-      &:before {
-        content: '';
-        position: absolute;
-        top: -2px;
-        bottom: -2px;
-        left: -2px;
-        right: -2px;
-        background: linear-gradient(
-          180deg,
-          var(--tarif_color),
-          #ffffff 49.48%,
-          var(--tarif_color) 100%
-        );
-        border-radius: 50%;
-        z-index: -1;
-      }
-      &:after {
-        content: '';
-        position: absolute;
-        top: 11px;
-        bottom: 11px;
-        left: 11px;
-        right: 11px;
-        background: linear-gradient(
-          180deg,
-          var(--tarif_color),
-          #ffffff 49.48%,
-          var(--tarif_color) 100%
-        );
-        border-radius: 50%;
-        z-index: 1;
-      }
-      .icon-image__wrapper {
-        margin: auto;
-        z-index: 2;
-        width: 127px;
-        height: 127px;
-        border-radius: 50%;
-        background-color: var(--circle-background);
-        border: 5px solid var(--circle-background);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-    }
-  }
-
-  &__main {
-    margin-bottom: 5px;
-  }
-
-  &__item {
-    display: flex;
-    align-items: center;
-    max-width: 266px;
-    margin: auto;
-    .text {
-      margin-left: 13px;
-      font-weight: 500;
-      font-size: 0.75rem;
-      line-height: 1.25em;
-
-      color: #ffffff;
-    }
-    &:not(:last-child) {
-      margin-bottom: 11px;
-    }
-  }
-  &__footer {
-    margin-top: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    .price {
-      font-style: italic;
-      font-weight: 700;
-      font-size: 1.3125rem;
-      line-height: 1.238095238095238em;
-      margin-bottom: 4px;
-      color: #8f8b8b;
-      * {
-        color: #8f8b8b;
-      }
-    }
-    .sale {
-      font-style: italic;
-      font-weight: 700;
-      font-size: 1.125rem;
-      line-height: 1.222222222222222em;
-      margin-bottom: 11px;
-      color: #ffffff;
-    }
-    .button__section {
-      font-size: 0.8125rem;
-      max-width: 140px;
-      width: 100%;
-      padding: 0.6923076923076923em 0;
-      &:disabled {
-        background: linear-gradient(110.51deg, #626262 -12.74%, #464749 90.2%);
-        color: #b3adad;
-        cursor: not-allowed;
-      }
-    }
-  }
+  // &--lover {
+  //   --tarif_background-color: rgba(19, 58, 133, 0.1);
+  //   --tarif_color: #375fbe;
+  //   --tarif_linear-color: linear-gradient(180deg, var(--tarif_color) 38.24%, #ffffff 132.35%);
+  //   --circle-background: #182236;
+  //   background: top 0 left 24px no-repeat
+  //       url('../../view/auth/auth-assets/images/tarif/blueLeftDec.svg'),
+  //     top 0 right 24px no-repeat url('../../view/auth/auth-assets/images/tarif/blueRightDec.svg'),
+  //     var(--tarif_background-color);
+  // }
+  // &--middle {
+  //   --tarif_background-color: rgba(182, 24, 222, 0.1);
+  //   --tarif_color: #b618de;
+  //   --tarif_linear-color: linear-gradient(180deg, var(--tarif_color) 0%, #ffffff 144.12%);
+  //   --circle-background: #3a1e31;
+  //   background: top 0 left 24px no-repeat
+  //       url('../../view/auth/auth-assets/images/tarif/purpleLeftDec.svg'),
+  //     top 0 right 24px no-repeat url('../../view/auth/auth-assets/images/tarif/purpleRightDec.svg'),
+  //     var(--tarif_background-color);
+  // }
+  // &--max {
+  //   --tarif_background-color: rgba(255, 251, 44, 0.1);
+  //   --tarif_color: #fffd93;
+  //   --tarif_linear-color: linear-gradient(181.77deg, var(--tarif_color) 1.5%, #ffffff 169.87%);
+  //   --circle-background: #3a3519;
+  //   background: top 0 left 24px no-repeat
+  //       url('../../view/auth/auth-assets/images/tarif/yelloLeftDec.svg'),
+  //     top 0 right 24px no-repeat url('../../view/auth/auth-assets/images/tarif/yelloRightDec.svg'),
+  //     var(--tarif_background-color);
+  // }
 }
 // ---------------------------------------------------->
 
@@ -555,6 +354,7 @@
   overflow: hidden;
   padding: 39px 14px 0 33px;
   margin-top: 44px;
+
   background: top -62px right 47px / 678.34px 610.56px no-repeat url('../../view/auth/auth-assets/images/star.svg'),
     rgba(55, 95, 190, 0.3);
   &__image {
@@ -632,9 +432,6 @@
       }
     }
   }
-  @media screen and (max-width: 1439px) {
-    margin: 44px auto auto;
-  }
 }
 // ---------------------------------------------------->
 
@@ -672,8 +469,8 @@
       text-align: center;
       margin-top: 17px;
       font-weight: 500;
-      font-size: 15px;
-      line-height: 18px;
+      font-size: 0.9375rem;
+      line-height: 120%;
     }
   }
   .avatar {
@@ -687,10 +484,6 @@
     &__poop {
       position: absolute;
     }
-  }
-  @media screen and (max-width: 1439px) {
-    margin: 30px auto auto;
-    width: 100%;
   }
 }
 // ---------------------------------------------------->
@@ -753,9 +546,6 @@
       margin-left: 15px;
     }
   }
-  @media screen and (max-width: 1439px) {
-    margin: 98px auto auto;
-  }
 }
 // ---------------------------------------------------->
 
@@ -765,27 +555,41 @@
   max-height: 429px;
   height: 100%;
   width: 100%;
-  margin: 61px 0 0 254px;
-  display: flex;
-  @media screen and (max-width: 1439px) {
-    margin: 61px auto auto;
-  }
+  margin: auto 0 auto 254px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 30px;
 }
 .bonuse {
   &__container {
     width: 341px;
     height: 205px;
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 2px;
+    border-radius: 22px;
     &--first {
+      background: linear-gradient(
+        89.45deg,
+        rgba(32, 140, 134, 1) 10.89%,
+        rgba(139, 27, 120, 1) 90.63%
+      );
     }
     &--middle {
-      margin: auto 32px;
+      background: linear-gradient(
+        89.45deg,
+        rgba(247, 147, 27, 1) 10.89%,
+        rgba(138, 29, 121, 1) 90.63%
+      );
     }
     &--last {
-      margin-top: auto;
+      background: linear-gradient(
+        89.45deg,
+        rgba(255, 255, 255, 1) 10.89%,
+        rgba(138, 29, 121, 1) 90.63%
+      );
     }
   }
   &__back {
@@ -796,21 +600,23 @@
     right: 0;
   }
   &__text {
+    border-radius: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-style: normal;
     font-weight: 500;
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 1.25rem;
+    line-height: 120%;
     text-align: center;
     position: relative;
     color: #ffffff;
-    max-width: 294px;
+    background: linear-gradient(89.45deg, rgba(5, 7, 36, 1) 10.89%, rgba(61, 23, 55, 1) 90.63%);
+    width: 100%;
+    height: 100%;
   }
 }
-.text {
-  &__span {
-    color: #b618de;
-  }
-}
+
 // ---------------------------------------------------->
 
 // Партнеры
@@ -854,13 +660,16 @@
   margin-left: 235px;
   margin-top: 126px;
   position: relative;
+  max-width: 1190px;
+  width: 100%;
   &__items {
     max-width: 1190px;
     margin: auto;
+    width: 100%;
   }
-  @media screen and (max-width: 1439px) {
-    margin: 126px auto auto;
-  }
+}
+.swiper-slide {
+  max-width: 249px;
 }
 .review {
   &__item {
@@ -949,7 +758,7 @@
     .answer {
       font-weight: 500;
       flex: 1;
-      font-size: 0.625rem;
+      font-size: 10px;
       line-height: 1.2em;
       margin-top: 10px;
       display: flex;

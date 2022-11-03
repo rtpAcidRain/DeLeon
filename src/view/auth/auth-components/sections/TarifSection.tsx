@@ -1,7 +1,8 @@
 import React from 'react';
 import Section from '../layouts/Section';
-import Heading from '../UI/Heading';
+import { H3 } from '../UI/Heading';
 import Tarif, { TarifENUMS } from '../Tarif';
+import styled from 'styled-components';
 
 const tarifsData = [
   {
@@ -45,11 +46,23 @@ const tarifsData = [
   },
 ];
 
+const Tarifs = styled.div`
+  margin-top: 51px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 77px;
+  margin-left: 229px;
+  padding: 0 50px;
+  @media screen and (max-width: 1439px) {
+    margin: auto;
+  }
+`;
+
 const TarifSection: React.FC = React.memo(() => {
   return (
     <Section>
-      <Heading>Тарифы</Heading>
-      <div className="tarifs">
+      <H3>Тарифы</H3>
+      <Tarifs>
         {tarifsData.map((el) => (
           <Tarif
             key={el.id}
@@ -59,7 +72,7 @@ const TarifSection: React.FC = React.memo(() => {
             sale={el.sale}
           />
         ))}
-      </div>
+      </Tarifs>
     </Section>
   );
 });

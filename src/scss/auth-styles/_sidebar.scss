@@ -47,7 +47,8 @@
     flex-direction: column;
   }
   &__buttons {
-    margin-top: 28px;
+    font-size: 0.625rem;
+    margin-top: 2.8em;
   }
   &-toggle {
     position: fixed;
@@ -66,15 +67,16 @@
       left: 0%;
     }
   }
-  @media screen and (max-width: 1439px) {
-    left: -100%;
-    &:hover {
-      left: 0;
-    }
-    &-toggle {
-      display: flex;
-    }
-  }
+  // @media screen and (max-width: 1439px) {
+  //   left: -100%;
+  //   &:hover {
+  //     left: 0;
+  //   }
+  //   &-toggle {
+  //     display: flex;
+  //     z-index: 9997;
+  //   }
+  // }
 }
 
 .navbar {

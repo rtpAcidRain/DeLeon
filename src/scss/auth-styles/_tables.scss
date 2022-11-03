@@ -52,6 +52,13 @@
     position: relative;
     bottom: 56px;
     left: 148px;
+    transition: left 0.2s;
+    .mobile-auth & {
+      @media screen and (max-width: 910px) {
+        bottom: 24px;
+        left: 0;
+      }
+    }
   }
 
   &__statistic {
@@ -71,15 +78,25 @@
       font-weight: 400;
     }
     &__name {
-      font-size: 12px;
-      line-height: 15px;
+      font-size: 13px;
+      line-height: 120%;
       margin-bottom: 5px;
       color: #7c7c7c;
+      .mobile-auth & {
+        @media screen and (max-width: 567px) {
+          font-size: 10px;
+        }
+      }
     }
     &__value {
       font-size: 15px;
-      line-height: 18px;
+      line-height: 120%;
       color: #ffffff;
+      .mobile-auth & {
+        @media screen and (max-width: 567px) {
+          font-size: 13px;
+        }
+      }
     }
   }
 }

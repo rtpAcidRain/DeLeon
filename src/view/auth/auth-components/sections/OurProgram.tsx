@@ -1,13 +1,13 @@
 import React from 'react';
 import Section from '../layouts/Section';
-import Heading from '../UI/Heading';
+import { H3 } from '../UI/Heading';
 
 import road from '../../auth-assets/images/Program/road.svg';
 
 const OurProgram: React.FC = React.memo(() => {
   return (
     <Section>
-      <Heading>Наша программа</Heading>
+      <H3>Наша программа</H3>
       <div className="our-program">
         <img src={road} alt="road" className="road" />
         <div className="our-program__item program-item--first">

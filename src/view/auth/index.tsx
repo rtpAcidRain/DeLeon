@@ -1,6 +1,6 @@
 import DesktopComponent from './auth-components/DesktopComponent';
-import { isMobile, isTablet } from 'react-device-detect';
-import MobileComponent from './auth-components/MobileComponent';
+// import { isMobile, isTablet } from 'react-device-detect';
+// import MobileComponent from './auth-components/MobileComponent';
 
 function Auth() {
   return (

@@ -45,6 +45,7 @@ const Tarif: React.FC<Props> = React.memo(({ title, content, prise, sale }) => {
     if (title === TarifENUMS.MAXLEVEL) {
       return setColors(colorsObj.max);
     }
+    // eslint-disable-next-line
   }, []);
 
   return (

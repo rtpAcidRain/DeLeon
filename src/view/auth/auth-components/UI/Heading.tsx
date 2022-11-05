@@ -7,7 +7,7 @@ const H1 = styled.h1`
   background-clip: text;
   font-style: italic;
   font-weight: 700;
-  font-size: 4rem;
+  font-size: 4em;
   line-height: 1.21875em;
 `;
 const H2 = styled.h2`
@@ -24,7 +24,7 @@ const H2 = styled.h2`
 const H3 = styled.h3`
   font-style: italic;
   font-weight: 700;
-  font-size: 2.25rem;
+  font-size: 18px;
   line-height: 1.222222222222222em;
   letter-spacing: 0.07em;
   color: #ffffff;

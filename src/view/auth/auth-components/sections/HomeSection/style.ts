@@ -1,20 +1,45 @@
 import styled from 'styled-components';
+import { device, size } from '../../../../../styles/auth/breackpoints';
 import { SectionButton } from '../../../../../styles/auth/Buttons';
 
 const Home = styled.div`
-  font-size: 1.25em;
+  font-size: 7px;
   width: 100%;
-  max-width: 1046px;
+  padding: 2em;
   height: 100%;
   max-height: 560px;
   display: flex;
-  margin: auto 0 auto auto;
+  margin: auto;
   position: relative;
+  max-width: 230px;
+  @media (${device.mobileS}) {
+    font-size: 10px;
+    max-width: ${size.mobileS}px;
+  }
+  @media (${device.mobileM}) {
+    font-size: 11px;
+    max-width: ${size.mobileM}px;
+  }
+  @media (${device.mobileL}) {
+    font-size: 12px;
+    max-width: ${size.mobileL}px;
+  }
+  @media (${device.tablet}) {
+    font-size: 12px;
+    max-width: ${size.tablet}px;
+  }
+  @media (${device.laptop}) {
+    font-size: 16px;
+    align-items: center;
+    max-width: 1046px;
+    padding: 0 2em;
+  }
 `;
 
 const Buttons = styled.div`
   display: flex;
   max-width: 507px;
+  justify-content: center;
 `;
 
 const Button = styled(SectionButton)`
@@ -27,6 +52,12 @@ const Button = styled(SectionButton)`
 const Content = styled.div`
   height: 100%;
   max-width: 533px;
+  @media (${device.laptop}) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto 0;
+  }
 `;
 
 const ContentText = styled.div`
@@ -48,4 +79,14 @@ const ListItem = styled.li`
   margin-bottom: 0.7em;
 `;
 
-export { Home, Buttons, Button, Content, ContentText, List, ListItem };
+const Picture = styled.div`
+  display: none;
+  * {
+    width: 100%;
+  }
+  @media (${device.tablet}) {
+    display: block;
+  }
+`;
+
+export { Picture, Home, Buttons, Button, Content, ContentText, List, ListItem };

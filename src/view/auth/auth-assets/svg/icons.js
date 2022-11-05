@@ -122,3 +122,52 @@ export const TarifStar = ({ color }) => {
     </svg>
   );
 };
+
+export const BurgerMenu = (props) => {
+  return (
+    <svg
+      {...props}
+      width="50"
+      height="32"
+      viewBox="0 0 50 32"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <rect width="50" height="4" rx="2" fill="#28A0B0" fillOpacity="0.8" />
+      <rect y="14" width="50" height="4" rx="2" fill="#28A0B0" fillOpacity="0.8" />
+      <rect y="28" width="50" height="4" rx="2" fill="#28A0B0" fillOpacity="0.8" />
+    </svg>
+  );
+};
+
+export const BurgerMenuClose = (props) => {
+  return (
+    <svg
+      {...props}
+      width="42"
+      height="38"
+      viewBox="0 0 42 38"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <rect
+        x="3.50586"
+        y="0.988525"
+        width="50"
+        height="4"
+        rx="2"
+        transform="rotate(41.9228 3.50586 0.988525)"
+        fill="#28A0B0"
+        fillOpacity="0.8"
+      />
+      <rect
+        x="1.38477"
+        y="34.7654"
+        width="50"
+        height="4"
+        rx="2"
+        transform="rotate(-41.7257 1.38477 34.7654)"
+        fill="#28A0B0"
+        fillOpacity="0.8"
+      />
+    </svg>
+  );
+};

@@ -1,5 +1,5 @@
 import React, { FC, ReactNode } from 'react';
-import { isDesktop, isMobile } from 'react-device-detect';
+import { isDesktop } from 'react-device-detect';
 import styled from 'styled-components';
 import { device } from '../../../../styles/auth/breackpoints';
 

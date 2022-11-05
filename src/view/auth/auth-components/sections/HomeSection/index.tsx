@@ -3,7 +3,7 @@ import { H1 } from '../../UI/Heading';
 
 import coin from '../../../auth-assets/images/cryptocoin.png';
 import React, { FC } from 'react';
-import { Home, Buttons, Button, Content, ContentText, List, ListItem } from './style';
+import { Home, Buttons, Button, Content, ContentText, List, ListItem, Picture } from './style';
 
 type Props = {
   ChangeSection: (idx: number) => void;
@@ -36,11 +36,11 @@ const HomeSection: FC<Props> = React.memo(({ ChangeSection }) => {
             <Button onClick={() => ChangeSection(5)}>Записаться на курс</Button>
           </Buttons>
         </Content>
-        <div className="home-section__content content--right">
+        <Picture>
           <picture>
             <img src={coin} alt="cryptoCoin" />
           </picture>
-        </div>
+        </Picture>
       </Home>
     </Section>
   );

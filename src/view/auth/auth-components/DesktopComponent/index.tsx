@@ -1,13 +1,12 @@
 import { useCallback, useEffect, useRef, useState, WheelEvent } from 'react';
-import { Helmet } from 'react-helmet';
 
-import useWheel from '../auth-hooks/useWheel';
-import SideBar from '../auth-components/SideBar';
+import useWheel from '../../auth-hooks/useWheel';
+import SideBar from '../SideBar';
 
-import ContentComponent from '../auth-components/ContentComponent';
+import ContentComponent from '../ContentComponent';
 
-import '../../../scss/auth-styles/desktop/style.scss';
-import { ScrollButton } from './UI/Buttons';
+import { ScrollButton } from '../UI/Buttons';
+import { DescApp, DescMain, Scroll } from './style';
 
 function DesktopComponent() {
   const [currentSection, setCurrentSection] = useState<number>(0);
@@ -57,24 +56,20 @@ function DesktopComponent() {
   }, [currentSection]);
 
   return (
-    <div className="app dekstop-auth">
-      <Helmet>
-        <meta name="viewport" content="width=1200, initial-scale=1.0, maximum-scale=1.0" />
-      </Helmet>
+    <DescApp className=" dekstop-auth">
       {currentSection > 0 && <ScrollButton vector="up" ChangeSection={ChangeSection} />}
       <SideBar ChangeSection={ChangeSection} currentSection={currentSection} />
-      <main>
-        <div
+      <DescMain>
+        <Scroll
           ref={scrollRef}
-          className="scroll"
           onWheel={(event) => {
             onWheel(event);
           }}>
           <ContentComponent ChangeSection={ChangeSection} />
-        </div>
-      </main>
+        </Scroll>
+      </DescMain>
       {currentSection < 12 && <ScrollButton vector="down" ChangeSection={ChangeSection} />}
-    </div>
+    </DescApp>
   );
 }
 

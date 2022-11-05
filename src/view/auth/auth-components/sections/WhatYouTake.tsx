@@ -1,14 +1,17 @@
 import React, { FC } from 'react';
+import styled from 'styled-components';
 import Section from '../layouts/Section';
 import { H3 } from '../UI/Heading';
 import WYTTable from '../UI/WYTTable';
 
 type Props = {};
 
+const WhatYouTakeLay = styled.div``;
+
 const WhatYouTake: FC<Props> = React.memo(() => {
   return (
     <Section>
-      <div className="whatyoutake-section">
+      <WhatYouTakeLay className="whatyoutake-section">
         <H3>Чего же вы ждете? Начните прямо сейчас!</H3>
         <div className="content">
           <div className="graphs">
@@ -125,7 +128,7 @@ const WhatYouTake: FC<Props> = React.memo(() => {
             </p>
           </div>
         </div>
-      </div>
+      </WhatYouTakeLay>
     </Section>
   );
 });

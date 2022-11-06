@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { device } from '../../../../styles/auth/breackpoints';
 
 const H1 = styled.h1`
   background: linear-gradient(95.81deg, #21b3b3 22.61%, #3362be 80.36%);
@@ -24,12 +25,29 @@ const H2 = styled.h2`
 const H3 = styled.h3`
   font-style: italic;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 17px;
   line-height: 1.222222222222222em;
   letter-spacing: 0.07em;
   color: #ffffff;
-  margin: 82px auto 0;
+  margin: 0 auto 1.3em;
+
   text-align: center;
+  @media (${device.mobileS}) {
+    font-size: 18px;
+  }
+  @media (${device.mobileM}) {
+    font-size: 20px;
+  }
+  @media (${device.mobileL}) {
+    font-size: 25px;
+  }
+  @media (${device.tablet}) {
+    font-size: 30px;
+  }
+  @media (${device.laptop}) {
+    margin: 82px auto 0;
+    font-size: 36px;
+  }
 `;
 const H4 = styled.h4`
   font-style: italic;
@@ -49,7 +67,7 @@ const H5 = styled.h5`
 const H6 = styled.h6`
   font-style: normal;
   font-weight: 400;
-  font-size: 12px;
+  font-size: 1em;
   line-height: 1.25em;
   color: #ffffff;
 `;

@@ -16,7 +16,7 @@ const SectionLay = styled.section`
     padding: 80px 0 2rem 0;
   }
   :not(:first-child) {
-    padding: 1.5rem 1rem;
+    padding: 1.5rem 0.7em;
   }
 
   ${isDesktop &&

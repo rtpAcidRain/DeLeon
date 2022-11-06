@@ -1,18 +1,20 @@
-import React, { FC, ReactNode } from 'react';
-import { H6 } from './Heading';
+import { FC, ReactNode } from 'react';
+
+import { H6 } from '../Heading';
+import { Header, Heading, Table } from './styled';
 
 type Props = {
   title: string;
-  tablecount: string;
+  tablecount: number;
   children: ReactNode;
 };
 
 const WYTTable: FC<Props> = ({ title, tablecount, children }) => {
   return (
-    <article className={`table table--${tablecount}`}>
-      <header className="table__header">
-        <div className={`table__heading table__heading--${tablecount}`}>
-          {tablecount === 'first' ? (
+    <Table count={tablecount}>
+      <Header>
+        <Heading count={tablecount}>
+          {tablecount === 1 ? (
             <svg
               className="heading__icon"
               width="10"
@@ -92,10 +94,10 @@ const WYTTable: FC<Props> = ({ title, tablecount, children }) => {
             </svg>
           )}
           <H6>{title}</H6>
-        </div>
-      </header>
-      <main>{children}</main>
-    </article>
+        </Heading>
+      </Header>
+      <div>{children}</div>
+    </Table>
   );
 };
 

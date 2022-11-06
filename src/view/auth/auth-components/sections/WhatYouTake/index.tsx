@@ -1,22 +1,18 @@
-import React, { FC } from 'react';
-import styled from 'styled-components';
-import Section from '../layouts/Section';
-import { H3 } from '../UI/Heading';
-import WYTTable from '../UI/WYTTable';
+import React from 'react';
+import Section from '../../layouts/Section';
+import { H3 } from '../../UI/Heading';
+import WYTTable from '../../UI/WYTTable';
+import { Content, Tabels, WhatYouTakeLay, Text } from './style';
 
-type Props = {};
-
-const WhatYouTakeLay = styled.div``;
-
-const WhatYouTake: FC<Props> = React.memo(() => {
+const WhatYouTake = React.memo(() => {
   return (
     <Section>
       <WhatYouTakeLay className="whatyoutake-section">
         <H3>Чего же вы ждете? Начните прямо сейчас!</H3>
-        <div className="content">
-          <div className="graphs">
-            <WYTTable title="Рыночные данные BTC" tablecount={'first'}>
-              <ul className="table__statistic table__statistic--first statistic">
+        <Content className="content">
+          <Tabels>
+            <WYTTable title="Рыночные данные BTC" tablecount={1}>
+              <ul className="statistic">
                 <li className="statistic__item">
                   <p className="statistic__name">Капитализация</p>
                   <p className="statistic__value">$603,866,717</p>
@@ -35,12 +31,7 @@ const WhatYouTake: FC<Props> = React.memo(() => {
                 </li>
               </ul>
               <div className="table__schedule">
-                <svg
-                  width="250"
-                  height="81"
-                  viewBox="0 0 250 81"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
+                <svg viewBox="0 0 250 81" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M2.952 68.6V77H2.088V69.368H0.108V68.6H2.952ZM8.30794 77.072C7.65994 77.072 7.07994 76.9 6.56794 76.556C6.06394 76.212 5.66794 75.72 5.37994 75.08C5.09994 74.432 4.95994 73.672 4.95994 72.8C4.95994 71.928 5.09994 71.172 5.37994 70.532C5.66794 69.884 6.06394 69.388 6.56794 69.044C7.07994 68.7 7.65994 68.528 8.30794 68.528C8.95594 68.528 9.53194 68.7 10.0359 69.044C10.5479 69.388 10.9479 69.884 11.2359 70.532C11.5239 71.172 11.6679 71.928 11.6679 72.8C11.6679 73.672 11.5239 74.432 11.2359 75.08C10.9479 75.72 10.5479 76.212 10.0359 76.556C9.53194 76.9 8.95594 77.072 8.30794 77.072ZM8.30794 76.28C8.79594 76.28 9.22394 76.144 9.59194 75.872C9.96794 75.6 10.2599 75.204 10.4679 74.684C10.6759 74.164 10.7799 73.536 10.7799 72.8C10.7799 72.064 10.6759 71.436 10.4679 70.916C10.2599 70.396 9.96794 70 9.59194 69.728C9.22394 69.456 8.79594 69.32 8.30794 69.32C7.81994 69.32 7.38794 69.456 7.01194 69.728C6.64394 70 6.35594 70.396 6.14794 70.916C5.93994 71.436 5.83594 72.064 5.83594 72.8C5.83594 73.536 5.93994 74.164 6.14794 74.684C6.35594 75.204 6.64394 75.6 7.01194 75.872C7.38794 76.144 7.81994 76.28 8.30794 76.28ZM16.2533 77.072C15.6053 77.072 15.0253 76.9 14.5133 76.556C14.0093 76.212 13.6133 75.72 13.3253 75.08C13.0453 74.432 12.9053 73.672 12.9053 72.8C12.9053 71.928 13.0453 71.172 13.3253 70.532C13.6133 69.884 14.0093 69.388 14.5133 69.044C15.0253 68.7 15.6053 68.528 16.2533 68.528C16.9013 68.528 17.4773 68.7 17.9813 69.044C18.4933 69.388 18.8933 69.884 19.1813 70.532C19.4693 71.172 19.6133 71.928 19.6133 72.8C19.6133 73.672 19.4693 74.432 19.1813 75.08C18.8933 75.72 18.4933 76.212 17.9813 76.556C17.4773 76.9 16.9013 77.072 16.2533 77.072ZM16.2533 76.28C16.7413 76.28 17.1693 76.144 17.5373 75.872C17.9133 75.6 18.2053 75.204 18.4133 74.684C18.6213 74.164 18.7253 73.536 18.7253 72.8C18.7253 72.064 18.6213 71.436 18.4133 70.916C18.2053 70.396 17.9133 70 17.5373 69.728C17.1693 69.456 16.7413 69.32 16.2533 69.32C15.7653 69.32 15.3333 69.456 14.9573 69.728C14.5893 70 14.3013 70.396 14.0933 70.916C13.8853 71.436 13.7812 72.064 13.7812 72.8C13.7812 73.536 13.8853 74.164 14.0933 74.684C14.3013 75.204 14.5893 75.6 14.9573 75.872C15.3333 76.144 15.7653 76.28 16.2533 76.28Z"
                     fill="#C8C8C8"
@@ -87,7 +78,7 @@ const WhatYouTake: FC<Props> = React.memo(() => {
                 </svg>
               </div>
             </WYTTable>
-            <WYTTable title="Рыночные данные ETH" tablecount={'second'}>
+            <WYTTable title="Рыночные данные ETH" tablecount={2}>
               <ul className="table__statistic table__statistic--second statistic">
                 <li className="statistic__item">
                   <p className="statistic__name">Капитализация</p>
@@ -98,7 +89,7 @@ const WhatYouTake: FC<Props> = React.memo(() => {
                   <p className="statistic__value">$42,637,405</p>
                 </li>
                 <li className="statistic__item">
-                  <p className="statistic__name">Цена BTC сейчас</p>
+                  <p className="statistic__name">Цена ETH сейчас</p>
                   <p className="statistic__value">$2,356,00</p>
                 </li>
                 <li className="statistic__item">
@@ -107,27 +98,25 @@ const WhatYouTake: FC<Props> = React.memo(() => {
                 </li>
               </ul>
             </WYTTable>
-          </div>
-          <div className="content__text">
-            <p className="text text--first">
+          </Tabels>
+          <div>
+            <Text>
               Всё больше людей узнают о криптовалютах благодаря СМИ и интернету. С каждым днем
               криптовалюту начинают признавать все больше передовых стран. Ежедневно мы слышим о
               разных крупных компаниях, которые инвестируют и принимают в качестве оплаты такие
               криптовалюты, как биткоин и эфириум.
-            </p>
-            <p className="text text--second">
+            </Text>
+            <Text>
               Задумайся, почему Биллу Гейтсу и его компании Microsoft выгодно продавать свои товары
               и услуги за криптовалюту?
-            </p>
-            <p className="text text--third">
+            </Text>
+            <Text>
               Мы уверены, что будущее стоит за криптовалютным рынком. Так почему же не начать
               изучать его уже сегодня?
-            </p>
-            <p className="text text--fourth">
-              Купив биткоина на 100$ два года назад - сегодня бы он стоил 1084$
-            </p>
+            </Text>
+            <Text>Купив биткоина на 100$ два года назад - сегодня бы он стоил 1084$</Text>
           </div>
-        </div>
+        </Content>
       </WhatYouTakeLay>
     </Section>
   );

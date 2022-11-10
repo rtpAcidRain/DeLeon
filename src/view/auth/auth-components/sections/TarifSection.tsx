@@ -5,6 +5,7 @@ import Tarif, { TarifENUMS } from '../Tarif';
 import styled from 'styled-components';
 import { device, size } from '../../../../styles/auth/breackpoints';
 import { isMobile } from 'react-device-detect';
+import { motion } from 'framer-motion';
 
 const tarifsData = [
   {
@@ -84,7 +85,22 @@ const TarifSection: React.FC = React.memo(() => {
   return (
     <Section>
       <H3>Тарифы</H3>
-      <Tarifs>
+      <Tarifs
+        as={motion.div}
+        variants={{
+          hidden: { opacity: 1, scale: 0 },
+          visible: {
+            opacity: 1,
+            scale: 1,
+            transition: {
+              delayChildren: 0.3,
+              staggerChildren: 0.2,
+            },
+          },
+        }}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}>
         {tarifsData.map((el) => (
           <Tarif
             key={el.id}

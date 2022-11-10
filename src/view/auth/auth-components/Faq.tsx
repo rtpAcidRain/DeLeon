@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 import { H5 } from './UI/Heading';
+import { motion } from 'framer-motion';
 
 type Props = {
   question: string;
@@ -8,10 +9,18 @@ type Props = {
 
 const Faq: FC<Props> = React.memo(({ question, answer }) => {
   return (
-    <article className="quesiton__item">
+    <motion.article
+      className="quesiton__item"
+      variants={{
+        hidden: { y: 20, opacity: 0 },
+        visible: {
+          y: 0,
+          opacity: 1,
+        },
+      }}>
       <H5>{question}</H5>
       <p className="answer">{answer}</p>
-    </article>
+    </motion.article>
   );
 });
 

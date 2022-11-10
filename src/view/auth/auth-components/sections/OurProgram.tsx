@@ -6,6 +6,7 @@ import MediaQuery from 'react-responsive';
 import styled from 'styled-components';
 import { device, size } from '../../../../styles/auth/breackpoints';
 import { isMobile } from 'react-device-detect';
+import { motion } from 'framer-motion';
 
 const Program = styled.div`
   position: relative;
@@ -137,7 +138,11 @@ const OurProgram: React.FC = React.memo(() => {
   return (
     <Section>
       <H3>Наша программа</H3>
-      <Program>
+      <Program
+        as={motion.div}
+        initial={{ opacity: 0, scale: 0 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}>
         <MediaQuery minWidth={size.tablet}>
           <Road viewBox="0 0 868 516" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path

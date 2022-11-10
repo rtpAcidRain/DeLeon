@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import React from 'react';
 import { isMobile } from 'react-device-detect';
 import styled from 'styled-components';
@@ -99,7 +100,7 @@ const LearningFormatSection: React.FC<Props> = React.memo((props: Props) => {
   return (
     <Section>
       <H3>Формат обучения</H3>
-      <Learning>
+      <Learning as={motion.div} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
         <Container>
           <ItemGreen>
             <ItemContainer>

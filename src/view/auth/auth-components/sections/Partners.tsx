@@ -6,6 +6,7 @@ import { AirLinesIco, ApploIco, X5Ico } from '../../auth-assets/svg/icons';
 import styled from 'styled-components';
 import { device, size } from '../../../../styles/auth/breackpoints';
 import { isDesktop, isMobile } from 'react-device-detect';
+import { motion } from 'framer-motion';
 
 type Props = {};
 
@@ -93,18 +94,57 @@ const Partners: React.FC<Props> = React.memo((props: Props) => {
   return (
     <Section>
       <H3>Партнеры</H3>
-      <PartnersStyle>
-        <Back>
+      <PartnersStyle
+        as={motion.div}
+        variants={{
+          hidden: { opacity: 1, scale: 0 },
+          visible: {
+            opacity: 1,
+            scale: 1,
+            transition: {
+              delayChildren: 0.3,
+              staggerChildren: 0.2,
+            },
+          },
+        }}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}>
+        <Back
+          as={motion.div}
+          variants={{
+            hidden: { y: 20, opacity: 0 },
+            visible: {
+              y: 0,
+              opacity: 1,
+            },
+          }}>
           <Front>
             <ApploIco className="logo" />
           </Front>
         </Back>
-        <Back>
+        <Back
+          as={motion.div}
+          variants={{
+            hidden: { y: 20, opacity: 0 },
+            visible: {
+              y: 0,
+              opacity: 1,
+            },
+          }}>
           <Front>
             <AirLinesIco className="logo" />
           </Front>
         </Back>
-        <Back>
+        <Back
+          as={motion.div}
+          variants={{
+            hidden: { y: 20, opacity: 0 },
+            visible: {
+              y: 0,
+              opacity: 1,
+            },
+          }}>
           <Front>
             <X5Ico className="logo" />
           </Front>

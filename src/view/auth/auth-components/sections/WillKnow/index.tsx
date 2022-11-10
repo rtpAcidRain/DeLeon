@@ -17,6 +17,7 @@ import styled from 'styled-components';
 import Stand from './Stand';
 import { device } from '../../../../../styles/auth/breackpoints';
 import { isDesktop, isMobile } from 'react-device-detect';
+import { motion } from 'framer-motion';
 
 const WillKnowWrapper = styled.div`
   font-size: 7px;
@@ -404,7 +405,11 @@ const WillKnow: React.FC = React.memo(() => {
   return (
     <Section>
       <H3>Что вы узнаете</H3>
-      <WillKnowWrapper>
+      <WillKnowWrapper
+        as={motion.div}
+        initial={{ opacity: 0, scale: 0 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}>
         <Composition>
           <img src={line} alt="line" className="line line--1" />
           <img src={line} alt="line" className="line line--2" />

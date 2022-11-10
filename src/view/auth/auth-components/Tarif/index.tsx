@@ -21,6 +21,7 @@ import {
   Sale,
   Button,
 } from './styles';
+import { motion } from 'framer-motion';
 
 export enum TarifENUMS {
   LOWERLEVEL = 'Хомяк',
@@ -48,8 +49,16 @@ const Tarif: React.FC<Props> = React.memo(({ title, content, prise, sale }) => {
     // eslint-disable-next-line
   }, []);
 
+  const item = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+    },
+  };
+
   return (
-    <TarifWrapper colors={colors}>
+    <TarifWrapper colors={colors} as={motion.article} variants={item}>
       <Dec>
         <RightDec
           color1={

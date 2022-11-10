@@ -25,13 +25,16 @@ const SectionLay = styled.section`
     scroll-snap-align: start;
     scroll-snap-stop: always;
     object-fit: cover;
-
+    
     :first-child {
       min-height: unset;
       padding: 0;
+      padding: 0 15px 0 225px;
     }
     :not(:first-child) {
       padding: 0;
+      padding: 0 15px 0 225px;
+
     }
   }`}
 `;
@@ -46,7 +49,8 @@ const Container = styled.div`
   @media (${device.laptop}) {
     ${isDesktop && 'height: 100vh;'}
     max-width: 1440px;
-    max-height: 800px;
+    ${isDesktop && 'max-height: 800px;'}
+
     width: 100%;
   }
 `;

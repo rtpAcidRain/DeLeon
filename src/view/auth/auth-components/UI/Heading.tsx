@@ -1,3 +1,4 @@
+import { isMobile } from 'react-device-detect';
 import styled from 'styled-components';
 import { device } from '../../../../styles/auth/breackpoints';
 
@@ -14,7 +15,7 @@ const H1 = styled.h1`
 const H2 = styled.h2`
   font-style: italic;
   font-weight: 800;
-  font-size: 2.5rem;
+  font-size: 2.5em;
   line-height: 1.225em;
   letter-spacing: 0.01em;
   background: linear-gradient(90deg, #399892 25%, #375fbe 80.58%);
@@ -45,7 +46,7 @@ const H3 = styled.h3`
     font-size: 30px;
   }
   @media (${device.laptop}) {
-    margin: 82px auto 0;
+    margin: 82px auto ${isMobile ? '1.3em' : '0'};
     font-size: 36px;
   }
 `;

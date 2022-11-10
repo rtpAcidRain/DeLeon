@@ -1,3 +1,4 @@
+import { isDesktop } from 'react-device-detect';
 import styled from 'styled-components';
 import { device, size } from '../../../../../styles/auth/breackpoints';
 import { SectionButton } from '../../../../../styles/auth/Buttons';

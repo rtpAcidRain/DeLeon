@@ -1,3 +1,4 @@
+import { isDesktop, isMobile } from 'react-device-detect';
 import styled from 'styled-components';
 import { device, size } from '../../../../../styles/auth/breackpoints';
 
@@ -20,7 +21,7 @@ export const WhatYouTakeLay = styled.div`
   @media (${device.tablet}) {
     max-width: ${size.tablet}px;
   }
-  @media (${device.laptop}) {
+  @media (${isMobile ? device.laptop : 'min-width: 1302px'}) {
     font-size: 16px;
     margin: 0 auto;
     width: 100%;
@@ -33,15 +34,20 @@ export const Content = styled.div`
     display: flex;
     justify-content: space-between;
   }
-  @media (${device.laptop}) {
+  @media (${isMobile ? device.laptop : 'min-width: 1302px'}) {
     margin: 3.375em 68px auto auto;
     max-width: 1050px;
     width: 100%;
   }
+  ${isDesktop &&
+  `@media (${device.laptop}) {
+    margin-top: 7vh;
+   
+  }`}
 `;
 
 export const Tabels = styled.div`
-  @media (${device.laptop}) {
+  @media (${isMobile ? device.laptop : 'min-width: 1302px'}) {
     max-width: 462px;
     width: 100%;
   }
@@ -99,7 +105,7 @@ export const Text = styled.p`
       text-align: start;
     }
   }
-  @media (${device.laptop}) {
+  @media (${isMobile ? device.laptop : 'min-width: 1302px'}) {
     :nth-child(1) {
       max-width: unset;
       width: 620px;

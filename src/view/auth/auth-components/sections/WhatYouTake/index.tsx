@@ -9,7 +9,7 @@ const WhatYouTake = React.memo(() => {
     <Section>
       <WhatYouTakeLay className="whatyoutake-section">
         <H3>Чего же вы ждете? Начните прямо сейчас!</H3>
-        <Content className="content">
+        <Content>
           <Tabels>
             <WYTTable title="Рыночные данные BTC" tablecount={1}>
               <ul className="statistic">

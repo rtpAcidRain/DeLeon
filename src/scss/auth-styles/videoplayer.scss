@@ -1,0 +1,43 @@
+.video-js {
+  width: 208px;
+  height: auto;
+  display: block;
+  margin: auto;
+  aspect-ratio: 16 / 9;
+  border: 0.5em solid #fff;
+  cursor: pointer;
+  @media (min-width: 320px) {
+    width: 295px;
+  }
+  @media (min-width: 375px) {
+    width: 350px;
+  }
+  @media (min-width: 425px) {
+    width: 403px;
+  }
+  @media (min-width: 768px) {
+    width: 745px;
+  }
+
+  @media (min-width: 1024px) {
+    width: 800px;
+  }
+}
+
+.vjs-big-play-button {
+  display: none !important;
+}
+
+.vjs-picture-in-picture-control {
+  display: none !important;
+}
+
+.vjs-fullscreen-control {
+  display: none !important;
+}
+
+.vjs-control-bar {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}

@@ -131,7 +131,7 @@ export const Item = styled.li`
 export const Text = styled.p`
   margin-left: 13px;
   font-weight: 500;
-  font-size: 0.75rem;
+  font-size: 0.75em;
   line-height: 1.25em;
 
   color: #ffffff;
@@ -147,7 +147,7 @@ export const Footer = styled.footer`
 export const Price = styled.p`
   font-style: italic;
   font-weight: 700;
-  font-size: 1.3125rem;
+  font-size: 1.3125em;
   line-height: 1.238095238095238em;
   margin-bottom: 4px;
   color: #8f8b8b;
@@ -159,14 +159,14 @@ export const Price = styled.p`
 export const Sale = styled.p`
   font-style: italic;
   font-weight: 700;
-  font-size: 1.125rem;
+  font-size: 1.125em;
   line-height: 1.222222222222222em;
   margin-bottom: 11px;
   color: #ffffff;
 `;
 
 export const Button = styled(SectionButton)`
-  font-size: 0.8125rem;
+  font-size: 0.8125em;
   max-width: 140px;
   width: 100%;
   padding: 0.6923076923076923em 0;

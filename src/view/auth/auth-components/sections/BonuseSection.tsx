@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import React from 'react';
 import { isMobile } from 'react-device-detect';
 import styled from 'styled-components';
@@ -36,7 +37,8 @@ const Bonuse = styled.div`
   display: flex;
   max-width: 350px;
   align-items: center;
-  width: 100%
+  width: 100%;
+  margin: auto;
   justify-content: center;
   padding: 0.2em;
   border-radius: 1.1em;
@@ -85,18 +87,57 @@ const BonuseSection: React.FC<Props> = React.memo((props: Props) => {
   return (
     <Section>
       <H3>Бонусы</H3>
-      <Bonuses>
-        <Bonuse>
+      <Bonuses
+        as={motion.div}
+        variants={{
+          hidden: { opacity: 1, scale: 0 },
+          visible: {
+            opacity: 1,
+            scale: 1,
+            transition: {
+              delayChildren: 0.3,
+              staggerChildren: 0.2,
+            },
+          },
+        }}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}>
+        <Bonuse
+          as={motion.div}
+          variants={{
+            hidden: { y: 20, opacity: 0 },
+            visible: {
+              y: 0,
+              opacity: 1,
+            },
+          }}>
           <Text>
             Подарки для лучших <br /> учеников от спонсоров
           </Text>
         </Bonuse>
-        <Bonuse>
+        <Bonuse
+          as={motion.div}
+          variants={{
+            hidden: { y: 20, opacity: 0 },
+            visible: {
+              y: 0,
+              opacity: 1,
+            },
+          }}>
           <Text>
             Доступ к закрытому клубу выпускников , возможность развиваться с единомышленниками
           </Text>
         </Bonuse>
-        <Bonuse>
+        <Bonuse
+          as={motion.div}
+          variants={{
+            hidden: { y: 20, opacity: 0 },
+            visible: {
+              y: 0,
+              opacity: 1,
+            },
+          }}>
           <Text>По окончанию курса NFT сертификат школы в подарок!</Text>
         </Bonuse>
       </Bonuses>

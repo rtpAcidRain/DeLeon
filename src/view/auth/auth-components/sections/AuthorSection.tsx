@@ -8,6 +8,7 @@ import MediaQuery from 'react-responsive';
 import { device, size } from '../../../../styles/auth/breackpoints';
 import styled from 'styled-components';
 import { isMobile } from 'react-device-detect';
+import { motion } from 'framer-motion';
 
 const Author = styled.div`
   font-size: 7px;
@@ -135,7 +136,7 @@ const AuthorSection: React.FC = React.memo(() => {
   return (
     <Section>
       <H3>Автор курса</H3>
-      <Author>
+      <Author as={motion.div} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
         <MediaQuery minWidth={size.tablet}>
           <img className="course-author__image" src={authorImage} alt="author" />
         </MediaQuery>

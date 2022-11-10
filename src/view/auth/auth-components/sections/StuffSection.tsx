@@ -28,6 +28,7 @@ import slava from '../../auth-assets/images/stuff/slava.png';
 
 import styled from 'styled-components';
 import { device } from '../../../../styles/auth/breackpoints';
+import { motion } from 'framer-motion';
 
 const Stuff = styled.div`
   font-size: 12px;
@@ -90,7 +91,7 @@ const StuffSection = React.memo(() => {
   return (
     <Section>
       <H3>Наша команда</H3>
-      <Stuff>
+      <Stuff as={motion.div} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
         <Item>
           <Avatar>
             <img

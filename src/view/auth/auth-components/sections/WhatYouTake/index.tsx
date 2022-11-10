@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import React from 'react';
 import Section from '../../layouts/Section';
 import { H3 } from '../../UI/Heading';
@@ -8,8 +9,10 @@ const WhatYouTake = React.memo(() => {
   return (
     <Section>
       <WhatYouTakeLay className="whatyoutake-section">
-        <H3>Чего же вы ждете? Начните прямо сейчас!</H3>
-        <Content>
+        <H3 as={motion.h3} initial={{ y: 40, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }}>
+          Чего же вы ждете? Начните прямо сейчас!
+        </H3>
+        <Content as={motion.div} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
           <Tabels>
             <WYTTable title="Рыночные данные BTC" tablecount={1}>
               <ul className="statistic">

@@ -14,7 +14,15 @@ const HomeSection: FC<Props> = React.memo(({ ChangeSection }) => {
   return (
     <Section>
       <Home>
-        <Content>
+        <Content
+          as={motion.div}
+          initial={{ y: -20, scale: 0 }}
+          animate={{ y: 0, scale: 1 }}
+          transition={{
+            type: 'spring',
+            stiffness: 260,
+            damping: 35,
+          }}>
           <ContentText className="content__text">
             <H1>КриптоСтарт</H1>
             <p className="text">
@@ -39,7 +47,17 @@ const HomeSection: FC<Props> = React.memo(({ ChangeSection }) => {
         </Content>
         <Picture>
           <picture>
-            <img src={coin} alt="cryptoCoin" />
+            <motion.img
+              initial={{ rotate: 180, scale: 0 }}
+              animate={{ rotate: 0, scale: 1 }}
+              transition={{
+                type: 'spring',
+                stiffness: 260,
+                damping: 35,
+              }}
+              src={coin}
+              alt="cryptoCoin"
+            />
           </picture>
         </Picture>
       </Home>

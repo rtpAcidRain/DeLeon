@@ -21,6 +21,7 @@ import {
   MailIcon,
 } from './style';
 import { isDesktop } from 'react-device-detect';
+import { motion } from 'framer-motion';
 
 type Props = {
   ChangeSection: (idx: number) => void;
@@ -51,6 +52,26 @@ const SideBar: FC<Props> = ({ ChangeSection, currentSection }) => {
     ChangeSection(i);
   };
 
+  const container = {
+    hidden: { opacity: 1, scale: 0 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delayChildren: 0.1,
+        staggerChildren: 0.05,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { x: -20, opacity: 0 },
+    visible: {
+      x: 0,
+      opacity: 1,
+    },
+  };
+
   return (
     <Sidebar>
       <SideContainer>
@@ -67,9 +88,16 @@ const SideBar: FC<Props> = ({ ChangeSection, currentSection }) => {
 
         <Controls show={show}>
           <Navbar>
-            <NavItems className="navbar__items">
+            <NavItems
+              as={motion.ul}
+              variants={container}
+              initial="hidden"
+              animate="visible"
+              className="navbar__items">
               {sections.map((el, i) => (
                 <Item
+                  as={motion.li}
+                  variants={item}
                   onClick={() => onChange(i)}
                   key={i}
                   active={currentSection === i ? true : false}>

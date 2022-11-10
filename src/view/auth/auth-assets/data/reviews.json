@@ -1,25 +1,21 @@
 [
   {
-    "id": 1,
-    "img": "https://s3-alpha-sig.figma.com/img/23ed/ad01/53988d6704197a43ed4d17e51f00e455?Expires=1658102400&Signature=KFlVh1Z~AhgI3oDoA7q0K0R4kghHa0QCODQv440AoHJzPZ1kPOWYUGt1IsR~NHuRJ9hoWF9OfrLTqnuxdRigC6Eciy7LIFZpDsEKyoe2E-9ez~Gu6zF1vuGP6PbiEjZ2sjbbSfFegAfnWC36gu63cSsPyyRcsTw1xFbryiKsMVjE~WiKmDNtvsR2fs~sr8HBdPWjwqABqZos8-y3NW2h9dwidLjzK~QWpHA74ccG5jXcLWfAniwTGxvy0yqr3lyriqN7lMY-CX17Ok8gRdp421naszDNoYbMTpGfFomCwLovzdZveF-s0bB2B5AW55DgVVXdcrTMppgY9WHEKK-HYQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+    "id": 0,
     "useName": "Алексей",
     "description": "Прошел курс, хотелось бы оставить тут свое мнение. Курс давольно интересный, всегда помогут и объяснят, что ты делаешь не так. Много нового для себя извлек. Материал очень подробно рассказывается на уроках. В общем, если есть желание приумножить свои знания в сфере крипты, советую брать курс!)"
   },
   {
-    "id": 2,
-    "img": "https://s3-alpha-sig.figma.com/img/f0a3/3761/69c4da5e78338d8bb6dc30ecc0564f18?Expires=1658102400&Signature=GiOA1i0VuWwnce1MwzaCAjPXuDoyxgf--XJHiW79fZ9dWzK7WsvEkUY7no4SA2y~zGlSYzeYZ6fDtT1Lxr774xMUTOitPCToIQQNZUxy4PA-Ts~GwS3fonZa2wwt7k3RvBqvPeifEAr~ISecBEhOz86k~CwKiR45mmeJjjxPjhvLg5j28XGid5pTUgOKfAb35OQkgSxeXhae9bXyyNsR6Tj4ecz3jbr-cLLEsYY9vhbSc8xev9hfMBqv9I6Z-PaWHdQRifnXLDS3H~boRJ83yTGN8Nc6CojaMu0f8ip~vNkjFNBlMiWKnFk86PFpZS6-shpB1wllm~RqarzFkjsFPA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",  
+    "id": 1,
     "useName": "Артур",
     "description": "Делаю финальные шаги к началу работы на криптобирже. Без данного курса я бы вряд ли сам разобрался в сфере криптоторговле. Очень благодарен автору курса. И с уверенностью говорю, что курс стоит своих денег и даже больше. Советую сразу брать полный тариф, не пожалеете. Спасибо большое за обучение!"
   },
   {
-    "id": 3,
-    "img": "https://s3-alpha-sig.figma.com/img/f94a/bea0/956e5acd322ff3bad53fbbba2de488ca?Expires=1658102400&Signature=OKkye~VVWSikGI8fsdBscvbq2sqCnFzr4RCqlpWYkg5S43rbbYY7jbr02ygzwteD5JT1Oy-uV1X7AX9K5gP~fbuje-vwrbttZCETxVeH14JCkH-lf1AcwCA-llIJ-P6OAySQSSJZPD5M~HV4Vy7WK8XA4ogh3cyLyw4S5eS6LKKpcn1pqwuEVE3r6TR2s6oYP-AGFdQXjiteRq6smZVbCBe2xIsxrk1GEQ3S-wMmPQDV2uJOXI7Er28pEYfITxa-9WMMFHMsXWBCed~FW1ZipviCTbvKYFObZIlxWGswAQlPyJv-asxI~lt6WQRfqlALW5ZMeqWcADpYQbaLgP81EQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA", 
+    "id": 2,
     "useName": "Илья",
     "description": "Закончил полный курс и остался доволен. Узнал для себя очень много информации. Сами уроки были составлены грамотно, доходчиво. Воды не было. Курс очень интесивный и дает сбалансированный объем знаний. И без дела не сидишь, но и все задания выполнять успеваешь) На все свои вопросы получал подробные ответы."
   },
   {
-    "id": 4,
-    "img": "https://s3-alpha-sig.figma.com/img/d835/0a92/1d03d73360fa772829d007cce5379724?Expires=1658102400&Signature=B6DLcWsl2dTYF4PgmYpusy-VqJWro7bkjy6Xz4Jsd6VI7~wz3NIeVMgAHQElbRRRDl749bWMuREu04R1zNoPse9EUx42yZVqFOHVqHS7tpAkeS0pMFYNf5XwNMg8vIp34X-3ZGNWcklqRHtbvUc7df1-ZcnhzjRoyFsZrN1WZHA9cRwwABrV4-0v2I8ppSXPbbDoBivFaMUufb7CJICqL5Zy6RRLR89rKnm1jfpS0YeabsSHToWmPwBflCVyGUC3vmFpvWxVkPDvMu7MWqx9XA7O2Mrb5Hacg-H5CgM7XM3wV~eY8BAaycon13JWbSuSCdTBtepxn0yn8RR0PFv7yA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+    "id": 3,
     "useName": "Александр",
     "description": "Хочу поблагодарить автора курса и его команду за такой замечательный и полезный курс! Он заложил хорошее основание для развития в этой сфере! Уроки более чем понятные, домашние задания заставляют использовать полученные на уроке знания, но автор если что подсказывает и поправляет.  В итоге получил nft-сертификат о прохождении курса, множество теоретических знаний и формул о криптовалюте и операциям с ней. И конечно же множество часов практики. Огромное спасибо!!!"
   }

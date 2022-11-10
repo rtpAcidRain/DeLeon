@@ -3,6 +3,8 @@ import Section from '../layouts/Section';
 import { H3 } from '../UI/Heading';
 import Tarif, { TarifENUMS } from '../Tarif';
 import styled from 'styled-components';
+import { device, size } from '../../../../styles/auth/breackpoints';
+import { isMobile } from 'react-device-detect';
 
 const tarifsData = [
   {
@@ -49,12 +51,32 @@ const tarifsData = [
 const Tarifs = styled.div`
   margin-top: 51px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 77px;
-  margin-left: 229px;
-  padding: 0 50px;
-  @media screen and (max-width: 1439px) {
-    margin: auto;
+  row-gap: 33px;
+  font-size: 10px;
+  margin: auto;
+  max-width: 230px;
+  @media (${device.mobileS}) {
+    font-size: 11px;
+    max-width: ${size.mobileS}px;
+  }
+  @media (${device.mobileM}) {
+    font-size: 12px;
+    max-width: ${size.mobileM}px;
+  }
+  @media (${device.mobileL}) {
+    font-size: 14px;
+    max-width: ${size.mobileL}px;
+  }
+  @media (${device.tablet}) {
+    font-size: 15px;
+    max-width: ${size.tablet}px;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 33px;
+  }
+  @media (${isMobile ? device.laptop : 'min-width: 1302px'}) {
+    font-size: 16px;
+    max-width: ${size.laptop}px;
+    gap: 77px;
   }
 `;
 

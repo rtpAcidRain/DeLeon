@@ -4,6 +4,7 @@ import { H1 } from '../../UI/Heading';
 import coin from '../../../auth-assets/images/cryptocoin.png';
 import React, { FC } from 'react';
 import { Home, Buttons, Button, Content, ContentText, List, ListItem, Picture } from './style';
+import { motion } from 'framer-motion';
 
 type Props = {
   ChangeSection: (idx: number) => void;

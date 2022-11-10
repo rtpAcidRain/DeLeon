@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { device } from './breackpoints';
 
 const Button = styled.button`
   z-index: 9998;
@@ -42,6 +43,9 @@ const ArrowBut = styled(Button)`
   background: none;
   border: 0;
   z-index: 9999;
+  @media (${device.laptop}) {
+    width: 45px;
+  }
 `;
 
 const TopButton = styled(ArrowBut)`
@@ -53,15 +57,31 @@ const BotButton = styled(ArrowBut)`
   transform: rotate(180deg);
 `;
 
-const LeftButton = styled(ArrowBut)`
-  width: 45px;
+const SwiperBut = styled(ArrowBut)`
+  width: 20px;
   top: 50%;
+  @media (${device.mobileS}) {
+    width: 25px;
+  }
+  @media (${device.mobileM}) {
+    width: 30px;
+  }
+  @media (${device.mobileL}) {
+    width: 35px;
+  }
+  @media (${device.tablet}) {
+    width: 40px;
+  }
+  @media (${device.laptop}) {
+    width: 45px;
+  }
+`;
+
+const LeftButton = styled(SwiperBut)`
   transform: translateY(-50%) rotate(-90deg);
   left: 0;
 `;
-const RightButton = styled(ArrowBut)`
-  width: 45px;
-  top: 50%;
+const RightButton = styled(SwiperBut)`
   left: unset;
   transform: translateY(-50%) rotate(90deg);
   right: 0;

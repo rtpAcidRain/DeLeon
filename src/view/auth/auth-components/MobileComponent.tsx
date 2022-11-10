@@ -2,7 +2,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import ContentComponent from './ContentComponent';
 import SideBar from './SideBar';
 
-import '../../../scss/auth-styles/mobile/style.scss';
+import '../../../scss/auth-styles/desktop/style.scss';
 import { App, Main } from '../../../styles/auth/AuthApp';
 
 type Props = {};

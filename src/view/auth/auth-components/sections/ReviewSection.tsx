@@ -4,12 +4,17 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import Section from '../layouts/Section';
 import { H3 } from '../UI/Heading';
 import Review from '../Review';
+import { isWebpSupported } from 'react-image-webp/dist/utils';
 
 import reviews from '../../auth-assets/data/reviews.json';
 import avatar1 from '../../auth-assets/images/reviews/1.jpg';
 import avatar2 from '../../auth-assets/images/reviews/2.jpg';
 import avatar3 from '../../auth-assets/images/reviews/3.jpg';
 import avatar4 from '../../auth-assets/images/reviews/4.jpg';
+import avatar1Webp from '../../auth-assets/images/reviews/1.webp';
+import avatar2Webp from '../../auth-assets/images/reviews/2.webp';
+import avatar3Webp from '../../auth-assets/images/reviews/3.webp';
+import avatar4Webp from '../../auth-assets/images/reviews/4.webp';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -19,7 +24,12 @@ import { SwiperButton } from '../UI/Buttons';
 import styled from 'styled-components';
 import { device } from '../../../../styles/auth/breackpoints';
 
-const images = [avatar1, avatar2, avatar3, avatar4];
+const images = [
+  { src: avatar1, webp: avatar1Webp },
+  { src: avatar2, webp: avatar2Webp },
+  { src: avatar3, webp: avatar3Webp },
+  { src: avatar4, webp: avatar4Webp },
+];
 
 const Reviews = styled.div`
   font-size: 7px;
@@ -63,7 +73,11 @@ const ReviewSection: FC = React.memo(() => {
             <SwiperButton vector="right" />
             {reviews.map((el) => (
               <SwiperSlide key={el.id}>
-                <Review img={images[el.id]} name={el.useName} text={el.description} />
+                <Review
+                  img={isWebpSupported ? images[el.id].webp : images[el.id].src}
+                  name={el.useName}
+                  text={el.description}
+                />
               </SwiperSlide>
             ))}
           </Swiper>

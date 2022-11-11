@@ -1,10 +1,13 @@
 import Section from '../layouts/Section';
 import VideoPlayer from '../VideoPlayer';
 import 'video.js/dist/video-js.css';
+import { isWebpSupported } from 'react-image-webp/dist/utils';
 
 import video from '../../auth-assets/videos/video.mp4';
 import preview from '../../auth-assets/images/videoPreview.jpg';
-import React, { FC } from 'react';
+import previewWebp from '../../auth-assets/images/videoPreview.webp';
+
+import React, { FC, useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { VideoJsPlayerOptions } from 'video.js';
 
@@ -13,10 +16,18 @@ const Container = styled.div`
 `;
 
 const VideoSection: FC = React.memo(() => {
+  const [previewImage, setPreviewImage] = useState(preview);
+
+  useEffect(() => {
+    if (isWebpSupported) {
+      setPreviewImage(previewWebp);
+    }
+  }, []);
+
   const videoOptions: VideoJsPlayerOptions = {
     autoplay: false,
     controls: true,
-    poster: preview,
+    poster: previewImage,
     preload: 'none',
     sources: [
       {

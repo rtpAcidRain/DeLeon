@@ -19,6 +19,7 @@
     "react-device-detect": "^2.2.2",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
+    "react-image-webp": "^0.8.0",
     "react-responsive": "^9.0.0",
     "react-scripts": "5.0.1",
     "react-transition-group": "^4.4.2",

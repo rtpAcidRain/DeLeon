@@ -2,6 +2,8 @@ import Section from '../../layouts/Section';
 import { H1 } from '../../UI/Heading';
 
 import coin from '../../../auth-assets/images/cryptocoin.png';
+import coinWebp from '../../../auth-assets/images/cryptocoin.webp';
+
 import React, { FC } from 'react';
 import { Home, Buttons, Button, Content, ContentText, List, ListItem, Picture } from './style';
 import { motion } from 'framer-motion';
@@ -47,6 +49,7 @@ const HomeSection: FC<Props> = React.memo(({ ChangeSection }) => {
         </Content>
         <Picture>
           <picture>
+            <source srcSet={coinWebp} type="image/webp" />
             <motion.img
               initial={{ rotate: 180, scale: 0 }}
               animate={{ rotate: 0, scale: 1 }}

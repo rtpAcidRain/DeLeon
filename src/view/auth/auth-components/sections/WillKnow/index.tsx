@@ -3,6 +3,8 @@ import Section from '../../layouts/Section';
 import { H3 } from '../../UI/Heading';
 
 import line from '../../../auth-assets/images/willKnow/dashes.png';
+import lineWebp from '../../../auth-assets/images/willKnow/dashes.webp';
+
 import {
   ArchIco,
   Bitcoin,
@@ -411,10 +413,23 @@ const WillKnow: React.FC = React.memo(() => {
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}>
         <Composition>
-          <img src={line} alt="line" className="line line--1" />
-          <img src={line} alt="line" className="line line--2" />
-          <img src={line} alt="line" className="line line--3" />
-          <img src={line} alt="line" className="line line--4" />
+          <picture>
+            <source srcSet={lineWebp} type="image/webp" />
+            <img src={line} alt="line" className="line line--1" />
+          </picture>
+          <picture>
+            <source srcSet={lineWebp} type="image/webp" />
+            <img src={line} alt="line" className="line line--2" />
+          </picture>
+          <picture>
+            <source srcSet={lineWebp} type="image/webp" />
+            <img src={line} alt="line" className="line line--3" />
+          </picture>
+          <picture>
+            <source srcSet={lineWebp} type="image/webp" />
+            <img src={line} alt="line" className="line line--4" />
+          </picture>
+
           <ArchIco className="arch arch--1" />
           <ArchIco className="arch arch--2" />
           <ArchIco className="arch arch--3" />

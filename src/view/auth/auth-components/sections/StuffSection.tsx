@@ -25,6 +25,11 @@ import sanechka from '../../auth-assets/images/stuff/sanechka.png';
 import richardson from '../../auth-assets/images/stuff/richardson.png';
 import dimchanskiy from '../../auth-assets/images/stuff/dimchanskiy.png';
 import slava from '../../auth-assets/images/stuff/slava.png';
+import maysonWebp from '../../auth-assets/images/stuff/mayson.webp';
+import sanechkaWebp from '../../auth-assets/images/stuff/sanechka.webp';
+import richardsonWebp from '../../auth-assets/images/stuff/richardson.webp';
+import dimchanskiyWebp from '../../auth-assets/images/stuff/dimchanskiy.webp';
+import slavaWebp from '../../auth-assets/images/stuff/slava.webp';
 
 import styled from 'styled-components';
 import { device } from '../../../../styles/auth/breackpoints';
@@ -114,7 +119,10 @@ const StuffSection = React.memo(() => {
               src={poopCloud}
               alt="avatar__poop"
             />
-            <img className="avatar__image" src={mayson} alt="avatar" />
+            <picture>
+              <source srcSet={maysonWebp} type="image/webp" />
+              <img className="avatar__image" src={mayson} alt="avatar" />
+            </picture>
           </Avatar>
           <Text>
             <p className="stuff__name">Мэйсон</p>
@@ -144,7 +152,10 @@ const StuffSection = React.memo(() => {
               alt="avatar__poop"
             />
 
-            <img className="avatar__image" src={sanechka} alt="avatar" />
+            <picture>
+              <source srcSet={sanechkaWebp} type="image/webp" />
+              <img className="avatar__image" src={sanechka} alt="avatar" />
+            </picture>
           </Avatar>
           <Text>
             <p className="stuff__name">Александр</p>
@@ -174,7 +185,10 @@ const StuffSection = React.memo(() => {
               alt="avatar__poop"
             />
 
-            <img className="avatar__image" src={richardson} alt="avatar" />
+            <picture>
+              <source srcSet={richardsonWebp} type="image/webp" />
+              <img className="avatar__image" src={richardson} alt="avatar" />
+            </picture>
           </Avatar>
           <Text>
             <p className="stuff__name">Ричард</p>
@@ -205,12 +219,15 @@ const StuffSection = React.memo(() => {
               alt="avatar__poop"
             />
 
-            <img
-              style={{ transform: 'translate(-38%, -50%)' }}
-              className="avatar__image"
-              src={dimchanskiy}
-              alt="avatar"
-            />
+            <picture>
+              <source srcSet={dimchanskiyWebp} type="image/webp" />
+              <img
+                style={{ transform: 'translate(-38%, -50%)' }}
+                className="avatar__image"
+                src={dimchanskiy}
+                alt="avatar"
+              />
+            </picture>
           </Avatar>
           <Text>
             <p className="stuff__name">Дмитрий</p>
@@ -240,7 +257,10 @@ const StuffSection = React.memo(() => {
               alt="avatar__poop"
             />
 
-            <img className="avatar__image" src={slava} alt="avatar" />
+            <picture>
+              <source srcSet={slavaWebp} type="image/webp" />
+              <img className="avatar__image" src={slava} alt="avatar" />
+            </picture>
           </Avatar>
           <Text>
             <p className="stuff__name">Владислав</p>

@@ -3,12 +3,14 @@ import Section from '../layouts/Section';
 import { H2, H3 } from '../UI/Heading';
 
 import authorImage from '../../auth-assets/images/author.png';
+import authorImageWebp from '../../auth-assets/images/author.webp';
 import { calendar, dollar, electricity, settings } from '../../auth-assets/images/authorSection';
 import MediaQuery from 'react-responsive';
 import { device, size } from '../../../../styles/auth/breackpoints';
 import styled from 'styled-components';
 import { isMobile } from 'react-device-detect';
 import { motion } from 'framer-motion';
+import star from '../../auth-assets/images/star.svg';
 
 const Author = styled.div`
   font-size: 7px;
@@ -19,7 +21,7 @@ const Author = styled.div`
   overflow: hidden;
   padding: 2.4375em 0.875em 0 2.0625em;
   max-width: 230px;
-  background: top -62px right 47px / 678.34px 610.56px no-repeat url('../../view/auth/auth-assets/images/star.svg'),
+  background: top -62px right 47px / 678.34px 610.56px no-repeat url(${star}),
     rgba(55, 95, 190, 0.3);
   margin: 2.75em auto 0;
 
@@ -138,7 +140,10 @@ const AuthorSection: React.FC = React.memo(() => {
       <H3>Автор курса</H3>
       <Author as={motion.div} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
         <MediaQuery minWidth={size.tablet}>
-          <img className="course-author__image" src={authorImage} alt="author" />
+          <picture>
+            <source srcSet={authorImageWebp} type="image/webp" />
+            <img className="course-author__image" src={authorImage} alt="author" />
+          </picture>
         </MediaQuery>
 
         <Container>

@@ -52,7 +52,7 @@ function DesktopComponent() {
     scrollRef.current?.children[currentSection].scrollIntoView({ behavior: 'smooth' });
     setTimeout(() => {
       animation.current = false;
-    }, 700);
+    }, 1000);
   }, [currentSection]);
 
   return (

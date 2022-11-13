@@ -77,7 +77,7 @@ const Review: React.FC<Props> = React.memo(({ name, img, text }) => {
     <ReviewStyle>
       <Header>
         <Avatar>
-          <img className="avatar__image" src={img} alt="avatar" />
+          <img loading="lazy" decoding="async" className="avatar__image" src={img} alt="avatar" />
         </Avatar>
         <Autor>
           <p className="autor__name">{name}</p>

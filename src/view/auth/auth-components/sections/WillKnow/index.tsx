@@ -415,19 +415,19 @@ const WillKnow: React.FC = React.memo(() => {
         <Composition>
           <picture>
             <source srcSet={lineWebp} type="image/webp" />
-            <img src={line} alt="line" className="line line--1" />
+            <img loading="lazy" decoding="async" src={line} alt="line" className="line line--1" />
           </picture>
           <picture>
             <source srcSet={lineWebp} type="image/webp" />
-            <img src={line} alt="line" className="line line--2" />
+            <img loading="lazy" decoding="async" src={line} alt="line" className="line line--2" />
           </picture>
           <picture>
             <source srcSet={lineWebp} type="image/webp" />
-            <img src={line} alt="line" className="line line--3" />
+            <img loading="lazy" decoding="async" src={line} alt="line" className="line line--3" />
           </picture>
           <picture>
             <source srcSet={lineWebp} type="image/webp" />
-            <img src={line} alt="line" className="line line--4" />
+            <img loading="lazy" decoding="async" src={line} alt="line" className="line line--4" />
           </picture>
 
           <ArchIco className="arch arch--1" />

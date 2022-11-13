@@ -51,6 +51,8 @@ const HomeSection: FC<Props> = React.memo(({ ChangeSection }) => {
           <picture>
             <source srcSet={coinWebp} type="image/webp" />
             <motion.img
+              loading="lazy"
+              decoding="async"
               initial={{ rotate: 180, scale: 0 }}
               animate={{ rotate: 0, scale: 1 }}
               transition={{

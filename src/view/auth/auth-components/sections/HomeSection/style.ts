@@ -29,10 +29,15 @@ const Home = styled.div`
     max-width: ${size.tablet}px;
   }
   @media (${device.laptop}) {
-    font-size: 16px;
+    font-size: 18px;
     align-items: center;
     max-width: 1046px;
     padding: 0 2em;
+  }
+  @media (${device.desktop}) {
+    font-size: 22px;
+    max-width: 1247px;
+    max-height: 600px;
   }
 `;
 
@@ -40,6 +45,9 @@ const Buttons = styled.div`
   display: flex;
   max-width: 507px;
   justify-content: center;
+  @media (${device.desktop}) {
+    max-width: 640px;
+  }
 `;
 
 const Button = styled(SectionButton)`
@@ -57,6 +65,9 @@ const Content = styled.div`
     flex-direction: column;
     justify-content: center;
     margin: auto 0;
+  }
+  @media (${device.desktop}) {
+    max-width: 640px;
   }
 `;
 

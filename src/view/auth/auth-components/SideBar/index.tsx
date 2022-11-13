@@ -81,7 +81,7 @@ const SideBar: FC<Props> = ({ ChangeSection, currentSection }) => {
         <Logo>
           <picture>
             {isDesktop && <source media={device.laptop} srcSet={logo} />}
-            <img src={logoMobile} alt="logo" />
+            <img loading="lazy" decoding="async" src={logoMobile} alt="logo" />
           </picture>
           <Heading>DE LEON UNIVERSITY</Heading>
         </Logo>

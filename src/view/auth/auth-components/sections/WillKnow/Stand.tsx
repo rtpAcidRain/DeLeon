@@ -42,6 +42,12 @@ const Title = styled.p`
   @media (${device.tablet}) {
     font-size: 8px;
   }
+  @media (${device.laptop}) {
+    font-size: 9px;
+  }
+  @media (${device.desktop}) {
+    font-size: 11px;
+  }
 `;
 
 const BaseMent = styled.div`

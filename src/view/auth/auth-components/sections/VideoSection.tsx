@@ -7,7 +7,7 @@ import video from '../../auth-assets/videos/video.mp4';
 import preview from '../../auth-assets/images/videoPreview.jpg';
 import previewWebp from '../../auth-assets/images/videoPreview.webp';
 
-import { FC, useEffect, useState } from 'react';
+import { FC, memo, useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { VideoJsPlayerOptions } from 'video.js';
 
@@ -15,7 +15,7 @@ const Container = styled.div`
   margin: auto;
 `;
 
-const VideoSection: FC = () => {
+const VideoSection: FC = memo(() => {
   const [previewImage, setPreviewImage] = useState(preview);
 
   useEffect(() => {
@@ -44,6 +44,6 @@ const VideoSection: FC = () => {
       </Container>
     </Section>
   );
-};
+});
 
 export default VideoSection;

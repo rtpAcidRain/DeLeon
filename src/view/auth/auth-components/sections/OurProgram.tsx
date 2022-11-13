@@ -29,7 +29,8 @@ const Program = styled.div`
     max-width: 1170px;
   }
   @media (${isMobile ? 'min-width: 1000px' : 'min-width: 1302px'}) {
-    font-size: 16px;
+    font-size: 17px;
+    max-width: 1170px;
   }
 `;
 
@@ -79,7 +80,7 @@ const ProgramItemStyle = styled.div`
   @media (${isMobile ? 'min-width: 1000px' : 'min-width: 1302px'}) {
     max-width: 350px;
     :nth-child(2) {
-      bottom: 418px;
+      bottom: 335px;
     }
   }
 `;

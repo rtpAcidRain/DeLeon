@@ -60,7 +60,7 @@ const H4 = styled.h4`
 const H5 = styled.h5`
   font-style: normal;
   font-weight: 500;
-  font-size: 13px;
+  font-size: 1.3em;
   line-height: 1.230769230769231em;
   text-align: center;
   color: #ffffff;

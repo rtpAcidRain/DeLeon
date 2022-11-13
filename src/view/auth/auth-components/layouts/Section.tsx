@@ -36,7 +36,20 @@ const SectionLay = styled.section`
       padding: 0 15px 0 225px;
 
     }
-  }`}
+  }
+  @media (${device.desktop}){
+    :first-child {
+      min-height: unset;
+      padding: 0;
+      padding: 0 15px 0 0;
+    }
+    :not(:first-child) {
+      padding: 0;
+      padding: 0 15px 0 0;
+
+    }
+  }
+  `}
 `;
 
 const Container = styled.div`

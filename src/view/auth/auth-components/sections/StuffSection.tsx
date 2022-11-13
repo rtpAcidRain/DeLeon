@@ -121,7 +121,13 @@ const StuffSection = React.memo(() => {
             />
             <picture>
               <source srcSet={maysonWebp} type="image/webp" />
-              <img className="avatar__image" src={mayson} alt="avatar" />
+              <img
+                loading="lazy"
+                decoding="async"
+                className="avatar__image"
+                src={mayson}
+                alt="avatar"
+              />
             </picture>
           </Avatar>
           <Text>
@@ -154,7 +160,13 @@ const StuffSection = React.memo(() => {
 
             <picture>
               <source srcSet={sanechkaWebp} type="image/webp" />
-              <img className="avatar__image" src={sanechka} alt="avatar" />
+              <img
+                loading="lazy"
+                decoding="async"
+                className="avatar__image"
+                src={sanechka}
+                alt="avatar"
+              />
             </picture>
           </Avatar>
           <Text>
@@ -187,7 +199,13 @@ const StuffSection = React.memo(() => {
 
             <picture>
               <source srcSet={richardsonWebp} type="image/webp" />
-              <img className="avatar__image" src={richardson} alt="avatar" />
+              <img
+                loading="lazy"
+                decoding="async"
+                className="avatar__image"
+                src={richardson}
+                alt="avatar"
+              />
             </picture>
           </Avatar>
           <Text>
@@ -222,6 +240,8 @@ const StuffSection = React.memo(() => {
             <picture>
               <source srcSet={dimchanskiyWebp} type="image/webp" />
               <img
+                loading="lazy"
+                decoding="async"
                 style={{ transform: 'translate(-38%, -50%)' }}
                 className="avatar__image"
                 src={dimchanskiy}
@@ -259,7 +279,13 @@ const StuffSection = React.memo(() => {
 
             <picture>
               <source srcSet={slavaWebp} type="image/webp" />
-              <img className="avatar__image" src={slava} alt="avatar" />
+              <img
+                loading="lazy"
+                decoding="async"
+                className="avatar__image"
+                src={slava}
+                alt="avatar"
+              />
             </picture>
           </Avatar>
           <Text>

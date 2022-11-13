@@ -142,7 +142,13 @@ const AuthorSection: React.FC = React.memo(() => {
         <MediaQuery minWidth={size.tablet}>
           <picture>
             <source srcSet={authorImageWebp} type="image/webp" />
-            <img className="course-author__image" src={authorImage} alt="author" />
+            <img
+              loading="lazy"
+              decoding="async"
+              className="course-author__image"
+              src={authorImage}
+              alt="author"
+            />
           </picture>
         </MediaQuery>
 

@@ -79,6 +79,9 @@ const Tarifs = styled.div`
     max-width: ${size.laptop}px;
     gap: 77px;
   }
+  @media (${device.desktop}) {
+    font-size: 20px;
+  }
 `;
 
 const TarifSection: React.FC = React.memo(() => {

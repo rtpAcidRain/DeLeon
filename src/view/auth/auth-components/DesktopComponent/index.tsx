@@ -7,12 +7,18 @@ import ContentComponent from '../ContentComponent';
 
 import { ScrollButton } from '../UI/Buttons';
 import { DescApp, DescMain, Scroll } from './style';
+import { GiftButton } from '../../../../styles/auth/Buttons';
+import gift from "../../auth-assets/images/gifts.png";
+import BonusesModal from "../UI/BonusesModal/BonusesModal";
 
 function DesktopComponent() {
   const [currentSection, setCurrentSection] = useState<number>(0);
+  const [isOpenModal, setIsOpenModal] = useState(false)
   const scrollRef = useRef<HTMLDivElement>(null);
   const onSckroll = useWheel();
   const animation = useRef(true);
+
+  const onClose = () => setIsOpenModal(false)
 
   const onWheel = (event: WheelEvent<HTMLDivElement>) => {
     if (!animation.current) {
@@ -48,6 +54,14 @@ function DesktopComponent() {
   }, []);
 
   useEffect(() => {
+    const timeout = setTimeout(() => {
+      setIsOpenModal(true)
+    }, 7000)
+
+    return () => clearTimeout(timeout)
+  }, [])
+
+  useEffect(() => {
     animation.current = true;
     scrollRef.current?.children[currentSection].scrollIntoView({ behavior: 'smooth' });
     setTimeout(() => {
@@ -56,10 +70,13 @@ function DesktopComponent() {
   }, [currentSection]);
 
   return (
-    <DescApp className=" dekstop-auth">
-      {currentSection > 0 && <ScrollButton vector="up" ChangeSection={ChangeSection} />}
+    <DescApp className="dekstop-auth">
       <SideBar ChangeSection={ChangeSection} currentSection={currentSection} />
+      <GiftButton onClick={() => setIsOpenModal(true)}>
+        <img alt="" src={gift} />
+      </GiftButton>
       <DescMain>
+      {currentSection > 0 && <ScrollButton vector="up" ChangeSection={ChangeSection} />}
         <Scroll
           ref={scrollRef}
           onWheel={(event) => {
@@ -67,8 +84,9 @@ function DesktopComponent() {
           }}>
           <ContentComponent ChangeSection={ChangeSection} />
         </Scroll>
-      </DescMain>
       {currentSection < 12 && <ScrollButton vector="down" ChangeSection={ChangeSection} />}
+      <BonusesModal onClose={onClose}  isOpen={isOpenModal} />
+      </DescMain>
     </DescApp>
   );
 }

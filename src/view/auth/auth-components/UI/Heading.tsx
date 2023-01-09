@@ -14,10 +14,9 @@ const H1 = styled.h1`
 `;
 const H2 = styled.h2`
   font-style: italic;
-  font-weight: 800;
-  font-size: 2.5em;
-  line-height: 1.225em;
-  letter-spacing: 0.01em;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 59px;
   background: linear-gradient(90deg, #399892 25%, #375fbe 80.58%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -30,7 +29,7 @@ const H3 = styled.h3`
   line-height: 1.222222222222222em;
   letter-spacing: 0.07em;
   color: #ffffff;
-  margin: 0 auto 1.3em;
+  margin: 0 auto 1.9em;
 
   text-align: center;
   @media (${device.mobileS}) {
@@ -46,6 +45,9 @@ const H3 = styled.h3`
     font-size: 30px;
   }
   @media (${device.laptop}) {
+    margin: 82px auto 1.3em;
+  }
+  @media (${device.laptopL}) {
     margin: 82px auto ${isMobile ? '1.3em' : '0'};
     font-size: 36px;
   }

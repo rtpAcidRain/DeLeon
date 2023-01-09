@@ -22,6 +22,7 @@ import {
   Button,
 } from './styles';
 import { motion } from 'framer-motion';
+import Module from "../UI/Module/Module";
 
 export enum TarifENUMS {
   LOWERLEVEL = 'Хомяк',
@@ -112,6 +113,33 @@ const Tarif: React.FC<Props> = React.memo(({ title, content, prise, sale }) => {
         </Header>
         <Main>
           <ul>
+            {title !== TarifENUMS.LOWERLEVEL
+                ?
+                  <>
+                    <Item>
+                      <TarifStar color={colors.cl} />
+                      <Module contentTitle={"Модуль 1. Базовый"} module={1} color={title === TarifENUMS.MIDDLELEVEL ? "middle" : "max"} title={"Модуль 1 "} />
+                    </Item>
+                    <Item>
+                      <TarifStar color={colors.cl} />
+                      <Module contentTitle={"Модуль 2. Продвинутый"} module={2} color={title === TarifENUMS.MIDDLELEVEL ? "middle" : "max"} title={"Модуль 2"} />
+                    </Item>
+                    <Item>
+                      <TarifStar color={colors.cl} />
+                      <Module contentTitle={"Модуль 3. Гуру Криптовалюты"} module={3} color={title === TarifENUMS.MIDDLELEVEL ? "middle" : "max"} title={"Модуль 3"} />
+                    </Item>
+                  </>
+                : <>
+                  <Item>
+                    <TarifStar color={colors.cl} />
+                    <Module contentTitle={"Модуль 1. Базовый"} module={1} color={"lower"} title={"Модуль 1 "} />
+                  </Item>
+                  <Item>
+                    <TarifStar color={colors.cl} />
+                    <Module contentTitle={"Модуль 2. Продвинутый"} module={2} color={"lower"} title={"Модуль 2"} />
+                  </Item>
+                </>
+            }
             {content.map((el, i) => (
               <Item key={i}>
                 <TarifStar color={colors.cl} /> <Text className="text">{el}</Text>

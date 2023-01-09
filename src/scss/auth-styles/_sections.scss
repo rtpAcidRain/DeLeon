@@ -1,13 +1,3 @@
-.swiper-slide {
-  height: auto;
-  @media screen and (min-width: 425px) {
-    max-width: 235px;
-  }
-  @media screen and (min-width: 768px) {
-    max-width: 249px;
-  }
-}
-
 // FAQ
 .quesiton {
   &__items {

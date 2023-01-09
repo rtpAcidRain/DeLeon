@@ -2,18 +2,16 @@ import { FC } from 'react';
 import {
   HomeSection,
   VideoSection,
-  WhatYouTake,
-  WillKnow,
   OurProgram,
   TarifSection,
   AuthorSection,
   StuffSection,
   LearningFormatSection,
-  BonuseSection,
   Partners,
   ReviewSection,
   FaqSection,
 } from './sections';
+import PostsSection from "./sections/PostsSection";
 
 type Props = {
   ChangeSection: (idx: number) => void;
@@ -24,14 +22,12 @@ const ContentComponent: FC<Props> = ({ ChangeSection }) => {
     <>
       <HomeSection ChangeSection={ChangeSection} />
       <VideoSection />
-      <WhatYouTake />
-      <WillKnow />
+      <PostsSection />
       <OurProgram />
       <TarifSection />
       <AuthorSection />
       <StuffSection />
       <LearningFormatSection />
-      <BonuseSection />
       <Partners />
       <ReviewSection />
       <FaqSection />

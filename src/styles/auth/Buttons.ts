@@ -2,16 +2,12 @@ import styled from 'styled-components';
 import { device } from './breackpoints';
 
 const Button = styled.button`
-  z-index: 9998;
   display: block;
   cursor: pointer;
 `;
 
 export const SectionButton = styled(Button)<{ disabled?: boolean }>`
-  background: ${(props) =>
-    props.disabled
-      ? 'linear-gradient(110.51deg, #626262 -12.74%, #464749 90.2%)'
-      : 'linear-gradient(110.51deg, #00fff0 -12.74%, #3362be 90.2%)'};
+  background: linear-gradient(88.35deg, #0CE364 0%, #18B7B2 52.92%, #24488C 100%);;
   font-style: normal;
   font-weight: 800;
   font-size: 0.9375em;
@@ -25,15 +21,26 @@ export const SectionButton = styled(Button)<{ disabled?: boolean }>`
 `;
 
 export const SidebarButton = styled(Button)`
-  border: 1px solid rgba(0, 255, 240, 0.6);
-  border-radius: 6px;
-  background: none;
-  color: #ffffff;
-  font-weight: 700;
-  font-size: 0.625em;
-  line-height: 1.2em;
-  padding: 0.9em 2em;
-  margin-bottom: 2em;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 40px;
+  text-transform: uppercase;
+  color: #585858;
+  height: 40px; 
+`;
+
+export const SubscribeSidebarButton = styled(Button)`
+  background: #8FD1F9;
+  box-shadow: 0 0 13px #0058FF;
+  border-radius: 10px;
+  color: #292929;
+  font-size: 20px;
+  max-width: fit-content;
+  margin: 0 auto;
+  line-height: 24px;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding: 8px 14px;
 `;
 
 const ArrowBut = styled(Button)`
@@ -50,11 +57,29 @@ const ArrowBut = styled(Button)`
 
 const TopButton = styled(ArrowBut)`
   top: 25px;
+  transform: translateX(50%);
+`;
+
+export const GiftButton = styled.button`
+  position: fixed;
+  right: 10px;
+  bottom: 20px;
+  outline: none;
+  border: none;
+  z-index: 1;
+  
+  img {
+    display: block;
+    height: auto;
+    width: auto;
+    max-height: 80px;
+    max-width: 80px;
+  }
 `;
 
 const BotButton = styled(ArrowBut)`
   bottom: 25px;
-  transform: rotate(180deg);
+  transform: rotate(180deg) translateX(-50%);
 `;
 
 const SwiperBut = styled(ArrowBut)`

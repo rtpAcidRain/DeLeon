@@ -4,32 +4,41 @@ import { device } from '../../../../styles/auth/breackpoints';
 import { H6 } from '../UI/Heading';
 
 export const Sidebar = styled.aside`
-  position: fixed;
-  top: 0;
-  left: 0;
   height: 80px;
   right: 0;
+  z-index: 1;
   background: #212d4a;
-  z-index: 9999;
   font-size: 12px;
+  top: 0;
+  left: 0;
+  position: fixed;
+  
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+  
   @media (${device.tablet}) {
     font-size: 14px;
   }
   ${isDesktop &&
   ` @media (${device.laptop}) {
+    position: static;
     width: 100%;
-    max-width: 223px;
+    max-width: 300px;
     height: 100vh;
     right: unset;
     display: flex;
-    background: rgba(21, 21, 21, 0.07);
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9px);
     bottom: 0;
-    z-index: 9999;
-    backdrop-filter: blur(7px);
     transition: left 0.3s;
     font-size: 16px;
     overflow: auto;
   }`}
+
+  @media (${device.laptopL}) {
+    max-width: 330px;
+  }
 `;
 
 export const SideContainer = styled.div`
@@ -40,12 +49,10 @@ export const SideContainer = styled.div`
     width: 100%;
     height: 100%;
     max-height: 800px;
-    margin: auto 0;
-    padding: 15px 0 25px;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    padding: 15px 0 25px;
+    padding: 60px 30px;
   }`}
 `;
 
@@ -98,7 +105,6 @@ export const Controls = styled.div<{ show: boolean }>`
       background: unset;
       left: unset;
       top: unset;
-      padding-left: 30px;
       display: flex;
       justify-content: space-between;
       flex-direction: column;
@@ -112,16 +118,22 @@ export const Navbar = styled.nav`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  overflow-y: scroll;
   ${isDesktop &&
   `   @media (${device.laptop}) {
       padding-top: 0;
       background: none;
+ 
       height: 100%;
       max-height: 416px;
       color: #fff;
-      justify-content: start;
+      justify-content: space-between;
       margin-top: 2.5em; 
       }`}
+
+  @media (${device.laptop}) {
+    overflow: visible;
+  }
 `;
 
 export const NavItems = styled.ol`
@@ -136,35 +148,44 @@ export const NavItems = styled.ol`
 `;
 
 export const Item = styled.li<{ active: boolean }>`
-  margin-bottom: 0.75em;
-  font-size: 1em;
-  font-weight: ${(props) => (!props.active ? '500' : '800')};
-  line-height: 1.25em;
+  font-size: 20px;
+  line-height: 40px;
   cursor: pointer;
-  color: ${(props) => (!props.active ? ' #c8c8c8' : '#ffffff')};
+  text-transform: uppercase;
+  padding: 0 20px;
+  max-width: 300px;
+  width: max-content;
+  border-radius: 10px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  filter: ${(props) => props.active && 'drop-shadow(0px 0px 7px #0058FF)'};
+  color: ${(props) => (props.active ? '#fff' : '#585858')};
+  border: ${(props) => (props.active ? '2px solid #8FD1F9' : '2px solid transparent' )};
   transition: all 0.1s linear;
-  ::before {
-    content: counter(item, decimal-leading-zero) ' ';
-    counter-increment: item;
-  }
+  white-space: nowrap;
+`;
+
+export const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 50px;
 `;
 
 export const Buttons = styled.div`
-  margin: 0 auto;
-  ${isDesktop &&
-  `   @media (${device.laptop}) {
-    margin: 1em 0 0;
-  }
-      `}
+  display: flex;
+  justify-content: center;
+  gap: 19px;
 `;
 
 export const Mail = styled.a`
-  display: flex;
-  align-items: center;
-  font-size: 0.8125em;
-  font-weight: 500;
-  line-height: 1.230769230769231em;
-  color: #ffffff;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 40px;
+  text-transform: uppercase;
+  color: #585858;
+  height: 40px;
 `;
 
 export const MailIcon = styled.svg`

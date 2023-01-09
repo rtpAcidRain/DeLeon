@@ -13,10 +13,10 @@ const SectionLay = styled.section`
   overflow-x: hidden;
   :first-child {
     min-height: 100vh;
-    padding: 80px 0 2rem 0;
   }
-  :not(:first-child) {
-    padding: 1.5rem 0.7em;
+  
+  &::-webkit-scrollbar {
+    width: 0;
   }
 
   ${isDesktop &&
@@ -25,29 +25,6 @@ const SectionLay = styled.section`
     scroll-snap-align: start;
     scroll-snap-stop: always;
     object-fit: cover;
-    
-    :first-child {
-      min-height: unset;
-      padding: 0;
-      padding: 0 15px 0 225px;
-    }
-    :not(:first-child) {
-      padding: 0;
-      padding: 0 15px 0 225px;
-
-    }
-  }
-  @media (${device.desktop}){
-    :first-child {
-      min-height: unset;
-      padding: 0;
-      padding: 0 15px 0 0;
-    }
-    :not(:first-child) {
-      padding: 0;
-      padding: 0 15px 0 0;
-
-    }
   }
   `}
 `;
@@ -56,14 +33,12 @@ const Container = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
-  margin: auto;
   flex-direction: column;
 
   @media (${device.laptop}) {
     ${isDesktop && 'height: 100vh;'}
     max-width: 1440px;
     ${isDesktop && 'max-height: 800px;'}
-
     width: 100%;
   }
 `;

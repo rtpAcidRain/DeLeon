@@ -41,6 +41,15 @@ const Home = styled.div`
   }
 `;
 
+export const HomeButtons = styled.div`
+  display: flex;
+  max-width: 507px;
+  gap: 60px;
+  @media (${device.desktop}) {
+    max-width: 640px;
+  }
+`;
+
 const Buttons = styled.div`
   display: flex;
   max-width: 507px;
@@ -52,23 +61,10 @@ const Buttons = styled.div`
 
 const Button = styled(SectionButton)`
   font-size: 0.75em;
-  :first-child {
-    margin-right: 3.66666667em;
-  }
 `;
 
 const Content = styled.div`
-  height: 100%;
-  max-width: 533px;
-  @media (${device.laptop}) {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: auto 0;
-  }
-  @media (${device.desktop}) {
-    max-width: 640px;
-  }
+  width: 100%;
 `;
 
 const ContentText = styled.div`
@@ -77,6 +73,7 @@ const ContentText = styled.div`
     margin-bottom: 1.8em;
   }
   & > *:last-child {
+    max-width: 700px;
     margin-top: 1.8em;
     margin-bottom: 3.4em;
   }
@@ -90,14 +87,25 @@ const ListItem = styled.li`
   margin-bottom: 0.7em;
 `;
 
-const Picture = styled.div`
+const Video = styled.div`
+  position: absolute;
+  right: -46%;
+  top: 0;
   display: none;
-  * {
-    width: 100%;
-  }
-  @media (${device.tablet}) {
+  @media (${device.laptopL}) {
     display: block;
   }
 `;
 
-export { Picture, Home, Buttons, Button, Content, ContentText, List, ListItem };
+
+const Picture = styled.div`
+  position: absolute;
+  right: -46%;
+  top: 0;
+  display: none;
+  @media (${device.laptopL}) {
+    display: block;
+  }
+`;
+
+export { Video, Home, Buttons, Button, Content, ContentText, List, ListItem, Picture };

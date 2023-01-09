@@ -32,7 +32,7 @@ const VideoPlayer: FC<Props> = React.memo(({ videoOption }) => {
 
   return (
     <div data-vjs-player>
-      <video ref={videoRef} className="video-js " />
+      <video ref={videoRef} className="video-js" />
     </div>
   );
 });

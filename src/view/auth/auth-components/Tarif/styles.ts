@@ -3,7 +3,7 @@ import { H4 } from '../UI/Heading';
 
 import { SectionButton } from '../../../../styles/auth/Buttons';
 
-type ColorsType = {
+export type ColorsType = {
   lower: LevelColorType;
   middle: LevelColorType;
   max: LevelColorType;
@@ -118,6 +118,18 @@ export const Main = styled.main`
   margin-bottom: 5px;
 `;
 
+export const ItemModule = styled.li`
+  display: flex;
+  align-items: center;
+  max-width: 266px;
+  border: 1px solid #fff;
+  margin: auto;
+  :not(:last-child) {
+    margin-bottom: 11px;
+  }
+`;
+
+
 export const Item = styled.li`
   display: flex;
   align-items: center;
@@ -125,6 +137,23 @@ export const Item = styled.li`
   margin: auto;
   :not(:last-child) {
     margin-bottom: 11px;
+  }
+`;
+
+export const TextModule = styled.p`
+  position: relative;
+  margin-left: 13px;
+  width: 100%;
+  font-weight: 500;
+  font-size: 0.75em;
+  line-height: 1.25em;
+  
+
+  color: #ffffff;
+  
+  .title {
+    border-bottom: 1px solid #fff;
+    cursor: pointer;
   }
 `;
 

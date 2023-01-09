@@ -19,10 +19,11 @@ const Learning = styled.div`
   @media (${device.tablet}) {
     font-size: 15px;
     max-width: ${size.tablet}px;
+    margin: auto 80px;
   }
   @media (${isMobile ? device.laptop : 'min-width: 1302px'}) {
     font-size: 20px;
-    max-width: 1000px;
+    max-width: 100%;
   }
 `;
 
@@ -40,10 +41,12 @@ const Container = styled.div`
 
 const Item = styled.div`
   font-weight: 500;
-  font-size: 1em;
+  font-size: 1.1em;
   line-height: 1.2em;
   display: flex;
   padding: 0.6em;
+  justify-content: center;
+  width: 100%;
   .item__text {
     color: #ffffff;
   }
@@ -67,7 +70,6 @@ const ItemContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: auto;
   max-width: 438px;
   width: 100%;
 `;
@@ -77,10 +79,10 @@ const Svg = styled.svg`
 `;
 
 const Icons = styled.div`
-  width: 11%;
+  width: 18%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   height: 100%;
   align-items: center;
   * {
@@ -92,7 +94,7 @@ const Icons = styled.div`
 `;
 
 const Text = styled.p`
-  width: 100%;
+  width: 80%;
   margin-left: 15px;
 `;
 

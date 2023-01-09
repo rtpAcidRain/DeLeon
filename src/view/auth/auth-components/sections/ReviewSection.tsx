@@ -54,6 +54,16 @@ const Reviews = styled.div`
   .swiper {
     padding: 0 51px;
   }
+  
+  .swiper-slide {
+    height: auto;
+    @media screen and (min-width: 425px) {
+      max-width: 235px;
+    }
+    @media screen and (min-width: 768px) {
+      max-width: 249px;
+    }
+  }
 `;
 
 const ReviewSection: FC = React.memo(() => {
@@ -65,8 +75,9 @@ const ReviewSection: FC = React.memo(() => {
           <Swiper
             id="reviewSwiper"
             spaceBetween={30}
-            slidesPerView={'auto'}
-            loopAdditionalSlides={2}
+            slidesPerView='auto'
+            loopedSlides={2}
+            loopAdditionalSlides={4}
             loop
             modules={[Navigation, Pagination, Scrollbar, A11y]}>
             <SwiperButton vector="left" />

@@ -31,13 +31,13 @@ const variants = {
     show: {rotate: 0, scale: 1}
 }
 
-interface BonusItem {
+interface BonusItemProps {
     bonus: number
     max: number
     isSelected: boolean
 }
 
-const BonusItem: FC<BonusItem> = ({bonus, max, isSelected}) => {
+const BonusItem: FC<BonusItemProps> = ({bonus, max, isSelected}) => {
     const [isOpen, setIsOpen] = useState(isSelected)
     const [selectedBonuses, setSelectedBonuses] = useAtom(bonusesAtoms)
 

@@ -7,15 +7,16 @@ import video from '../../auth-assets/videos/video.mp4';
 import preview from '../../auth-assets/images/videoPreview.jpg';
 import previewWebp from '../../auth-assets/images/videoPreview.webp';
 
-import { FC, memo, useEffect, useState } from 'react';
+import {FC, memo, useEffect, useRef, useState} from 'react';
 import styled from 'styled-components';
-import { VideoJsPlayerOptions } from 'video.js';
+import videojs, { VideoJsPlayerOptions } from 'video.js';
 
 const Container = styled.div`
   margin: auto;
 `;
 
 const VideoSection: FC = memo(() => {
+  const playerRef = useRef<videojs.Player | null>(null)
   const [previewImage, setPreviewImage] = useState(preview);
 
   useEffect(() => {
@@ -37,10 +38,22 @@ const VideoSection: FC = memo(() => {
     ],
   };
 
+  const handlePlayerReady = (player: videojs.Player) => {
+    playerRef.current = player;
+
+    player.on('waiting', () => {
+      videojs.log('player is waiting');
+    });
+
+    player.on('dispose', () => {
+      videojs.log('player will dispose');
+    });
+  };
+
   return (
     <Section>
       <Container>
-        <VideoPlayer videoOption={videoOptions} data-setup={`{"poster":${preview}}`} />
+        <VideoPlayer onReady={handlePlayerReady} videoOption={videoOptions} data-setup={`{"poster":${preview}}`} />
       </Container>
     </Section>
   );

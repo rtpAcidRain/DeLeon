@@ -60,6 +60,7 @@ const VideoPlayer: FC<Props> = ({ videoOption, onReady }) => {
         playerRef.current = null;
       }
     };
+  // eslint-disable-next-line
   }, [])
 
 

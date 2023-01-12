@@ -32,6 +32,7 @@ const VideoSection: FC = memo(() => {
     preload: 'none',
     sources: [
       {
+
         src: video as string,
         type: 'video/mp4',
       },
@@ -49,6 +50,7 @@ const VideoSection: FC = memo(() => {
       videojs.log('player will dispose');
     });
   };
+
 
   return (
     <Section>

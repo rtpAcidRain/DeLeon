@@ -1,7 +1,7 @@
-import React, { FC, ReactNode } from 'react';
-import { isDesktop } from 'react-device-detect';
-import styled from 'styled-components';
-import { device } from '../../../../styles/auth/breackpoints';
+import React, { FC, ReactNode } from "react";
+import { isDesktop } from "react-device-detect";
+import styled from "styled-components";
+import { device } from "../../../../styles/auth/breackpoints";
 
 type Props = {
   children: ReactNode;
@@ -11,10 +11,11 @@ const SectionLay = styled.section`
   width: 100%;
   display: flex;
   overflow-x: hidden;
+  margin: 24px auto;
   :first-child {
     min-height: 100vh;
   }
-  
+
   &::-webkit-scrollbar {
     width: 0;
   }
@@ -34,11 +35,11 @@ const Container = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 
   @media (${device.laptop}) {
-    ${isDesktop && 'height: 100vh;'}
-    max-width: 1440px;
-    ${isDesktop && 'max-height: 800px;'}
+    ${isDesktop && "height: 100vh;"}
+    ${isDesktop && "max-height: 800px;"}
     width: 100%;
   }
 `;

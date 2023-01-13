@@ -2,7 +2,7 @@
 
 .posts-slider {
   max-width: 1319px;
-  margin: 0 auto;
+  margin: auto;
   width: 100%;
   min-height: 687px;
 }
@@ -21,6 +21,7 @@
 
 .bonuses-modal {
   max-width: 1228px;
+  height: 100%;
 }
 
 .bonuses {
@@ -52,6 +53,7 @@
 .gift-wrapper {
   position: relative;
   display: flex;
+  width: 100%;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -59,13 +61,18 @@
 
 .gift-image {
   display: block;
-  width: auto;
+  width: 100%;
   height: auto;
   z-index: 1;
-  max-width: 300px;
-  max-height: 300px;
+  max-width: 280px;
+  max-height: 280px;
   position: relative;
   overflow: hidden;
+}
+
+.selected-gift {
+  filter: drop-shadow(0px 12px 32px #555);
+  -webkit-filter: drop-shadow(0px 12px 32px #555);
 }
 
 .gift-content {
@@ -80,9 +87,11 @@
 }
 
 .gift-text-content {
-  width: 240px;
+  font-size: 14px;
+  width: 100%;
+  max-width: 240px;
   height: 120px;
-  margin: 54px auto 0 auto;
+  margin: 20px auto 0 auto;
   -ms-text-overflow: ellipsis;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
@@ -97,27 +106,37 @@
 
 .gift-lock {
   position: absolute;
-  z-index: 1;
+  top: 32%;
+  width: 100%;
+  height: auto;
+  max-width: 140px;
+  max-height: 140px;
+  z-index: 10;
 }
 
-@media (min-width: 1040px) {
+@media (min-width: 425px) {
+  .gift-title-content {
+    font-size: 25px;
+  }
+  .gift-text-content {
+    height: 120px;
+    margin: 54px auto 0 auto;
+    font-size: 1em;
+  }
+}
+
+@media (min-width: 1024px) {
   .bonuses-section {
     grid-template-columns: repeat(3, 1fr);
+    height: 300px;
+  }
+
+  .posts-slider {
+    margin: 40px auto 0 auto;
   }
 
   .gift-image {
     max-width: 300px;
     max-height: 300px;
-  }
-}
-
-@media (min-width: 1440px) {
-  .bonuses-section {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .gift-image {
-    max-width: 335px;
-    max-height: 356px;
   }
 }

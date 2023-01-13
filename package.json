@@ -12,6 +12,7 @@
     "@types/react": "^18.0.14",
     "@types/react-dom": "^18.0.5",
     "ahooks": "^3.5.2",
+    "clsx": "^1.2.1",
     "framer-motion": "^7.6.5",
     "gh-pages": "^4.0.0",
     "jotai": "^1.12.1",
@@ -56,6 +57,7 @@
     "@types/react-helmet": "^6.1.5",
     "@types/styled-components": "^5.1.26",
     "@types/video.js": "^7.3.49",
+    "prettier": "^2.8.2",
     "sass": "^1.53.0",
     "video.js": "^7.20.3"
   }

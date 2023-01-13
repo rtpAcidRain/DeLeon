@@ -1,12 +1,11 @@
-import styled from 'styled-components';
-import { device, size } from '../../../../../styles/auth/breackpoints';
-import { SectionButton } from '../../../../../styles/auth/Buttons';
+import styled from "styled-components";
+import { device, size } from "../../../../../styles/auth/breackpoints";
+import { SectionButton } from "../../../../../styles/auth/Buttons";
 
 const Home = styled.div`
   font-size: 7px;
   width: 100%;
   padding: 2em;
-  height: 100%;
   max-height: 560px;
   display: flex;
   margin: auto;
@@ -31,22 +30,26 @@ const Home = styled.div`
   @media (${device.laptop}) {
     font-size: 18px;
     align-items: center;
+    margin: 160px auto auto auto;
+    height: 100%;
     max-width: 1046px;
-    padding: 0 2em;
   }
   @media (${device.desktop}) {
     font-size: 22px;
     max-width: 1247px;
-    max-height: 600px;
   }
 `;
 
 export const HomeButtons = styled.div`
   display: flex;
-  max-width: 507px;
-  gap: 60px;
-  @media (${device.desktop}) {
-    max-width: 640px;
+  flex-direction: column;
+  justify-content: start;
+  gap: 10px;
+
+  @media (${device.tablet}) {
+    flex-direction: row;
+    gap: 60px;
+    align-items: center;
   }
 `;
 
@@ -60,7 +63,9 @@ const Buttons = styled.div`
 `;
 
 const Button = styled(SectionButton)`
-  font-size: 0.75em;
+  padding: 13px 40px;
+  font-weight: 600;
+  font-size: 20px;
 `;
 
 const Content = styled.div`
@@ -77,10 +82,15 @@ const ContentText = styled.div`
     margin-top: 1.8em;
     margin-bottom: 3.4em;
   }
+
+  .text {
+    font-size: 20px;
+  }
 `;
 
 const List = styled.ul`
   list-style-type: disc;
+  font-size: 20px;
 `;
 
 const ListItem = styled.li`
@@ -97,7 +107,6 @@ const Video = styled.div`
   }
 `;
 
-
 const Picture = styled.div`
   position: absolute;
   right: -46%;
@@ -108,4 +117,14 @@ const Picture = styled.div`
   }
 `;
 
-export { Video, Home, Buttons, Button, Content, ContentText, List, ListItem, Picture };
+export {
+  Video,
+  Home,
+  Buttons,
+  Button,
+  Content,
+  ContentText,
+  List,
+  ListItem,
+  Picture,
+};

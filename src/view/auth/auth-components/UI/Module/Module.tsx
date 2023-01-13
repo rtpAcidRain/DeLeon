@@ -1,68 +1,87 @@
-import React, {useEffect, useState} from "react";
-import {ColorsType, TextModule} from "../../Tarif/styles";
-import {ProgramItem} from "../../sections/OurProgram";
+import React, { useEffect, useState } from "react";
+import { ColorsType, TextModule } from "../../Tarif/styles";
+import { ProgramItem } from "../../sections/OurProgram";
 
-const mockLessons = ['Законодательство',
-'10 правил безопасности',
-'Что такое криптовалюта, блокчейн и майнинг',
-'Чем различаются блокчейны ',
-'Экономика, конфиденциальность и анонимность блокчейна',
-'Как купить/продать/перевести криптовалюту',
-'Виды криптовалютных кошельков',
-'Анализ криптовалют',
-'Централизованные биржи',
-'Децентрализованные биржи',
-'Как собрать криптовалютный портфельОсновные стратегии торговли',
-'Способы заработка на криптовалюте',
-'Базовый технический анализ',
-'Трейдинг с помощью алгоритмических ботов',
-'Стейблкоины Виды и их отличия',
-'DeFi смарт-контракты и пулы ликвидности',
-'Фарминг, стейкинг и лендинг',
-'Риск-менеджмент, мани-менеджмент, психология рынка',
-'Пресейлы токенов (ICO, IDO…)',
-'Что такое NFT и 5 способов на нем заработать',
-'Что такое WEB 30 и Метавселенные',
-'Что такое DAO',
-'Play2Earn - Играй и зарабатывай!',
-'Аирдропы и вайтлисты',
-'Тестнеты',
-'Амбассадорские программы',
-'Ноды',
-'Полезные инструменты для анализа и работы с рынком',
-'Как создать свой токен'
-]
+const mockLessons = [
+  "Урок 1. Законодательство РФ/РЬ/КЗ/УА (4 урока)",
+  "Урок 2. 10 правил безопасности",
+  "Урок 3. Что такое криптовалюта и блокчейн(хэши, майнинг, Анонимность)",
+  "Урок 4. Чем различаются блокчейны (консенсусы)",
+  "Урок 5. Экономика, конфиденциальность и анонимность блокчейна",
+  "Урок 6. Как купить/продать/перевести криптовалюту",
+  "Урок 7. Виды криптовалютных кошельков",
+  "Урок 8. Анализ криптовалют",
+  "Урок 9. Централизованные биржи",
+  "Урок 10. Децентрализованные биржи",
+  "Урок 11. Как собрать криптовалютный портфель",
+  "Урок 12. Основные стратегии торговли",
+  "Урок 13. Способы заработка на криптовалюте",
+  "Урок 14. Базовый технический анализ",
+  "Урок 15. Трейдинг с помощью алгоритмических ботов",
+  "Урок 16. Стейблкоины. Виды и их отличия",
+  "Урок 17. DeFi смарт-контракты и пулы ликвидности",
+  "Урок 18. Фарминг, стейкинг и лендинг",
+  "Урок 19. Риск-менеджмент, мани-менеджмент, психология рынка",
+  "Урок 20. Пресейлы токенов (ICO, IDO…)",
+  "Урок 21. Что такое NFT и 5 способов на нем заработать",
+  "Урок 22. Что такое WEB 30 и Метавселенные",
+  "Урок 23. Что такое DAO",
+  "Урок 24. Play2Earn - Играй и зарабатывай!",
+  "Урок 25. Аирдропы и вайтлисты",
+  "Урок 26. Тестнеты",
+  "Урок 27. Амбассадорские программы",
+  "Урок 28. Ноды",
+  "Урок 29. Полезные инструменты для анализа и работы с рынком",
+  "Урок 30. Как создать свой токен",
+];
 
 interface ModuleProps {
-    module: 1 | 2 | 3
-    color: keyof ColorsType
-    title: string
-    contentTitle: string
+  module: 1 | 2 | 3;
+  color: keyof ColorsType;
+  title: string;
+  contentTitle: string;
 }
 
-const Module: React.FC<ModuleProps> = ({color, title, module, contentTitle}) => {
-    const [lessons, setLessons] = useState<string[]>([])
-    const [showModule, setShowModule] = useState(false)
+const Module: React.FC<ModuleProps> = ({
+  color,
+  title,
+  module,
+  contentTitle,
+}) => {
+  const [lessons, setLessons] = useState<string[]>([]);
+  const [showModule, setShowModule] = useState(false);
 
-    useEffect(() => {
-        switch (module) {
-            case 1: return setLessons(mockLessons.slice(0, 20))
-            case 2: return setLessons(mockLessons.slice(0, 30))
-            case 3: return setLessons(mockLessons.slice(0, 30))
-            default: return setLessons(mockLessons.slice(0, 20))
-        }
-    }, [module])
+  useEffect(() => {
+    switch (module) {
+      case 1:
+        return setLessons(mockLessons.slice(0, 12));
+      case 2:
+        return setLessons(mockLessons.slice(12, 19));
+      case 3:
+        return setLessons(mockLessons.slice(20, 30));
+      default:
+        return setLessons(mockLessons.slice(0, 20));
+    }
+  }, [module]);
 
-    return (
-        <TextModule onMouseEnter={() => setShowModule(true)} onMouseLeave={() => setShowModule(false)} className="text">
-            <span className="title">{title} (?)</span>
-            {showModule &&
-                <ProgramItem color={color} title={contentTitle}>
-                    {lessons.map((lesson, index) => <li className="list__item" key={lesson}>Урок {index + 1}. {lesson}</li>)}
-                </ProgramItem>
-            }
-        </TextModule>
-    );
+  return (
+    <TextModule
+      onMouseEnter={() => setShowModule(true)}
+      onMouseLeave={() => setShowModule(false)}
+      className="text"
+    >
+      <span className="title">{title} (?)</span>
+      {showModule && (
+        <ProgramItem color={color} title={contentTitle}>
+          {lessons.map((lesson) => (
+            <li className="list__item" key={lesson}>
+              {lesson}
+            </li>
+          ))}
+        </ProgramItem>
+      )}
+    </TextModule>
+  );
 };
 
 export default Module;

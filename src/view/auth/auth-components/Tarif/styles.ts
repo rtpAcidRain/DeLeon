@@ -1,7 +1,7 @@
-import styled from 'styled-components';
-import { H4 } from '../UI/Heading';
+import styled from "styled-components";
+import { H4 } from "../UI/Heading";
 
-import { SectionButton } from '../../../../styles/auth/Buttons';
+import { SectionButton } from "../../../../styles/auth/Buttons";
 
 export type ColorsType = {
   lower: LevelColorType;
@@ -17,19 +17,19 @@ export type LevelColorType = {
 
 export const colorsObj: ColorsType = {
   lower: {
-    bg: 'rgba(19, 58, 133, 0.1)',
-    cl: '#375fbe',
-    circlebg: '#182236',
+    bg: "rgba(19, 58, 133, 0.1)",
+    cl: "#375fbe",
+    circlebg: "#182236",
   },
   middle: {
-    bg: 'rgba(182, 24, 222, 0.1)',
-    cl: '#b618de',
-    circlebg: '#3a1e31',
+    bg: "rgba(182, 24, 222, 0.1)",
+    cl: "#b618de",
+    circlebg: "#3a1e31",
   },
   max: {
-    bg: 'rgba(255, 251, 44, 0.1)',
-    cl: '#fffd93',
-    circlebg: '#3a3519',
+    bg: "rgba(255, 251, 44, 0.1)",
+    cl: "#fffd93",
+    circlebg: "#3a3519",
   },
 };
 
@@ -44,7 +44,7 @@ export const TarifWrapper = styled.article<{ colors: LevelColorType }>`
 export const Dec = styled.div<{ left?: boolean }>`
   position: absolute;
   top: 0;
-  ${(props) => (props.left ? 'left: 24px' : 'right: 24px')};
+  ${(props) => (props.left ? "left: 24px" : "right: 24px")};
 `;
 
 export const TarifContainer = styled.div`
@@ -77,7 +77,7 @@ export const Icon = styled.div<{ colors: LevelColorType }>`
   margin: 11px auto 0;
   display: flex;
   :before {
-    content: '';
+    content: "";
     position: absolute;
     top: -2px;
     bottom: -2px;
@@ -93,7 +93,7 @@ export const Icon = styled.div<{ colors: LevelColorType }>`
     z-index: -1;
   }
   :after {
-    content: '';
+    content: "";
     position: absolute;
     top: 11px;
     bottom: 11px;
@@ -129,7 +129,6 @@ export const ItemModule = styled.li`
   }
 `;
 
-
 export const Item = styled.li`
   display: flex;
   align-items: center;
@@ -147,10 +146,9 @@ export const TextModule = styled.p`
   font-weight: 500;
   font-size: 0.75em;
   line-height: 1.25em;
-  
 
   color: #ffffff;
-  
+
   .title {
     border-bottom: 1px solid #fff;
     cursor: pointer;
@@ -196,13 +194,17 @@ export const Sale = styled.p`
 
 export const Button = styled(SectionButton)`
   font-size: 0.8125em;
-  max-width: 140px;
+  max-width: 180px;
   width: 100%;
   padding: 0.6923076923076923em 0;
 `;
 
 export const Heading = styled(H4)<{ colors: LevelColorType }>`
-  background: linear-gradient(180deg, ${(props) => props.colors.cl} 0%, #ffffff 144.12%);
+  background: linear-gradient(
+    180deg,
+    ${(props) => props.colors.cl} 0%,
+    #ffffff 144.12%
+  );
 
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;

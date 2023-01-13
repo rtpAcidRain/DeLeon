@@ -1,19 +1,20 @@
-import React, {FC, useEffect, useState} from 'react';
-import lock from '../../../auth-assets/images/lock.png'
-import gift from '../../../auth-assets/images/gift.png'
-import blurGift from '../../../auth-assets/images/blur-gift.png'
-import disableGift from '../../../auth-assets/images/disable-gift.png'
+import React, { FC, useEffect, useState } from "react";
+import lock from "../../../auth-assets/images/lock.png";
+import gift from "../../../auth-assets/images/gift.png";
+import blurGift from "../../../auth-assets/images/blur-gift.png";
+import disableGift from "../../../auth-assets/images/disable-gift.png";
 import styled from "styled-components";
-import {AnimatePresence, motion} from 'framer-motion';
-import {useAtom} from "jotai";
-import {bonusesAtoms} from "./BonusesModal";
+import { AnimatePresence, motion } from "framer-motion";
+import { useAtom } from "jotai";
+import { bonusesAtoms } from "./BonusesModal";
+import clsx from "clsx";
 
 const Title = styled.div`
   font-weight: 600;
-  font-size: 25px;
+  font-size: 20px;
   line-height: 30px;
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: #ffffff;
 `;
 
 const Shadow = styled.div`
@@ -22,87 +23,96 @@ const Shadow = styled.div`
   width: 100%;
   height: 80px;
   border-radius: 50%;
-  background: #6D6D6D;
+  background: #6d6d6d;
   filter: blur(22.1292px);
 `;
 
 const variants = {
-    open: {rotate: 360},
-    show: {rotate: 0, scale: 1}
-}
+  open: { rotate: 360 },
+  show: { rotate: 0, scale: 1 },
+};
 
 interface BonusItemProps {
-    bonus: number
-    max: number
-    isSelected: boolean
+  bonus: number;
+  max: number;
+  isSelected: boolean;
 }
 
-const BonusItem: FC<BonusItemProps> = ({bonus, max, isSelected}) => {
-    const [isOpen, setIsOpen] = useState(isSelected)
-    const [selectedBonuses, setSelectedBonuses] = useAtom(bonusesAtoms)
+const BonusItem: FC<BonusItemProps> = ({ bonus, max, isSelected }) => {
+  const [isOpen, setIsOpen] = useState(isSelected);
+  const [selectedBonuses, setSelectedBonuses] = useAtom(bonusesAtoms);
 
-    const onClick = () => {
-        if (max === selectedBonuses.length && !isSelected) return
+  const image =
+    max === selectedBonuses.length && !isOpen
+      ? disableGift
+      : isOpen
+      ? blurGift
+      : gift;
 
-        setSelectedBonuses((prev) => [...prev, bonus])
-        setIsOpen(true)
-    }
+  const onClick = () => {
+    if (max === selectedBonuses.length && !isSelected) return;
 
-    useEffect(() => {
-        const timeout = setTimeout(() => {
-            if(max === selectedBonuses.length && !isSelected) setIsOpen(true)
-        }, 1000)
-        return () => clearTimeout(timeout)
-    }, [max, selectedBonuses, isOpen, isSelected])
+    setSelectedBonuses((prev) => [...prev, bonus]);
+    setIsOpen(true);
+  };
 
-    return (
-        <motion.div
-            variants={variants}
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      if (max === selectedBonuses.length && !isSelected) setIsOpen(true);
+    }, 1000);
+    return () => clearTimeout(timeout);
+  }, [max, selectedBonuses, isOpen, isSelected]);
+
+  return (
+    <motion.div
+      variants={variants}
+      transition={{
+        type: "spring",
+        stiffness: 260,
+        damping: 35,
+      }}
+      animate={!isOpen && "show"}
+      className="gift-wrapper"
+    >
+      <motion.img
+        variants={variants}
+        onClick={onClick}
+        transition={{
+          type: "spring",
+          stiffness: 260,
+          damping: 35,
+        }}
+        animate={isOpen && "open"}
+        alt=""
+        className={clsx(
+          "gift-image",
+          selectedBonuses.includes(bonus) && "selected-gift"
+        )}
+        src={image}
+      />
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
             transition={{
-                type: 'spring',
-                stiffness: 260,
-                damping: 35,
+              type: "spring",
+              stiffness: 260,
+              damping: 35,
             }}
-            animate={!isOpen && "show"}
-            className="gift-wrapper"
-        >
-            <motion.img
-                variants={variants}
-                onClick={onClick}
-                transition={{
-                    type: 'spring',
-                    stiffness: 260,
-                    damping: 35,
-                }}
-                animate={isOpen && "open"}
-                alt=""
-                className="gift-image"
-                src={max === selectedBonuses.length && !isOpen
-                    ? disableGift
-                    : isOpen ? blurGift : gift
-                }
-            />
-            <AnimatePresence>
-                {isOpen && (
-                    <motion.div
-                        transition={{
-                        type: 'spring',
-                        stiffness: 260,
-                        damping: 35,
-                        }}
-                        variants={variants}
-                        animate={isOpen && "open"}
-                        className="gift-content"
-                    >
-                        <Title>Ваш подарок</Title>
-                        <p className="gift-text-content"> Lorem ipsum dolor sit amet</p>
-                    </motion.div>
-                )}
-            </AnimatePresence>
-            {!isOpen && <Shadow />}
-            {max === selectedBonuses.length && !isOpen && <motion.img className="gift-lock" src={lock} alt="" />}
-        </motion.div>
-    );
+            variants={variants}
+            animate={isOpen && "open"}
+            className="gift-content"
+          >
+            <Title className="gift-title-content">Ваш подарок</Title>
+            <p className="gift-text-content"> Lorem ipsum dolor sit amet</p>
+          </motion.div>
+        )}
+      </AnimatePresence>
+      {!isOpen && <Shadow />}
+      {max === selectedBonuses.length && !isSelected && (
+        <motion.img className="gift-lock" src={lock} alt="" />
+      )}
+    </motion.div>
+  );
 };
 
 export default BonusItem;

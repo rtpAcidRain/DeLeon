@@ -1,6 +1,6 @@
-import { FC } from 'react';
-import styled from 'styled-components';
-import { device } from '../../../../../styles/auth/breackpoints';
+import { FC } from "react";
+import styled from "styled-components";
+import { device } from "../../../../../styles/auth/breackpoints";
 
 type Props = {
   icons: any;
@@ -8,13 +8,16 @@ type Props = {
 };
 
 const StandWrapper = styled.div`
-  max-width: 26.76px;
+  display: block;
   width: 100%;
-  position: absolute;
-  height: 44.25px;
-  @media (${device.mobileM}) {
+  max-width: 200px;
+  margin: 0 auto;
+
+  @media (${device.mobileL}) {
     max-width: 45.63px;
     height: 74.84px;
+    width: 100%;
+    position: absolute;
   }
   @media (${device.tablet}) {
     max-width: 91px;
@@ -30,13 +33,14 @@ const Container = styled.div`
 const Title = styled.p`
   font-style: italic;
   font-weight: 700;
-  font-size: 5px;
+  font-size: 14px;
+  text-align: center;
   line-height: 1.25em;
   display: flex;
   justify-content: center;
   color: #ffffff;
 
-  @media (${device.mobileM}) {
+  @media (${device.mobileL}) {
     font-size: 6px;
   }
   @media (${device.tablet}) {

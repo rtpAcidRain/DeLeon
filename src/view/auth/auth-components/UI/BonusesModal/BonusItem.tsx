@@ -103,13 +103,17 @@ const BonusItem: FC<BonusItemProps> = ({ bonus, max, isSelected }) => {
             className="gift-content"
           >
             <Title className="gift-title-content">Ваш подарок</Title>
-            <p className="gift-text-content"> Lorem ipsum dolor sit amet</p>
+            <p className="gift-text-content">Lorem ipsum dolor sit amet</p>
           </motion.div>
         )}
       </AnimatePresence>
       {!isOpen && <Shadow />}
       {max === selectedBonuses.length && !isSelected && (
-        <motion.img className="gift-lock" src={lock} alt="" />
+        <motion.img
+          className={clsx("gift-lock", isOpen && "transparent")}
+          src={lock}
+          alt=""
+        />
       )}
     </motion.div>
   );

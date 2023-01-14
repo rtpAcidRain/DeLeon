@@ -5,7 +5,6 @@ import { SectionButton } from "../../../../../styles/auth/Buttons";
 const Home = styled.div`
   font-size: 7px;
   width: 100%;
-  padding: 2em;
   max-height: 560px;
   display: flex;
   margin: auto;

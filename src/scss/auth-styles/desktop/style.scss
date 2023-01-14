@@ -114,6 +114,10 @@
   z-index: 10;
 }
 
+.transparent {
+  opacity: 20%;
+}
+
 @media (min-width: 425px) {
   .gift-title-content {
     font-size: 25px;

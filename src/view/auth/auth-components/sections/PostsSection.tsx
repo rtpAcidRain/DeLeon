@@ -24,7 +24,6 @@ const PostWrapper = styled.div`
   display: flex;
   border-radius: 0.5em;
   padding: 2.4375em 0.875em 0.875em 2.0625em;
-  margin: 6em auto;
   background: rgba(55, 95, 190, 0.3);
 
   .coin-image {
@@ -35,10 +34,6 @@ const PostWrapper = styled.div`
     max-height: 687px;
     width: 100%;
     max-width: 610px;
-  }
-
-  @media (${device.tablet}) {
-    margin: 4em auto;
   }
 `;
 

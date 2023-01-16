@@ -1,10 +1,16 @@
 @import '../global';
 
+// Swiper
+
 .posts-slider {
   max-width: 1319px;
   margin: auto;
   width: 100%;
   min-height: 687px;
+}
+
+.swiper-pagination {
+  display: none;
 }
 
 .swiper-pagination-bullet {
@@ -18,6 +24,14 @@
 .swiper-pagination-bullet-active {
   background: linear-gradient(138.6deg, #3562B8 -0.11%, #18B7B2 100%);
 }
+
+@media (min-width: 768px) {
+  .swiper-pagination {
+    display: block;
+  }
+}
+
+// Bonuses Modal
 
 .bonuses-modal {
   max-width: 1228px;
@@ -86,6 +100,10 @@
   z-index: 10;
 }
 
+.gift-title-content {
+  font-size: 20px;
+}
+
 .gift-text-content {
   font-size: 14px;
   width: 100%;
@@ -106,7 +124,8 @@
 
 .gift-lock {
   position: absolute;
-  top: 32%;
+  top: 50%;
+  transform: translateY(-50%);
   width: 100%;
   height: auto;
   max-width: 140px;
@@ -119,13 +138,37 @@
 }
 
 @media (min-width: 425px) {
-  .gift-title-content {
-    font-size: 25px;
-  }
   .gift-text-content {
     height: 120px;
     margin: 54px auto 0 auto;
     font-size: 1em;
+  }
+}
+
+@media (min-width: 576px) {
+  .bonuses-section {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+  }
+
+  .gift-text-content {
+    margin: 20px auto auto auto;
+    font-size: 14px;
+  }
+
+  .gift-title-content {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 768px) {
+  .gift-text-content {
+    font-size: 1em;
+    margin: 54px auto 0 auto;
+  }
+  .gift-title-content {
+    font-size: 20px;
+    margin-top: 0;
   }
 }
 

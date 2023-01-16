@@ -7,9 +7,11 @@ const Home = styled.div`
   width: 100%;
   max-height: 560px;
   display: flex;
-  margin: auto;
   position: relative;
   max-width: 230px;
+  margin: 80px auto auto auto;
+  text-align: center;
+
   @media (${device.mobileS}) {
     font-size: 10px;
     max-width: ${size.mobileS}px;
@@ -32,6 +34,7 @@ const Home = styled.div`
     margin: 160px auto auto auto;
     height: 100%;
     max-width: 1046px;
+    text-align: start;
   }
   @media (${device.desktop}) {
     font-size: 22px;
@@ -42,22 +45,14 @@ const Home = styled.div`
 export const HomeButtons = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: center;
   gap: 10px;
 
   @media (${device.tablet}) {
     flex-direction: row;
     gap: 60px;
     align-items: center;
-  }
-`;
-
-const Buttons = styled.div`
-  display: flex;
-  max-width: 507px;
-  justify-content: center;
-  @media (${device.desktop}) {
-    max-width: 640px;
+    justify-content: start;
   }
 `;
 
@@ -84,16 +79,31 @@ const ContentText = styled.div`
 
   .text {
     font-size: 20px;
+    text-align: center;
+  }
+
+  @media (${device.laptop}) {
+    .text {
+      text-align: start;
+    }
   }
 `;
 
 const List = styled.ul`
-  list-style-type: disc;
   font-size: 20px;
 `;
 
 const ListItem = styled.li`
   margin-bottom: 0.7em;
+
+  &::before {
+    content: "•";
+    height: 24px;
+    font-weight: bold;
+    width: 8px;
+    margin-right: 8px;
+    border-radius: 50px;
+  }
 `;
 
 const Video = styled.div`
@@ -116,14 +126,4 @@ const Picture = styled.div`
   }
 `;
 
-export {
-  Video,
-  Home,
-  Buttons,
-  Button,
-  Content,
-  ContentText,
-  List,
-  ListItem,
-  Picture,
-};
+export { Video, Home, Button, Content, ContentText, List, ListItem, Picture };

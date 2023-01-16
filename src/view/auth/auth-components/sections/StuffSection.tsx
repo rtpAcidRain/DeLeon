@@ -1,6 +1,6 @@
-import React from 'react';
-import Section from '../layouts/Section';
-import { H3 } from '../UI/Heading';
+import React from "react";
+import Section from "../layouts/Section";
+import { H3 } from "../UI/Heading";
 
 import {
   poopMoon,
@@ -18,22 +18,22 @@ import {
   five1,
   five2,
   five3,
-} from '../../auth-assets/images/stuff__poops';
+} from "../../auth-assets/images/stuff__poops";
 
-import mayson from '../../auth-assets/images/stuff/mayson.png';
-import sanechka from '../../auth-assets/images/stuff/sanechka.png';
-import richardson from '../../auth-assets/images/stuff/richardson.png';
-import dimchanskiy from '../../auth-assets/images/stuff/dimchanskiy.png';
-import slava from '../../auth-assets/images/stuff/slava.png';
-import maysonWebp from '../../auth-assets/images/stuff/mayson.webp';
-import sanechkaWebp from '../../auth-assets/images/stuff/sanechka.webp';
-import richardsonWebp from '../../auth-assets/images/stuff/richardson.webp';
-import dimchanskiyWebp from '../../auth-assets/images/stuff/dimchanskiy.webp';
-import slavaWebp from '../../auth-assets/images/stuff/slava.webp';
+import mayson from "../../auth-assets/images/stuff/mayson.png";
+import sanechka from "../../auth-assets/images/stuff/sanechka.png";
+import richardson from "../../auth-assets/images/stuff/richardson.png";
+import dimchanskiy from "../../auth-assets/images/stuff/dimchanskiy.png";
+import slava from "../../auth-assets/images/stuff/slava.png";
+import maysonWebp from "../../auth-assets/images/stuff/mayson.webp";
+import sanechkaWebp from "../../auth-assets/images/stuff/sanechka.webp";
+import richardsonWebp from "../../auth-assets/images/stuff/richardson.webp";
+import dimchanskiyWebp from "../../auth-assets/images/stuff/dimchanskiy.webp";
+import slavaWebp from "../../auth-assets/images/stuff/slava.webp";
 
-import styled from 'styled-components';
-import { device } from '../../../../styles/auth/breackpoints';
-import { motion } from 'framer-motion';
+import styled from "styled-components";
+import { device } from "../../../../styles/auth/breackpoints";
+import { motion } from "framer-motion";
 
 const Stuff = styled.div`
   font-size: 12px;
@@ -54,14 +54,25 @@ const Stuff = styled.div`
 
     max-width: 746px;
   }
-  @media (${device.laptop}) {
-    max-width: 926px;
+
+  .stuff__name {
+    font-size: 1.5em;
+  }
+
+  .stuff__job {
+    margin-top: 8px;
+    font-size: 1.5em;
   }
 `;
 
 const Item = styled.div``;
 const Avatar = styled.div`
-  background: linear-gradient(144.92deg, #b618de 14.11%, #375fbe 49.84%, #00fff0 87.08%);
+  background: linear-gradient(
+    144.92deg,
+    #b618de 14.11%,
+    #375fbe 49.84%,
+    #00fff0 87.08%
+  );
   border-radius: 0.5em;
   width: 207px;
   height: 207px;
@@ -90,32 +101,39 @@ const Text = styled.div`
   margin-top: 1.13333333333em;
 
   line-height: 120%;
+
+  @media (${device.laptop}) {
+  }
 `;
 
 const StuffSection = React.memo(() => {
   return (
     <Section>
       <H3>Наша команда</H3>
-      <Stuff as={motion.div} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
+      <Stuff
+        as={motion.div}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+      >
         <Item>
           <Avatar>
             <img
               className="avatar__poop"
-              style={{ position: 'absolute', top: '10px', left: '0px' }}
+              style={{ position: "absolute", top: "10px", left: "0px" }}
               src={poopMoon}
               alt="avatar__poop"
             />
 
             <img
               className="avatar__poop"
-              style={{ position: 'absolute', top: '110px', left: '0px' }}
+              style={{ position: "absolute", top: "110px", left: "0px" }}
               src={poopMoonDown}
               alt="avatar__poop"
             />
 
             <img
               className="avatar__poop"
-              style={{ position: 'absolute', top: '23px', right: '18px' }}
+              style={{ position: "absolute", top: "23px", right: "18px" }}
               src={poopCloud}
               alt="avatar__poop"
             />
@@ -139,21 +157,21 @@ const StuffSection = React.memo(() => {
           <Avatar>
             <img
               className="avatar__poop"
-              style={{ position: 'absolute', top: '3px', right: '6px' }}
+              style={{ position: "absolute", top: "3px", right: "6px" }}
               src={sec1}
               alt="avatar__poop"
             />
 
             <img
               className="avatar__poop"
-              style={{ position: 'absolute', top: '85px', right: '0px' }}
+              style={{ position: "absolute", top: "85px", right: "0px" }}
               src={sec2}
               alt="avatar__poop"
             />
 
             <img
               className="avatar__poop"
-              style={{ position: 'absolute', top: '58px', left: '0' }}
+              style={{ position: "absolute", top: "58px", left: "0" }}
               src={sec3}
               alt="avatar__poop"
             />
@@ -178,21 +196,21 @@ const StuffSection = React.memo(() => {
           <Avatar>
             <img
               className="avatar__poop"
-              style={{ position: 'absolute', top: '14px', right: '9px' }}
+              style={{ position: "absolute", top: "14px", right: "9px" }}
               src={third2}
               alt="avatar__poop"
             />
 
             <img
               className="avatar__poop"
-              style={{ position: 'absolute', top: '54px', left: '0px' }}
+              style={{ position: "absolute", top: "54px", left: "0px" }}
               src={third1}
               alt="avatar__poop"
             />
 
             <img
               className="avatar__poop"
-              style={{ position: 'absolute', top: '137px', right: '9px' }}
+              style={{ position: "absolute", top: "137px", right: "9px" }}
               src={third3}
               alt="avatar__poop"
             />
@@ -218,21 +236,21 @@ const StuffSection = React.memo(() => {
           <Avatar>
             <img
               className="avatar__poop"
-              style={{ position: 'absolute', top: '9px', left: '0px' }}
+              style={{ position: "absolute", top: "9px", left: "0px" }}
               src={fourth1}
               alt="avatar__poop"
             />
 
             <img
               className="avatar__poop"
-              style={{ position: 'absolute', top: '106px', left: '0px' }}
+              style={{ position: "absolute", top: "106px", left: "0px" }}
               src={fourth3}
               alt="avatar__poop"
             />
 
             <img
               className="avatar__poop"
-              style={{ position: 'absolute', top: '23px', right: '0' }}
+              style={{ position: "absolute", top: "23px", right: "0" }}
               src={fourth2}
               alt="avatar__poop"
             />
@@ -242,7 +260,7 @@ const StuffSection = React.memo(() => {
               <img
                 loading="lazy"
                 decoding="async"
-                style={{ transform: 'translate(-38%, -50%)' }}
+                style={{ transform: "translate(-38%, -50%)" }}
                 className="avatar__image"
                 src={dimchanskiy}
                 alt="avatar"
@@ -258,21 +276,21 @@ const StuffSection = React.memo(() => {
           <Avatar>
             <img
               className="avatar__poop"
-              style={{ position: 'absolute', top: '29px', left: '9px' }}
+              style={{ position: "absolute", top: "29px", left: "9px" }}
               src={five1}
               alt="avatar__poop"
             />
 
             <img
               className="avatar__poop"
-              style={{ position: 'absolute', top: '113px', left: '0px' }}
+              style={{ position: "absolute", top: "113px", left: "0px" }}
               src={five3}
               alt="avatar__poop"
             />
 
             <img
               className="avatar__poop"
-              style={{ position: 'absolute', top: '53px', right: '0' }}
+              style={{ position: "absolute", top: "53px", right: "0" }}
               src={five2}
               alt="avatar__poop"
             />

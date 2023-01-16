@@ -23,11 +23,17 @@ import { device } from "../../../../../styles/auth/breackpoints";
 const Title = styled.p`
   font-weight: 500;
   font-size: 24px;
-  margin-bottom: 28px !important;
+  text-align: center;
+  margin-bottom: 28px;
 
-  @media (${device.laptop}) {
+  @media (${device.mobileL}) {
+    font-size: 34px;
+  }
+
+  @media (${device.tablet}) {
     font-size: 40px;
     line-height: 49px;
+    text-align: start;
   }
 `;
 
@@ -37,6 +43,13 @@ const WrapperDiscount = styled.div`
   margin: 28px 0;
   flex-direction: column;
   gap: 14px;
+
+  .time-image {
+    max-width: 348px;
+    max-height: 78px;
+    height: auto;
+    width: 100%;
+  }
 
   @media (${device.tablet}) {
     flex-direction: row;
@@ -71,7 +84,11 @@ const Discount = styled.span`
   font-weight: 800;
   font-size: 28px;
 
-  @media (${device.laptop}) {
+  @media (${device.mobileL}) {
+    font-size: 40px;
+  }
+
+  @media (${device.tablet}) {
     font-size: 60px;
   }
 `;
@@ -101,7 +118,7 @@ const HomeSection: FC<Props> = React.memo(({ ChangeSection }) => {
               ЗАРАБОТКУ НА КРИПТОВАЛЮТЕ
             </Title>
             <WrapperDiscount>
-              <img width={348} height={78} alt="" src={timer} />
+              <img className="time-image" alt="" src={timer} />
               <OriginPrice>25000₽</OriginPrice>
               <DiscountPrice>7500₽</DiscountPrice>
             </WrapperDiscount>

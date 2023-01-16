@@ -20,9 +20,7 @@ const Author = styled.div`
   display: flex;
   border-radius: 0.5em;
   padding: 2.4375em 0.875em 0.875em 2.0625em;
-  margin: 2.75em auto;
-  background: top -100px right 10px / 678.34px 610.56px no-repeat url(${star}),
-    rgba(55, 95, 190, 0.3);
+  margin: auto;
 
   .image {
     position: absolute;
@@ -43,9 +41,13 @@ const Author = styled.div`
     max-width: ${size.mobileL}px;
   }
   @media (${device.tablet}) {
+    background: top -100px right 10px / 678.34px 610.56px no-repeat url(${star}),
+      rgba(55, 95, 190, 0.3);
     max-width: ${size.tablet}px;
   }
-
+  @media (${device.laptop}) {
+    margin: 2.75em auto;
+  }
   @media (${device.laptopL}) {
     padding-left: 2.625em;
     max-width: 1319px;

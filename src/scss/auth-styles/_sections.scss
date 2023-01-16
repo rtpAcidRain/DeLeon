@@ -24,14 +24,26 @@
     min-height: 156px;
     display: flex;
     flex-direction: column;
+    .question {
+      font-size: 2.3em;
+    }
     .answer {
       font-weight: 500;
       flex: 1;
-      font-size: 1em;
+      font-size: 1.8em;
       line-height: 1.2em;
       margin-top: 1em;
       display: flex;
       align-items: center;
+    }
+
+    @media (min-width: 1024px) {
+      .question {
+        font-size: 1.3em;
+      }
+      .answer {
+        font-size: 1em;
+      }
     }
 
     @media (min-width: 1440px) {

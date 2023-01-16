@@ -1,7 +1,7 @@
-import { isDesktop } from 'react-device-detect';
-import styled from 'styled-components';
-import { device } from '../../../../styles/auth/breackpoints';
-import { H6 } from '../UI/Heading';
+import { isDesktop } from "react-device-detect";
+import styled from "styled-components";
+import { device } from "../../../../styles/auth/breackpoints";
+import { H6 } from "../UI/Heading";
 
 export const Sidebar = styled.aside`
   height: 80px;
@@ -12,11 +12,11 @@ export const Sidebar = styled.aside`
   top: 0;
   left: 0;
   position: fixed;
-  
+
   &::-webkit-scrollbar {
     width: 0;
   }
-  
+
   @media (${device.tablet}) {
     font-size: 14px;
   }
@@ -65,7 +65,7 @@ export const Logo = styled.div`
 `;
 
 export const Heading = styled(H6)`
-  font-family: 'Audiowide', cursive;
+  font-family: "Audiowide", cursive;
   text-align: center;
   display: none;
   ${isDesktop &&
@@ -94,7 +94,7 @@ export const Controls = styled.div<{ show: boolean }>`
   position: absolute;
   top: 0;
   transition: left 0.5s;
-  left: ${(props) => (!props.show ? '-100%' : '0%')};
+  left: ${(props) => (!props.show ? "-100%" : "0%")};
   background: rgba(0, 0, 0, 0.5);
 
   ${isDesktop &&
@@ -158,9 +158,10 @@ export const Item = styled.li<{ active: boolean }>`
   border-radius: 10px;
   text-overflow: ellipsis;
   overflow: hidden;
-  filter: ${(props) => props.active && 'drop-shadow(0px 0px 7px #0058FF)'};
-  color: ${(props) => (props.active ? '#fff' : '#585858')};
-  border: ${(props) => (props.active ? '2px solid #8FD1F9' : '2px solid transparent' )};
+  filter: ${(props) => props.active && "drop-shadow(0px 0px 7px #0058FF)"};
+  color: ${(props) => (props.active ? "#fff" : "#585858")};
+  border: ${(props) =>
+    props.active ? "2px solid #8FD1F9" : "2px solid transparent"};
   transition: all 0.1s linear;
   white-space: nowrap;
 `;

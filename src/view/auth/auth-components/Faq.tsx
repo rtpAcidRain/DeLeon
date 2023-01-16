@@ -1,6 +1,6 @@
-import React, { FC } from 'react';
-import { H5 } from './UI/Heading';
-import { motion } from 'framer-motion';
+import React, { FC } from "react";
+import { H5 } from "./UI/Heading";
+import { motion } from "framer-motion";
 
 type Props = {
   question: string;
@@ -17,8 +17,9 @@ const Faq: FC<Props> = React.memo(({ question, answer }) => {
           y: 0,
           opacity: 1,
         },
-      }}>
-      <H5>{question}</H5>
+      }}
+    >
+      <H5 className="question">{question}</H5>
       <p className="answer">{answer}</p>
     </motion.article>
   );

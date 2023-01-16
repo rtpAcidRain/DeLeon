@@ -40,7 +40,13 @@ const Title = styled.div`
   }
 
   h2 {
-    font-size: 38px;
+    font-size: 28px;
+  }
+
+  @media (${device.mobileM}) {
+    h2 {
+      font-size: 38px;
+    }
   }
 
   @media (${device.tablet}) {

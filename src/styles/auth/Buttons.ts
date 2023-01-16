@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { device } from './breackpoints';
+import styled from "styled-components";
+import { device } from "./breackpoints";
 
 const Button = styled.button`
   display: block;
@@ -7,14 +7,19 @@ const Button = styled.button`
 `;
 
 export const SectionButton = styled(Button)<{ disabled?: boolean }>`
-  background: linear-gradient(88.35deg, #0CE364 0%, #18B7B2 52.92%, #24488C 100%);;
+  background: linear-gradient(
+    88.35deg,
+    #0ce364 0%,
+    #18b7b2 52.92%,
+    #24488c 100%
+  );
   font-style: normal;
   font-weight: 800;
   font-size: 0.9375em;
   border-radius: 0.533333333333em;
   line-height: 1.2em;
   padding: 0.9333333333333333em 2.266666666666667em;
-  color: ${(props) => (props.disabled ? '#b3adad' : '#ffffff')};
+  color: ${(props) => (props.disabled ? "#b3adad" : "#ffffff")};
   &:disabled {
     cursor: not-allowed;
   }
@@ -26,12 +31,12 @@ export const SidebarButton = styled(Button)`
   line-height: 40px;
   text-transform: uppercase;
   color: #585858;
-  height: 40px; 
+  height: 40px;
 `;
 
 export const SubscribeSidebarButton = styled(Button)`
-  background: #8FD1F9;
-  box-shadow: 0 0 13px #0058FF;
+  background: #8fd1f9;
+  box-shadow: 0 0 13px #0058ff;
   border-radius: 10px;
   color: #292929;
   font-size: 20px;
@@ -49,7 +54,7 @@ const ArrowBut = styled(Button)`
   transform: translateX(-50%);
   background: none;
   border: 0;
-  z-index: 9999;
+  z-index: 1;
   @media (${device.laptop}) {
     width: 45px;
   }
@@ -66,8 +71,8 @@ export const GiftButton = styled.button`
   bottom: 20px;
   outline: none;
   border: none;
-  z-index: 1;
-  
+  z-index: 2;
+
   img {
     display: block;
     height: auto;

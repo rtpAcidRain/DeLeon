@@ -51,25 +51,10 @@ const ProgramItemStyle = styled.div<{ colors: LevelColorType }>`
   margin-bottom: 1.2em;
   position: absolute;
   width: 100%;
-  max-height: 226px;
-  overflow-y: scroll;
-  left: 0;
+  left: 50%;
   top: 100%;
-  z-index: 10;
-
-  &::-webkit-scrollbar {
-    width: 8px;
-  }
-  &::-webkit-scrollbar-thumb {
-    background-color: #fff3;
-    border: 4px solid #fff3;
-    border-radius: 0.5em;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background: #fff3;
-    border: solid 2px transparent;
-  }
+  transform: translateY(-40%) translateX(-55%);
+  z-index: 2;
 `;
 
 const Composition = styled.div`

@@ -150,17 +150,11 @@ const AuthorSection: React.FC = React.memo(() => {
   return (
     <Section>
       <H3>Автор курса</H3>
-      <Author
-        as={motion.div}
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-      >
+      <Author as={motion.div} initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
         <MediaQuery minWidth={size.laptopL}>
           <picture className="image">
-            <source height="100%" srcSet={authorImageWebp} type="image/webp" />
+            <source srcSet={authorImageWebp} type="image/webp" />
             <img
-              loading="lazy"
-              decoding="async"
               className="course-author__image"
               src={authorImage}
               alt="author"

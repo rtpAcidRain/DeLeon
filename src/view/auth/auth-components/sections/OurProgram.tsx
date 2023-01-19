@@ -53,7 +53,7 @@ const ProgramItemStyle = styled.div<{ colors: LevelColorType }>`
   width: 100%;
   left: 50%;
   top: 100%;
-  transform: translateY(-40%) translateX(-55%);
+  transform: translateY(-35%) translateX(-50%);
   z-index: 2;
 `;
 
@@ -375,24 +375,12 @@ const Road = styled.svg`
 type Props = {
   title: string;
   children: ReactNode;
-  color: keyof ColorsType;
+  color: LevelColorType;
 };
 
 export const ProgramItem: FC<Props> = ({ title, children, color }) => {
-  const [colors, setColors] = useState<LevelColorType>(colorsObj.lower);
-
-  useEffect(() => {
-    if (color === "middle") {
-      return setColors(colorsObj.middle);
-    }
-    if (color === "max") {
-      return setColors(colorsObj.max);
-    }
-    // eslint-disable-next-line
-  }, []);
-
   return (
-    <ProgramItemStyle colors={colors}>
+    <ProgramItemStyle colors={color}>
       <ProgramItemContainer className="program-item__container">
         <Name>{title}</Name>
         <ul className="our-program__list list">{children}</ul>

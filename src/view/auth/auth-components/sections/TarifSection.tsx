@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Section from "../layouts/Section";
 import { H3 } from "../UI/Heading";
 import Tarif, { TarifENUMS } from "../Tarif";
@@ -50,11 +50,14 @@ const tarifsData = [
 ];
 
 const Tarifs = styled.div`
-  display: grid;
-  row-gap: 33px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-size: 20px;
-  margin: auto;
   max-width: 230px;
+  width: 100%;
+  gap: 20px;
+  margin: auto;
   @media (${device.mobileS}) {
     max-width: ${size.mobileS}px;
   }
@@ -66,17 +69,19 @@ const Tarifs = styled.div`
   }
   @media (${device.tablet}) {
     max-width: ${size.tablet}px;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 33px;
     font-size: 16px;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 33px;
   }
-  @media (${isMobile ? device.laptop : "min-width: 1302px"}) {
+  @media (${device.laptop}) {
     max-width: ${size.laptop}px;
     margin: 51px auto auto auto;
     font-size: 20px;
-    gap: 77px;
   }
-  @media (${device.desktop}) {
+
+  @media (${device.laptopL}) {
+    margin: 51px auto auto auto;
     font-size: 20px;
   }
 `;

@@ -6,10 +6,16 @@ export const AirLinesIco = (props) => (
     viewBox="0 0 205 43"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    xmlnsXlink="http://www.w3.org/1999/xlink">
+    xmlnsXlink="http://www.w3.org/1999/xlink"
+  >
     <rect width="205" height="43" fill="url(#pattern0)" />
     <defs>
-      <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+      <pattern
+        id="pattern0"
+        patternContentUnits="objectBoundingBox"
+        width="1"
+        height="1"
+      >
         <use
           xlinkHref="#image0_220_506"
           transform="translate(0 -0.00228405) scale(0.00357143 0.0170266)"
@@ -32,7 +38,8 @@ export const ApploIco = (props) => (
     height="39"
     viewBox="0 0 33 39"
     fill="none"
-    xmlns="http://www.w3.org/2000/svg">
+    xmlns="http://www.w3.org/2000/svg"
+  >
     <path
       d="M27.5897 20.6101C27.5708 17.4134 29.0296 15.0041 31.9755 13.2276C30.3279 10.884 27.8352 9.59494 24.5494 9.34651C21.4382 9.10277 18.0343 11.1464 16.788 11.1464C15.4708 11.1464 12.4588 9.43088 10.0888 9.43088C5.19785 9.50588 0 13.3026 0 21.0273C0 23.31 0.420172 25.6678 1.26051 28.0958C2.38412 31.2925 6.43476 39.125 10.6601 38.9985C12.8695 38.9469 14.4322 37.4423 17.3073 37.4423C20.0974 37.4423 21.5421 38.9985 24.0064 38.9985C28.2695 38.9375 31.933 31.8175 33 28.6114C27.2828 25.9349 27.5897 20.7742 27.5897 20.6101V20.6101ZM22.6279 6.31382C25.0215 3.49205 24.8043 0.923402 24.7335 0C22.6185 0.12187 20.173 1.42963 18.7803 3.03738C17.2459 4.76232 16.3442 6.89504 16.5378 9.29964C18.8227 9.47307 20.9094 8.30593 22.6279 6.31382V6.31382Z"
       fill="black"
@@ -48,10 +55,16 @@ export const X5Ico = (props) => (
     viewBox="0 0 233 37"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    xmlnsXlink="http://www.w3.org/1999/xlink">
+    xmlnsXlink="http://www.w3.org/1999/xlink"
+  >
     <rect width="233" height="37" fill="url(#pattern1)" />
     <defs>
-      <pattern id="pattern1" patternContentUnits="objectBoundingBox" width="1" height="1">
+      <pattern
+        id="pattern1"
+        patternContentUnits="objectBoundingBox"
+        width="1"
+        height="1"
+      >
         <use
           xlinkHref="#image1_220_507"
           transform="translate(0 -0.000921376) scale(0.00126263 0.00795113)"
@@ -68,7 +81,12 @@ export const X5Ico = (props) => (
 );
 
 export const ScrollButIco = (props) => (
-  <svg {...props} viewBox="0 0 45 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg
+    {...props}
+    viewBox="0 0 45 26"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
     <path
       d="M42.3932 24.8034C40.964 25.518 39.2379 25.2379 38.108 24.108L26.0355 12.0355C24.0829 10.0829 20.9171 10.0829 18.9645 12.0355L6.89199 24.108C5.76212 25.2379 4.036 25.518 2.6068 24.8034C0.340439 23.6702 -0.149723 20.6497 1.64199 18.858L18.9645 1.53553C20.9171 -0.417088 24.0829 -0.417088 26.0355 1.53553L43.358 18.858C45.1497 20.6497 44.6596 23.6702 42.3932 24.8034Z"
       fill="url(#paint0_linear_64_213)"
@@ -81,7 +99,8 @@ export const ScrollButIco = (props) => (
         y1="12"
         x2="22.5"
         y2="-2"
-        gradientUnits="userSpaceOnUse">
+        gradientUnits="userSpaceOnUse"
+      >
         <stop stopColor="#0FD5F0" />
         <stop offset="0.994792" stopColor="#375FBE" />
       </linearGradient>
@@ -91,7 +110,13 @@ export const ScrollButIco = (props) => (
 
 export const TarifStar = ({ color }) => {
   return (
-    <svg width="11" height="12" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      width="12"
+      height="12"
+      viewBox="0 0 11 12"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         d="M5.5 0C5.5 3.16875 4.05227 6 2 6C4.05227 6 5.5 8.83125 5.5 12C5.5 8.83125 6.94773 6 9 6C6.94773 6 5.5 3.16875 5.5 0Z"
         fill={color}
@@ -107,10 +132,19 @@ export const TarifStar = ({ color }) => {
           width="10.4541"
           height="11.25"
           filterUnits="userSpaceOnUse"
-          colorInterpolationFilters="sRGB">
+          colorInterpolationFilters="sRGB"
+        >
           <feFlood floodOpacity="0" result="BackgroundImageFix" />
-          <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-          <feGaussianBlur stdDeviation="1.5" result="effect1_foregroundBlur_105_861" />
+          <feBlend
+            mode="normal"
+            in="SourceGraphic"
+            in2="BackgroundImageFix"
+            result="shape"
+          />
+          <feGaussianBlur
+            stdDeviation="1.5"
+            result="effect1_foregroundBlur_105_861"
+          />
         </filter>
       </defs>
     </svg>
@@ -125,10 +159,25 @@ export const BurgerMenu = (props) => {
       height="32"
       viewBox="0 0 50 32"
       fill="none"
-      xmlns="http://www.w3.org/2000/svg">
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <rect width="50" height="4" rx="2" fill="#28A0B0" fillOpacity="0.8" />
-      <rect y="14" width="50" height="4" rx="2" fill="#28A0B0" fillOpacity="0.8" />
-      <rect y="28" width="50" height="4" rx="2" fill="#28A0B0" fillOpacity="0.8" />
+      <rect
+        y="14"
+        width="50"
+        height="4"
+        rx="2"
+        fill="#28A0B0"
+        fillOpacity="0.8"
+      />
+      <rect
+        y="28"
+        width="50"
+        height="4"
+        rx="2"
+        fill="#28A0B0"
+        fillOpacity="0.8"
+      />
     </svg>
   );
 };
@@ -141,7 +190,8 @@ export const BurgerMenuClose = (props) => {
       height="38"
       viewBox="0 0 42 38"
       fill="none"
-      xmlns="http://www.w3.org/2000/svg">
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <rect
         x="3.50586"
         y="0.988525"

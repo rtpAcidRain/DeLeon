@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { H4 } from "../UI/Heading";
 
 import { SectionButton } from "../../../../styles/auth/Buttons";
+import { device } from "../../../../styles/auth/breackpoints";
 
 export type ColorsType = {
   lower: LevelColorType;
@@ -35,10 +36,20 @@ export const colorsObj: ColorsType = {
 
 export const TarifWrapper = styled.article<{ colors: LevelColorType }>`
   padding: 2.8125em 0.625em 1.0625em;
+  height: 100%;
+  width: 100%;
   backdrop-filter: blur(7px);
   border-radius: 0.5em;
   position: relative;
   background: ${(props) => props.colors.bg};
+
+  @media (${device.tablet}) {
+    height: 640px;
+  }
+
+  @media (${device.laptop}) {
+    height: 100%;
+  }
 `;
 
 export const Dec = styled.div<{ left?: boolean }>`
@@ -132,8 +143,6 @@ export const ItemModule = styled.li`
 export const Item = styled.li`
   display: flex;
   align-items: center;
-  max-width: 266px;
-  margin: auto;
   :not(:last-child) {
     margin-bottom: 11px;
   }
@@ -141,27 +150,45 @@ export const Item = styled.li`
 
 export const TextModule = styled.p`
   position: relative;
-  margin-left: 13px;
   width: 100%;
   font-weight: 500;
   font-size: 0.75em;
   line-height: 1.25em;
+  padding-left: 24px;
 
   color: #ffffff;
 
   .title {
-    border-bottom: 1px solid #fff;
     cursor: pointer;
+    border-bottom: 1px solid #fff;
+  }
+
+  .arrow-module {
+    margin-left: 4px;
+  }
+
+  svg {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
   }
 `;
 
 export const Text = styled.p`
-  margin-left: 13px;
+  position: relative;
   font-weight: 500;
   font-size: 0.75em;
   line-height: 1.25em;
-
   color: #ffffff;
+  padding-left: 24px;
+
+  svg {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 `;
 
 export const Footer = styled.footer`
@@ -194,7 +221,6 @@ export const Sale = styled.p`
 
 export const Button = styled(SectionButton)`
   font-size: 0.8125em;
-  max-width: 180px;
   width: 100%;
   padding: 0.6923076923076923em 0;
 `;

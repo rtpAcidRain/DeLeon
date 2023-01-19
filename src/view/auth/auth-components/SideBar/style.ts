@@ -6,7 +6,7 @@ import { H6 } from "../UI/Heading";
 export const Sidebar = styled.aside`
   height: 80px;
   right: 0;
-  z-index: 1;
+  z-index: 2;
   background: #212d4a;
   font-size: 12px;
   top: 0;
@@ -62,6 +62,19 @@ export const Logo = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
+
+  img {
+    width: 44%;
+    image-rendering: pixelated;
+  }
+
+  ${isDesktop &&
+  `   @media (${device.laptop}) {
+    img {
+      width: 100%;
+    }
+  }
+      `}
 `;
 
 export const Heading = styled(H6)`

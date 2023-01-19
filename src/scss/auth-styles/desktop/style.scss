@@ -7,6 +7,7 @@
   margin: auto;
   width: 100%;
   min-height: 687px;
+  z-index: 1;
 }
 
 .swiper-pagination {
@@ -54,6 +55,8 @@
 }
 
 .bonuses-title {
+  font-size: 24px !important;
+  word-wrap: break-word;
   margin: 20px auto !important;
 }
 
@@ -142,6 +145,10 @@
     height: 120px;
     margin: 54px auto 0 auto;
     font-size: 1em;
+  }
+
+  .bonuses-title {
+    font-size: 34px !important;
   }
 }
 

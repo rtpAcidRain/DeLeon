@@ -1,6 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { ColorsType, TextModule } from "../../Tarif/styles";
+import {
+  colorsObj,
+  ColorsType,
+  LevelColorType,
+  TextModule,
+} from "../../Tarif/styles";
 import { ProgramItem } from "../../sections/OurProgram";
+import { TarifStar } from "../../../auth-assets/svg/icons";
+import arrow from "../../../auth-assets/images/moduleArrow.png";
 
 const mockLessons = [
   "Урок 1. Законодательство РФ/РЬ/КЗ/УА (4 урока)",
@@ -48,6 +55,9 @@ const Module: React.FC<ModuleProps> = ({
   module,
   contentTitle,
 }) => {
+  const [currentColor, setCurrentColor] = useState<LevelColorType>(
+    colorsObj.lower
+  );
   const [lessons, setLessons] = useState<string[]>([]);
   const [showModule, setShowModule] = useState(false);
 
@@ -64,15 +74,28 @@ const Module: React.FC<ModuleProps> = ({
     }
   }, [module]);
 
+  useEffect(() => {
+    switch (color) {
+      case "middle":
+        return setCurrentColor(colorsObj.middle);
+      case "max":
+        return setCurrentColor(colorsObj.max);
+      default:
+        return setCurrentColor(colorsObj.lower);
+    }
+  }, []);
+
   return (
     <TextModule
       onMouseEnter={() => setShowModule(true)}
       onMouseLeave={() => setShowModule(false)}
       className="text"
     >
-      <span className="title">{title} (?)</span>
+      <TarifStar color={currentColor.cl} />
+      <span className="title">{title}</span>
+      <img className="arrow-module" width={8} height={8} src={arrow} alt="" />
       {showModule && (
-        <ProgramItem color={color} title={contentTitle}>
+        <ProgramItem color={currentColor} title={contentTitle}>
           {lessons.map((lesson) => (
             <li className="list__item" key={lesson}>
               {lesson}

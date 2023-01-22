@@ -7,7 +7,7 @@ import {
 } from "../../Tarif/styles";
 import { ProgramItem } from "../../sections/OurProgram";
 import { TarifStar } from "../../../auth-assets/svg/icons";
-import arrow from "../../../auth-assets/images/moduleArrow.png";
+import arrow from "../../../auth-assets/images/arrow.png";
 
 const mockLessons = [
   "Урок 1. Законодательство РФ/РЬ/КЗ/УА (4 урока)",

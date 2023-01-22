@@ -64,8 +64,7 @@ export const Logo = styled.div`
   text-align: center;
 
   img {
-    width: 44%;
-    image-rendering: pixelated;
+    width: 50%;
   }
 
   ${isDesktop &&

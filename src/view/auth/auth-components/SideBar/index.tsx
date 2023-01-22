@@ -1,11 +1,14 @@
-import { FC, useState } from 'react';
-import {SidebarButton, SubscribeSidebarButton} from '../../../../styles/auth/Buttons';
+import { FC, useState } from "react";
+import {
+  SidebarButton,
+  SubscribeSidebarButton,
+} from "../../../../styles/auth/Buttons";
 
-import logo from '../../auth-assets/images/logo.png';
-import logoMobile from '../../auth-assets/images/logo-mobile.png';
+import logo from "../../auth-assets/images/logo.png";
+import logoMobile from "../../auth-assets/images/logo-mobile.png";
 
-import { device } from '../../../../styles/auth/breackpoints';
-import { BurgerMenu, BurgerMenuClose } from '../../auth-assets/svg/icons';
+import { device } from "../../../../styles/auth/breackpoints";
+import { BurgerMenu, BurgerMenuClose } from "../../auth-assets/svg/icons";
 import {
   Sidebar,
   SideContainer,
@@ -18,9 +21,9 @@ import {
   Buttons,
   Mail,
   Wrapper,
-} from './style';
-import { isDesktop } from 'react-device-detect';
-import { motion } from 'framer-motion';
+} from "./style";
+import { isDesktop } from "react-device-detect";
+import { motion } from "framer-motion";
 
 type Props = {
   ChangeSection: (idx: number) => void;
@@ -28,17 +31,17 @@ type Props = {
 };
 
 const sections = [
-  'Главная',
-  'Видео',
-  'Рынок сегодня',
-  'Что вы получите',
-  'Тарифы',
-  'Автор курса',
-  'Команда',
-  'Формат обучения',
-  'Наши партнеры',
-  'Отзывы',
-  'FAQ',
+  "Главная",
+  "Видео",
+  "Рынок сегодня",
+  "Что вы получите",
+  "Тарифы",
+  "Автор курса",
+  "Команда",
+  "Формат обучения",
+  "Наши партнеры",
+  "Отзывы",
+  "FAQ",
 ];
 
 const SideBar: FC<Props> = ({ ChangeSection, currentSection }) => {
@@ -78,7 +81,7 @@ const SideBar: FC<Props> = ({ ChangeSection, currentSection }) => {
         <Logo>
           <picture>
             {isDesktop && <source media={device.laptop} srcSet={logo} />}
-            <img loading="lazy" decoding="async" src={logoMobile} alt="logo" />
+            <img loading="lazy" decoding="async" src={logo} alt="logo" />
           </picture>
         </Logo>
 
@@ -89,14 +92,16 @@ const SideBar: FC<Props> = ({ ChangeSection, currentSection }) => {
               variants={container}
               initial="hidden"
               animate="visible"
-              className="navbar__items">
+              className="navbar__items"
+            >
               {sections.map((el, i) => (
                 <Item
                   as={motion.li}
                   variants={item}
                   onClick={() => onChange(i)}
                   key={i}
-                  active={currentSection === i}>
+                  active={currentSection === i}
+                >
                   {el}
                 </Item>
               ))}
@@ -106,11 +111,11 @@ const SideBar: FC<Props> = ({ ChangeSection, currentSection }) => {
               <Buttons>
                 <SidebarButton>Вход</SidebarButton>
                 <SidebarButton>Проверка NFT</SidebarButton>
-                <Mail href="mailto:admin@amdin">
-                  Email
-                </Mail>
+                <Mail href="mailto:admin@amdin">Email</Mail>
               </Buttons>
-              <SubscribeSidebarButton onClick={() => onChange(5)}>Записаться на курс</SubscribeSidebarButton>
+              <SubscribeSidebarButton onClick={() => onChange(5)}>
+                Записаться на курс
+              </SubscribeSidebarButton>
             </Wrapper>
           </Navbar>
         </Controls>

@@ -11,6 +11,9 @@ const Faq: FC<Props> = React.memo(({ question, answer }) => {
   return (
     <motion.article
       className="quesiton__item"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
       variants={{
         hidden: { y: 20, opacity: 0 },
         visible: {

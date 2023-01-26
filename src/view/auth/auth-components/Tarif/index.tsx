@@ -65,7 +65,14 @@ const Tarif: React.FC<Props> = React.memo(({ title, content, prise, sale }) => {
   };
 
   return (
-    <TarifWrapper colors={colors} as={motion.article} variants={item}>
+    <TarifWrapper
+      colors={colors}
+      as={motion.article}
+      initial={{ opacity: 0, scale: 0 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: true }}
+      variants={item}
+    >
       <Dec>
         <RightDec
           color1={

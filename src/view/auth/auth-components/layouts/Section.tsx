@@ -5,6 +5,7 @@ import { device } from "../../../../styles/auth/breackpoints";
 
 type Props = {
   children: ReactNode;
+  ref?: React.MutableRefObject<HTMLElement | null>;
 };
 
 const SectionLay = styled.section`
@@ -44,9 +45,9 @@ const Container = styled.div`
   }
 `;
 
-const Section: FC<Props> = React.memo(({ children }) => {
+const Section: FC<Props> = React.memo(({ children, ref }) => {
   return (
-    <SectionLay>
+    <SectionLay ref={ref}>
       <Container>{children}</Container>
     </SectionLay>
   );

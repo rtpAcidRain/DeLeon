@@ -9,15 +9,11 @@ import { H3 } from "../UI/Heading";
 type Props = {};
 
 const Learning = styled.div`
-  font-size: 9px;
+  font-size: 12px;
   max-width: 230px;
   margin: auto;
-  @media (${device.mobileM}) {
-    font-size: 11px;
-    max-width: ${size.mobileM}px;
-  }
   @media (${device.mobileL}) {
-    max-width: ${size.mobileL}px;
+    max-width: 95%;
   }
   @media (${device.tablet}) {
     font-size: 15px;

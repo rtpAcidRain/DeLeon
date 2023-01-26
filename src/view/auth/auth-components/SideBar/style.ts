@@ -44,6 +44,10 @@ export const Sidebar = styled.aside`
 export const SideContainer = styled.div`
   padding: 17px 0 0;
   position: relative;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
   ${isDesktop &&
   `  @media (${device.laptop}) {
     width: 100%;
@@ -58,7 +62,6 @@ export const SideContainer = styled.div`
 
 export const Logo = styled.div`
   max-width: 102px;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -89,9 +92,7 @@ export const Heading = styled(H6)`
 export const Burger = styled.button`
   display: block;
   cursor: pointer;
-  position: absolute;
-  top: 24px;
-  left: 23px;
+  margin-left: 24px;
   z-index: 2;
   ${isDesktop &&
   `   @media (${device.laptop}) {

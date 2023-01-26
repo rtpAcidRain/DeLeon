@@ -1,12 +1,12 @@
-import React from 'react';
-import Section from '../layouts/Section';
-import { H3 } from '../UI/Heading';
+import React from "react";
+import Section from "../layouts/Section";
+import { H3 } from "../UI/Heading";
 
-import { AirLinesIco, ApploIco, X5Ico } from '../../auth-assets/svg/icons';
-import styled from 'styled-components';
-import { device, size } from '../../../../styles/auth/breackpoints';
-import { isDesktop, isMobile } from 'react-device-detect';
-import { motion } from 'framer-motion';
+import { AirLinesIco, ApploIco, X5Ico } from "../../auth-assets/svg/icons";
+import styled from "styled-components";
+import { device, size } from "../../../../styles/auth/breackpoints";
+import { isDesktop, isMobile } from "react-device-detect";
+import { motion } from "framer-motion";
 
 type Props = {};
 
@@ -44,7 +44,7 @@ const Back = styled(Plate)`
     height: 118px;
     width: 185px;
   }
-  @media (${isMobile ? device.laptop : 'min-width: 1189px'}) {
+  @media (${isMobile ? device.laptop : "min-width: 1189px"}) {
     margin: 0;
     margin-right: 45px;
     width: 270px;
@@ -81,7 +81,7 @@ const Front = styled(Plate)`
       max-width: 120px;
     }
   }
-  @media (${isDesktop && 'min-width: 1189px'}) {
+  @media (${isDesktop && "min-width: 1189px"}) {
     width: 270px;
     height: 141px;
     .logo {
@@ -94,22 +94,7 @@ const Partners: React.FC<Props> = React.memo((props: Props) => {
   return (
     <Section>
       <H3>Партнеры</H3>
-      <PartnersStyle
-        as={motion.div}
-        variants={{
-          hidden: { opacity: 1, scale: 0 },
-          visible: {
-            opacity: 1,
-            scale: 1,
-            transition: {
-              delayChildren: 0.3,
-              staggerChildren: 0.2,
-            },
-          },
-        }}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}>
+      <PartnersStyle>
         <Back
           as={motion.div}
           variants={{
@@ -118,7 +103,11 @@ const Partners: React.FC<Props> = React.memo((props: Props) => {
               y: 0,
               opacity: 1,
             },
-          }}>
+          }}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
           <Front>
             <ApploIco className="logo" />
           </Front>
@@ -131,7 +120,11 @@ const Partners: React.FC<Props> = React.memo((props: Props) => {
               y: 0,
               opacity: 1,
             },
-          }}>
+          }}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
           <Front>
             <AirLinesIco className="logo" />
           </Front>
@@ -144,7 +137,11 @@ const Partners: React.FC<Props> = React.memo((props: Props) => {
               y: 0,
               opacity: 1,
             },
-          }}>
+          }}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
           <Front>
             <X5Ico className="logo" />
           </Front>

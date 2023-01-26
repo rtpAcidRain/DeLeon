@@ -1,4 +1,4 @@
-import React, { FC, ReactNode, useEffect, useState } from "react";
+import React, { FC, ReactNode } from "react";
 import Section from "../layouts/Section";
 import { H3 } from "../UI/Heading";
 
@@ -14,7 +14,7 @@ import styled from "styled-components";
 import { device, size } from "../../../../styles/auth/breackpoints";
 import { motion } from "framer-motion";
 import Stand from "./WillKnow/Stand";
-import { colorsObj, ColorsType, LevelColorType } from "../Tarif/styles";
+import { LevelColorType } from "../Tarif/styles";
 import MediaQuery from "react-responsive";
 
 const Program = styled.div`

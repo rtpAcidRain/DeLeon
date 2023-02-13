@@ -32,14 +32,14 @@ const variants = {
 };
 
 interface BonusItemProps {
-  bonus: number;
+  bonus: { title: string; id: number };
   max: number;
   isSelected: boolean;
 }
 
 const BonusItem: FC<BonusItemProps> = ({ bonus, max, isSelected }) => {
-  const [isOpen, setIsOpen] = useState(isSelected);
   const [selectedBonuses, setSelectedBonuses] = useAtom(bonusesAtoms);
+  const [isOpen, setIsOpen] = useState(isSelected);
 
   const image =
     max === selectedBonuses.length && !isOpen
@@ -49,18 +49,22 @@ const BonusItem: FC<BonusItemProps> = ({ bonus, max, isSelected }) => {
       : gift;
 
   const onClick = () => {
-    if (max === selectedBonuses.length && !isSelected) return;
+    if (max === selectedBonuses.length) return;
 
-    setSelectedBonuses((prev) => [...prev, bonus]);
-    setIsOpen(true);
+    setSelectedBonuses((prev) => [...prev, 5]);
   };
+
+  useEffect(() => {
+    isSelected && setIsOpen(true);
+  }, [isSelected]);
 
   useEffect(() => {
     const timeout = setTimeout(() => {
       if (max === selectedBonuses.length && !isSelected) setIsOpen(true);
     }, 1000);
+
     return () => clearTimeout(timeout);
-  }, [max, selectedBonuses, isOpen, isSelected]);
+  }, [max, selectedBonuses, isSelected]);
 
   return (
     <motion.div
@@ -83,10 +87,7 @@ const BonusItem: FC<BonusItemProps> = ({ bonus, max, isSelected }) => {
         }}
         animate={isOpen && "open"}
         alt=""
-        className={clsx(
-          "gift-image",
-          selectedBonuses.includes(bonus) && "selected-gift"
-        )}
+        className={clsx("gift-image", isOpen && "selected-gift")}
         src={image}
       />
       <AnimatePresence>
@@ -102,7 +103,7 @@ const BonusItem: FC<BonusItemProps> = ({ bonus, max, isSelected }) => {
             className="gift-content"
           >
             <Title className="gift-title-content">Ваш подарок</Title>
-            <p className="gift-text-content">Lorem ipsum dolor sit amet</p>
+            <p className="gift-text-content">{bonus.title}</p>
           </motion.div>
         )}
       </AnimatePresence>

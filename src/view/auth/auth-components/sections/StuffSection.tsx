@@ -3,33 +3,12 @@ import Section from "../layouts/Section";
 import { H3 } from "../UI/Heading";
 
 import {
-  poopMoon,
-  poopMoonDown,
-  poopCloud,
-  sec1,
-  sec2,
-  sec3,
-  third1,
-  third2,
-  third3,
-  fourth1,
-  fourth2,
-  fourth3,
-  five1,
-  five2,
-  five3,
-} from "../../auth-assets/images/stuff__poops";
-
-import mayson from "../../auth-assets/images/stuff/mayson.png";
-import sanechka from "../../auth-assets/images/stuff/sanechka.png";
-import richardson from "../../auth-assets/images/stuff/richardson.png";
-import dimchanskiy from "../../auth-assets/images/stuff/dimchanskiy.png";
-import slava from "../../auth-assets/images/stuff/slava.png";
-import maysonWebp from "../../auth-assets/images/stuff/mayson.webp";
-import sanechkaWebp from "../../auth-assets/images/stuff/sanechka.webp";
-import richardsonWebp from "../../auth-assets/images/stuff/richardson.webp";
-import dimchanskiyWebp from "../../auth-assets/images/stuff/dimchanskiy.webp";
-import slavaWebp from "../../auth-assets/images/stuff/slava.webp";
+  Ilya,
+  Elizaveta,
+  Evgeniy,
+  Kirill,
+  Azamat,
+} from "../../auth-assets/images/team";
 
 import styled from "styled-components";
 import { device } from "../../../../styles/auth/breackpoints";
@@ -67,12 +46,6 @@ const Stuff = styled.div`
 
 const Item = styled.div``;
 const Avatar = styled.div`
-  background: linear-gradient(
-    144.92deg,
-    #b618de 14.11%,
-    #375fbe 49.84%,
-    #00fff0 87.08%
-  );
   border-radius: 0.5em;
   width: 207px;
   height: 207px;
@@ -88,9 +61,6 @@ const Avatar = styled.div`
   @media (${device.tablet}) {
     width: 220px;
     height: 220px;
-    .avatar__image {
-      height: 119%;
-    }
   }
 `;
 
@@ -117,198 +87,88 @@ const StuffSection = React.memo(() => {
       >
         <Item>
           <Avatar>
-            <img
-              className="avatar__poop"
-              style={{ position: "absolute", top: "10px", left: "0px" }}
-              src={poopMoon}
-              alt="avatar__poop"
-            />
-
-            <img
-              className="avatar__poop"
-              style={{ position: "absolute", top: "110px", left: "0px" }}
-              src={poopMoonDown}
-              alt="avatar__poop"
-            />
-
-            <img
-              className="avatar__poop"
-              style={{ position: "absolute", top: "23px", right: "18px" }}
-              src={poopCloud}
-              alt="avatar__poop"
-            />
             <picture>
-              <source srcSet={maysonWebp} type="image/webp" />
+              <source srcSet={Ilya} type="image/webp" />
               <img
                 loading="lazy"
                 decoding="async"
                 className="avatar__image"
-                src={mayson}
+                src={Ilya}
                 alt="avatar"
               />
             </picture>
           </Avatar>
           <Text>
-            <p className="stuff__name">Мэйсон</p>
-            <p className="stuff__job">Аналитик</p>
+            <p className="stuff__name">Илья</p>
           </Text>
         </Item>
         <Item>
           <Avatar>
-            <img
-              className="avatar__poop"
-              style={{ position: "absolute", top: "3px", right: "6px" }}
-              src={sec1}
-              alt="avatar__poop"
-            />
-
-            <img
-              className="avatar__poop"
-              style={{ position: "absolute", top: "85px", right: "0px" }}
-              src={sec2}
-              alt="avatar__poop"
-            />
-
-            <img
-              className="avatar__poop"
-              style={{ position: "absolute", top: "58px", left: "0" }}
-              src={sec3}
-              alt="avatar__poop"
-            />
-
             <picture>
-              <source srcSet={sanechkaWebp} type="image/webp" />
+              <source srcSet={Kirill} type="image/webp" />
               <img
                 loading="lazy"
                 decoding="async"
                 className="avatar__image"
-                src={sanechka}
+                src={Kirill}
                 alt="avatar"
               />
             </picture>
           </Avatar>
           <Text>
-            <p className="stuff__name">Александр</p>
-            <p className="stuff__job">Менеджер</p>
+            <p className="stuff__name">Кирилл</p>
           </Text>
         </Item>
         <Item>
           <Avatar>
-            <img
-              className="avatar__poop"
-              style={{ position: "absolute", top: "14px", right: "9px" }}
-              src={third2}
-              alt="avatar__poop"
-            />
-
-            <img
-              className="avatar__poop"
-              style={{ position: "absolute", top: "54px", left: "0px" }}
-              src={third1}
-              alt="avatar__poop"
-            />
-
-            <img
-              className="avatar__poop"
-              style={{ position: "absolute", top: "137px", right: "9px" }}
-              src={third3}
-              alt="avatar__poop"
-            />
-
             <picture>
-              <source srcSet={richardsonWebp} type="image/webp" />
+              <source srcSet={Elizaveta} type="image/webp" />
               <img
                 loading="lazy"
                 decoding="async"
                 className="avatar__image"
-                src={richardson}
+                src={Elizaveta}
                 alt="avatar"
               />
             </picture>
           </Avatar>
           <Text>
-            <p className="stuff__name">Ричард</p>
-            <p className="stuff__job">Финансист</p>
+            <p className="stuff__name">Елизавета</p>
           </Text>
         </Item>
 
         <Item>
           <Avatar>
-            <img
-              className="avatar__poop"
-              style={{ position: "absolute", top: "9px", left: "0px" }}
-              src={fourth1}
-              alt="avatar__poop"
-            />
-
-            <img
-              className="avatar__poop"
-              style={{ position: "absolute", top: "106px", left: "0px" }}
-              src={fourth3}
-              alt="avatar__poop"
-            />
-
-            <img
-              className="avatar__poop"
-              style={{ position: "absolute", top: "23px", right: "0" }}
-              src={fourth2}
-              alt="avatar__poop"
-            />
-
             <picture>
-              <source srcSet={dimchanskiyWebp} type="image/webp" />
+              <source srcSet={Evgeniy} type="image/webp" />
               <img
                 loading="lazy"
                 decoding="async"
-                style={{ transform: "translate(-38%, -50%)" }}
                 className="avatar__image"
-                src={dimchanskiy}
+                src={Evgeniy}
                 alt="avatar"
               />
             </picture>
           </Avatar>
           <Text>
-            <p className="stuff__name">Дмитрий</p>
-            <p className="stuff__job">Комьюнити менеджер</p>
+            <p className="stuff__name">Евгений</p>
           </Text>
         </Item>
         <Item>
           <Avatar>
-            <img
-              className="avatar__poop"
-              style={{ position: "absolute", top: "29px", left: "9px" }}
-              src={five1}
-              alt="avatar__poop"
-            />
-
-            <img
-              className="avatar__poop"
-              style={{ position: "absolute", top: "113px", left: "0px" }}
-              src={five3}
-              alt="avatar__poop"
-            />
-
-            <img
-              className="avatar__poop"
-              style={{ position: "absolute", top: "53px", right: "0" }}
-              src={five2}
-              alt="avatar__poop"
-            />
-
             <picture>
-              <source srcSet={slavaWebp} type="image/webp" />
+              <source srcSet={Azamat} type="image/webp" />
               <img
                 loading="lazy"
                 decoding="async"
                 className="avatar__image"
-                src={slava}
+                src={Azamat}
                 alt="avatar"
               />
             </picture>
           </Avatar>
           <Text>
-            <p className="stuff__name">Владислав</p>
-            <p className="stuff__job">Экономист</p>
+            <p className="stuff__name">Азамат</p>
           </Text>
         </Item>
       </Stuff>

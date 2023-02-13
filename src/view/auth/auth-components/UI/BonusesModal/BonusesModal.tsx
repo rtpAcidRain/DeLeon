@@ -5,10 +5,13 @@ import { atomWithStorage } from "jotai/utils";
 import { useAtom } from "jotai";
 import { H3 } from "../Heading";
 import styled from "styled-components";
+import { SectionButton } from "../../../../../styles/auth/Buttons";
 
-const Close = styled.p`
-  position: absolute;
-  font-size: 1em;
+const Button = styled(SectionButton)`
+  padding: 13px 40px;
+  font-weight: 600;
+  font-size: 20px;
+  margin: 0 auto 20px auto;
 `;
 
 interface BonusesModalProps {
@@ -16,7 +19,15 @@ interface BonusesModalProps {
   onClose: () => void;
 }
 
-const mockBonuses = [1, 2, 3, 4, 5, 6];
+const mockBonuses = [
+  { title: "Доступ к закрытому клубу выпускников", id: 1 },
+  { title: "NFT сертификат о прохождении курса", id: 2 },
+  { title: "Подарки для лучших учеников от спонсоров проекта", id: 3 },
+  { title: "50 USDT", id: 4 },
+  { title: "Бесплатный 5-дневный марафон (мини-курс от школы)", id: 5 },
+  { title: "3 месяца бесплатного пользования VPN от Surfshark", id: 6 },
+];
+
 export const bonusesAtoms = atomWithStorage("bonuses", [1, 2, 3]);
 
 const BonusesModal: FC<BonusesModalProps> = ({ onClose, isOpen }) => {
@@ -30,9 +41,9 @@ const BonusesModal: FC<BonusesModalProps> = ({ onClose, isOpen }) => {
           {mockBonuses.slice(0, 3).map((bonus) => (
             <BonusItem
               max={4}
-              isSelected={selectedBonuses.includes(bonus)}
+              isSelected={selectedBonuses.includes(bonus.id)}
               bonus={bonus}
-              key={bonus}
+              key={bonus.id}
             />
           ))}
         </div>
@@ -41,12 +52,13 @@ const BonusesModal: FC<BonusesModalProps> = ({ onClose, isOpen }) => {
           {mockBonuses.slice(3, 6).map((bonus) => (
             <BonusItem
               max={4}
-              isSelected={selectedBonuses.includes(bonus)}
+              isSelected={selectedBonuses.includes(bonus.id)}
               bonus={bonus}
-              key={bonus}
+              key={bonus.id}
             />
           ))}
         </div>
+        <Button>Забрать подарок</Button>
       </div>
     </Modal>
   );

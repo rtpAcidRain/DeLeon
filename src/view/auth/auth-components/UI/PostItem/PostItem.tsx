@@ -125,7 +125,7 @@ const Text = styled.div`
   margin-bottom: 24px;
 
   @media (${device.laptop}) {
-    font-size: 40px;
+    font-size: 24px;
   }
 `;
 

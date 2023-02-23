@@ -11,6 +11,8 @@ import { motion } from "framer-motion";
 import star from "../../auth-assets/images/star.svg";
 import { Button } from "./HomeSection/style";
 import coinWebp from "../../auth-assets/images/cryptocoin.webp";
+import { useAtom } from "jotai";
+import { isOpenFreeLessonModalAtom } from "../UI/FreeLessonModal/FreeLessonModal";
 
 const Author = styled.div`
   font-size: 7px;
@@ -147,6 +149,10 @@ const Container = styled.div`
 `;
 
 const AuthorSection: React.FC = React.memo(() => {
+  const [, setIsOpenModal] = useAtom(isOpenFreeLessonModalAtom);
+
+  const takeFreeLesson = () => setIsOpenModal(true);
+
   return (
     <Section>
       <H3>Автор курса</H3>
@@ -199,7 +205,9 @@ const AuthorSection: React.FC = React.memo(() => {
             </div>
           </Information>
           <Wrapper>
-            <Button className="button">Забрать бесплатный урок</Button>
+            <Button onClick={takeFreeLesson} className="button">
+              Забрать бесплатный урок
+            </Button>
             <MediaQuery minWidth={size.tablet}>
               <picture className="coin-image">
                 <source srcSet={coinWebp} type="image/webp" />

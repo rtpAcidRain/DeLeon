@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC } from "react";
 import {
   HomeSection,
   VideoSection,
@@ -10,8 +10,9 @@ import {
   Partners,
   ReviewSection,
   FaqSection,
-} from './sections';
+} from "./sections";
 import PostsSection from "./sections/PostsSection";
+import FreeLessonModal from "./UI/FreeLessonModal/FreeLessonModal";
 
 type Props = {
   ChangeSection: (idx: number) => void;
@@ -31,6 +32,7 @@ const ContentComponent: FC<Props> = ({ ChangeSection }) => {
       <Partners />
       <ReviewSection />
       <FaqSection />
+      <FreeLessonModal />
     </>
   );
 };

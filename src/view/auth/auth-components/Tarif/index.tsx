@@ -1,3 +1,4 @@
+import { useAtom } from "jotai";
 import React, { useEffect, useState } from "react";
 
 import {
@@ -7,6 +8,8 @@ import {
   RightDec,
   LeftDec,
 } from "../../auth-assets/images/tarif";
+import Module from "../UI/Module/Module";
+import { isOpenFreeLessonModalAtom } from "../UI/FreeLessonModal/FreeLessonModal";
 
 import { TarifStar } from "../../auth-assets/svg/icons";
 import {
@@ -28,7 +31,6 @@ import {
   Button,
 } from "./styles";
 import { motion } from "framer-motion";
-import Module from "../UI/Module/Module";
 
 export enum TarifENUMS {
   LOWERLEVEL = "Хомяк",
@@ -45,6 +47,9 @@ type Props = {
 
 const Tarif: React.FC<Props> = React.memo(({ title, content, prise, sale }) => {
   const [colors, setColors] = useState<LevelColorType>(colorsObj.lower);
+  const [, setIsOpenModal] = useAtom(isOpenFreeLessonModalAtom);
+
+  const buyTarif = () => setIsOpenModal(true);
 
   useEffect(() => {
     if (title === TarifENUMS.MIDDLELEVEL) {
@@ -191,7 +196,7 @@ const Tarif: React.FC<Props> = React.memo(({ title, content, prise, sale }) => {
           {title === TarifENUMS.MAXLEVEL ? (
             <Button disabled>SOLD OUT</Button>
           ) : (
-            <Button>Купить</Button>
+            <Button onClick={buyTarif}>Купить</Button>
           )}
         </Footer>
       </TarifContainer>

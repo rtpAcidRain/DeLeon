@@ -6,12 +6,18 @@ import { useAtom } from "jotai";
 import { H3 } from "../Heading";
 import styled from "styled-components";
 import { SectionButton } from "../../../../../styles/auth/Buttons";
+import { device } from "../../../../../styles/auth/breackpoints";
+import { isOpenFreeLessonModalAtom } from "../FreeLessonModal/FreeLessonModal";
 
 const Button = styled(SectionButton)`
   padding: 13px 40px;
   font-weight: 600;
   font-size: 20px;
-  margin: 0 auto 20px auto;
+  margin: 20px auto 20px auto;
+
+  @media (${device.tablet}) {
+    margin: 0 auto 20px auto;
+  }
 `;
 
 interface BonusesModalProps {
@@ -32,6 +38,12 @@ export const bonusesAtoms = atomWithStorage("bonuses", [1, 2, 3]);
 
 const BonusesModal: FC<BonusesModalProps> = ({ onClose, isOpen }) => {
   const [selectedBonuses] = useAtom(bonusesAtoms);
+
+  const [, setIsOpenModal] = useAtom(isOpenFreeLessonModalAtom);
+  const takeGift = () => {
+    onClose();
+    setIsOpenModal(true);
+  };
 
   return (
     <Modal className="bonuses-modal" onClose={onClose} isOpen={isOpen}>
@@ -58,7 +70,7 @@ const BonusesModal: FC<BonusesModalProps> = ({ onClose, isOpen }) => {
             />
           ))}
         </div>
-        <Button>Забрать подарок</Button>
+        <Button onClick={takeGift}>Забрать подарок</Button>
       </div>
     </Modal>
   );

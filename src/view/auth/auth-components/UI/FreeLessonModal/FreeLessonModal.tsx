@@ -46,21 +46,6 @@ const FreeLessonModal = () => {
   const onClose = () => setIsOpenModal(false);
 
   const onSubmitForm = (event: FormEvent<HTMLFormElement>, php: string) => {
-    // event.preventDefault();
-    //
-    // fetch(php, {
-    //   method: "POST",
-    //   // @ts-ignore
-    //   body: new FormData(event.target),
-    //   headers: {
-    //     "Content-Type": "multipart/form-data",
-    //   },
-    // }).then((response) => {
-    //   response.json().then((data) => {
-    //     console.log("Successful" + data);
-    //   });
-    // });
-
     event.preventDefault();
     var req = new XMLHttpRequest();
     req.open("POST", php, true);

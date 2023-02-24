@@ -1,4 +1,4 @@
-import { FormEvent, useState } from "react";
+import { ChangeEvent, FormEvent, useState } from "react";
 import { atom, useAtom } from "jotai";
 import Modal from "../Modal/Modal";
 import s from "./FreeLessonModal.module.scss";
@@ -41,12 +41,17 @@ const Button = styled.button`
 export const isOpenFreeLessonModalAtom = atom(false);
 
 const FreeLessonModal = () => {
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+  });
   const [isOpenModal, setIsOpenModal] = useAtom(isOpenFreeLessonModalAtom);
 
   const onClose = () => setIsOpenModal(false);
 
   const onSubmitForm = (event: FormEvent<HTMLFormElement>, php: string) => {
     event.preventDefault();
+
     var req = new XMLHttpRequest();
     req.open("POST", php, true);
     req.onload = function () {
@@ -54,7 +59,7 @@ const FreeLessonModal = () => {
         let json = JSON.parse(this.response); // internet explorer 11
 
         // ЗДЕСЬ УКАЗЫВАЕМ ДЕЙСТВИЯ В СЛУЧАЕ УСПЕХА ИЛИ НЕУДАЧИ
-        if (json.result == "success") {
+        if (json.result == "sent") {
           // Если сообщение отправлено
           alert("Сообщение отправлено");
         } else {
@@ -71,8 +76,23 @@ const FreeLessonModal = () => {
     req.onerror = function () {
       alert("Ошибка отправки запроса");
     };
-    // @ts-ignore
-    req.send(new FormData(event.target));
+
+    req.send(JSON.stringify(`name=${form.name}&email=${form.email}`));
+  };
+
+  const onChangeForm = (event: ChangeEvent<HTMLInputElement>) => {
+    switch (event.target.name) {
+      case "email":
+        return setForm((prev) => ({
+          ...prev,
+          email: event.target.value,
+        }));
+      case "name":
+        return setForm((prev) => ({
+          ...prev,
+          name: event.target.value,
+        }));
+    }
   };
 
   return (
@@ -86,12 +106,14 @@ const FreeLessonModal = () => {
       <Title>Бесплатный урок</Title>
       <Form onSubmit={(event) => onSubmitForm(event, "send.php")}>
         <input
+          onChange={onChangeForm}
           name="name"
           className={s.inputName}
           type="text"
           placeholder="ИМЯ ФАМИЛИЯ"
         />
         <input
+          onChange={onChangeForm}
           name="email"
           className={s.inputEmail}
           type="email"

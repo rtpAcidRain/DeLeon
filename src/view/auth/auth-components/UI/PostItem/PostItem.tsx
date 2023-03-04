@@ -169,6 +169,9 @@ const PostItem: FC<PostItemProps> = ({ title, text, link }) => {
         <Item>
           <Price color="#DFE30C">3 000 000</Price>Заработок
         </Item>
+        <Item>
+          <Price color="#DFE30C">100$</Price>Вложения
+        </Item>
       </WrapperCoins>
     </Wrapper>
   );

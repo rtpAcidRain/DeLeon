@@ -1,6 +1,5 @@
 import React, { FC, ReactNode } from "react";
 import Section from "../layouts/Section";
-import { H3 } from "../UI/Heading";
 
 import {
   Wallet,
@@ -372,6 +371,25 @@ const Road = styled.svg`
   margin: auto;
 `;
 
+const Title = styled.h1`
+  font-style: italic;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.222222222222222em;
+  letter-spacing: 0.07em;
+  color: #ffffff;
+  margin: 1.3em auto;
+  text-align: center;
+
+  @media (${device.tablet}) {
+    font-size: 30px;
+  }
+  @media (${device.laptop}) {
+    margin: 82px auto 0;
+    font-size: 36px;
+  }
+`;
+
 type Props = {
   title: string;
   children: ReactNode;
@@ -392,13 +410,8 @@ export const ProgramItem: FC<Props> = ({ title, children, color }) => {
 const OurProgram: React.FC = React.memo(() => {
   return (
     <Section>
-      <H3>Наша программа</H3>
-      <Program
-        as={motion.div}
-        initial={{ opacity: 0, scale: 0 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        viewport={{ once: true }}
-      >
+      <Title>Наша программа</Title>
+      <Program>
         <MediaQuery minWidth={size.mobileL}>
           <Road
             viewBox="0 0 868 420"

@@ -1,6 +1,7 @@
 import { FC } from "react";
 import styled from "styled-components";
 import { device } from "../../../../../styles/auth/breackpoints";
+import { motion } from "framer-motion";
 
 type Props = {
   icons: any;

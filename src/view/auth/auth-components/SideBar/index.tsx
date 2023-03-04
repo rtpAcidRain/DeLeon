@@ -5,7 +5,6 @@ import {
 } from "../../../../styles/auth/Buttons";
 
 import logo from "../../auth-assets/images/logo.png";
-import logoMobile from "../../auth-assets/images/logo-mobile.png";
 
 import { device } from "../../../../styles/auth/breackpoints";
 import { BurgerMenu, BurgerMenuClose } from "../../auth-assets/svg/icons";

@@ -125,7 +125,6 @@ export const Controls = styled.div<{ show: boolean }>`
 `;
 
 export const Navbar = styled.nav`
-  padding-top: 80px;
   background: #212d4a;
   height: 100vh;
   display: flex;
@@ -146,6 +145,7 @@ export const Navbar = styled.nav`
 
   @media (${device.laptop}) {
     overflow: visible;
+    padding-top: 80px;
   }
 `;
 
@@ -184,7 +184,11 @@ export const Wrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   gap: 6px;
-  margin-top: 50px;
+  margin-top: 8px;
+
+  @media (${device.tablet}) {
+    margin-top: 50px;
+  }
 `;
 
 export const Buttons = styled.div`

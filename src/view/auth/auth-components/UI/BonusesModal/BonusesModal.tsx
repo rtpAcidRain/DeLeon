@@ -14,6 +14,7 @@ const Button = styled(SectionButton)`
   font-weight: 600;
   font-size: 20px;
   margin: 20px auto 20px auto;
+  z-index: 2;
 
   @media (${device.tablet}) {
     margin: 0 auto 20px auto;

@@ -73,6 +73,7 @@ const Tarifs = styled.div`
   @media (${device.tablet}) {
     max-width: ${size.tablet}px;
     font-size: 16px;
+    padding: 0 10px;
     flex-direction: row;
     justify-content: space-around;
     gap: 33px;
@@ -84,7 +85,6 @@ const Tarifs = styled.div`
   }
 
   @media (${device.laptopL}) {
-    margin: 51px auto auto auto;
     font-size: 20px;
   }
 

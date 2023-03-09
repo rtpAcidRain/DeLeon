@@ -19,3 +19,9 @@ export const device = {
   desktop: `(min-width: ${size.desktop}px)`,
   desktopL: `(min-width: ${size.desktopL}px)`,
 };
+
+export const deviceForHeight = {
+  tablet: `(min-height: 720px)`,
+  laptop: `(min-height: ${size.laptop}px)`,
+  laptopL: `(min-height: ${size.laptopL}px)`,
+};

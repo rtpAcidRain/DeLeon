@@ -119,7 +119,7 @@ function DesktopComponent() {
         >
           <ContentComponent ChangeSection={ChangeSection} />
         </Scroll>
-        {currentSection < 12 && (
+        {currentSection < 10 && (
           <ScrollButton vector="down" ChangeSection={ChangeSection} />
         )}
         <BonusesModal onClose={onClose} isOpen={isOpenModal} />

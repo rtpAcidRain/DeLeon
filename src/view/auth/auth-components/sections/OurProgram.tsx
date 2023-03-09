@@ -11,7 +11,6 @@ import {
 
 import styled from "styled-components";
 import { device, size } from "../../../../styles/auth/breackpoints";
-import { motion } from "framer-motion";
 import Stand from "./WillKnow/Stand";
 import { LevelColorType } from "../Tarif/styles";
 import MediaQuery from "react-responsive";
@@ -43,7 +42,8 @@ const Program = styled.div`
 `;
 
 const ProgramItemStyle = styled.div<{ colors: LevelColorType }>`
-  font-size: 0.8em;
+  font-size: 0.95em;
+  line-height: 1.25em;
   padding: 3em 0.5em 2.1em 2.7em;
   background: ${(props) => props.colors.circlebg};
   border: ${(props) => `2px solid ${props.colors.circlebg}`};

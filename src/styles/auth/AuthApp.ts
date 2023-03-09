@@ -28,7 +28,7 @@ export const Main = styled.main`
   width: 100%;
 
   @media (${device.laptop}) {
-    width: calc(100% - 330px);
+    width: calc(100% - 300px);
   }
 `;
 

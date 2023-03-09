@@ -1,6 +1,6 @@
 import { isDesktop } from "react-device-detect";
 import styled from "styled-components";
-import { device } from "../../../../styles/auth/breackpoints";
+import { device, deviceForHeight } from "../../../../styles/auth/breackpoints";
 import { H6 } from "../UI/Heading";
 
 export const Sidebar = styled.aside`
@@ -48,8 +48,10 @@ export const SideContainer = styled.div`
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  ${isDesktop &&
-  `  @media (${device.laptop}) {
+  
+  ${
+    isDesktop &&
+    `  @media (${device.laptop}) {
     width: 100%;
     height: 100%;
     max-height: 800px;
@@ -57,7 +59,15 @@ export const SideContainer = styled.div`
     justify-content: space-between;
     flex-direction: column;
     padding: 60px 30px;
-  }`}
+  }`
+  }
+
+  @media (${
+    deviceForHeight.tablet
+  }) and (max-height: 900px) and (min-width: 1024px) {
+  padding: 0 30px;
+}
+}
 `;
 
 export const Logo = styled.div`
@@ -147,6 +157,11 @@ export const Navbar = styled.nav`
     overflow: visible;
     padding-top: 80px;
   }
+
+  @media (${deviceForHeight.tablet}) and (max-height: 900px) and (${device.laptop}) {
+    padding-top: 0;
+    margin-top: 20px;
+  }
 `;
 
 export const NavItems = styled.ol`
@@ -188,6 +203,10 @@ export const Wrapper = styled.div`
 
   @media (${device.tablet}) {
     margin-top: 50px;
+  }
+
+  @media (${deviceForHeight.tablet}) and (max-height: 900px) and (${device.laptop}) {
+    margin-top: 0;
   }
 `;
 

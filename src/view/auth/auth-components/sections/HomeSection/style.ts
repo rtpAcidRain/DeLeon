@@ -1,44 +1,57 @@
 import styled from "styled-components";
-import { device, size } from "../../../../../styles/auth/breackpoints";
+import { isDesktop } from "react-device-detect";
+
+import {
+  device,
+  deviceForHeight,
+  size,
+} from "../../../../../styles/auth/breackpoints";
 import { SectionButton } from "../../../../../styles/auth/Buttons";
 
 const Home = styled.div`
   font-size: 7px;
   width: 100%;
-  max-height: 560px;
   display: flex;
   position: relative;
-  max-width: 230px;
-  margin: 80px auto auto auto;
+  height: 100%;
+  padding: 76px 0 0 0;
+  //max-width: 230px;
   text-align: center;
 
   @media (${device.mobileS}) {
     font-size: 10px;
-    max-width: ${size.mobileS}px;
+    //max-width: ${size.mobileS}px;
   }
   @media (${device.mobileM}) {
     font-size: 11px;
-    max-width: ${size.mobileM}px;
+    //max-width: ${size.mobileM}px;
   }
   @media (${device.mobileL}) {
     font-size: 12px;
-    max-width: ${size.mobileL}px;
+    //max-width: ${size.mobileL}px;
   }
   @media (${device.tablet}) {
     font-size: 12px;
-    max-width: ${size.tablet}px;
+    //max-width: ${size.tablet}px;
   }
   @media (${device.laptop}) {
     font-size: 18px;
     align-items: center;
-    margin: 160px auto auto auto;
     height: 100%;
-    max-width: 1046px;
     text-align: start;
+    width: 100%;
+    padding: 80px 0 20px 50px;
+  }
+  @media (${device.laptopL}) {
+    padding: 80px 0 20px 100px;
   }
   @media (${device.desktop}) {
     font-size: 22px;
-    max-width: 1247px;
+  }
+
+  @media (${deviceForHeight.tablet}) and (max-height: 900px) and (${device.laptop}) {
+    height: 100vh;
+    padding-top: 0;
   }
 `;
 
@@ -46,14 +59,24 @@ export const HomeButtons = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   gap: 10px;
+  width: 100%;
 
-  @media (${device.tablet}) {
+  @media (${device.laptop}) {
     flex-direction: row;
     gap: 60px;
     align-items: center;
     justify-content: start;
   }
+`;
+
+const HomeButton = styled(SectionButton)`
+  padding: 13px 40px;
+  font-weight: 600;
+  font-size: 20px;
+  width: 100%;
+  max-width: 320px;
 `;
 
 const Button = styled(SectionButton)`
@@ -64,27 +87,31 @@ const Button = styled(SectionButton)`
 
 const Content = styled.div`
   width: 100%;
+  height: 100%;
 `;
 
 const ContentText = styled.div`
-  & > *:nth-child(2) {
-    margin-top: 1.1em;
-    margin-bottom: 1.8em;
-  }
-  & > *:last-child {
-    max-width: 700px;
-    margin-top: 1.8em;
-    margin-bottom: 3.4em;
+  h1 {
+    margin-bottom: 12px;
   }
 
   .text {
     font-size: 20px;
     text-align: center;
+    margin: 32px 0 46px 0;
+    width: 100%;
   }
 
   @media (${device.laptop}) {
     .text {
       text-align: start;
+      width: 640px;
+    }
+  }
+
+  @media (${deviceForHeight.tablet}) and (max-height: 900px) and (${device.laptop}) {
+    .text {
+      margin: 12px 0;
     }
   }
 `;
@@ -118,12 +145,26 @@ const Video = styled.div`
 
 const Picture = styled.div`
   position: absolute;
-  right: -46%;
-  top: 0;
+  right: -14%;
+  top: 20%;
   display: none;
-  @media (${device.laptopL}) {
+  @media (${device.desktop}) {
     display: block;
+  }
+
+  @media (${deviceForHeight.tablet}) and (max-height: 900px) {
+    top: 8%;
   }
 `;
 
-export { Video, Home, Button, Content, ContentText, List, ListItem, Picture };
+export {
+  Video,
+  Home,
+  Button,
+  Content,
+  ContentText,
+  List,
+  ListItem,
+  Picture,
+  HomeButton,
+};

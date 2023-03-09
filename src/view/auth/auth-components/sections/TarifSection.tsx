@@ -1,11 +1,13 @@
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import Section from "../layouts/Section";
 import { H3 } from "../UI/Heading";
 import Tarif, { TarifENUMS } from "../Tarif";
 import styled from "styled-components";
-import { device, size } from "../../../../styles/auth/breackpoints";
-import { isMobile } from "react-device-detect";
-import { motion, useInView } from "framer-motion";
+import {
+  device,
+  deviceForHeight,
+  size,
+} from "../../../../styles/auth/breackpoints";
 
 const tarifsData = [
   {
@@ -54,10 +56,11 @@ const Tarifs = styled.div`
   flex-direction: column;
   align-items: center;
   font-size: 20px;
-  max-width: 230px;
+  //max-width: 230px;
   width: 100%;
   gap: 20px;
   margin: auto;
+
   @media (${device.mobileS}) {
     max-width: ${size.mobileS}px;
   }
@@ -83,6 +86,10 @@ const Tarifs = styled.div`
   @media (${device.laptopL}) {
     margin: 51px auto auto auto;
     font-size: 20px;
+  }
+
+  @media (${deviceForHeight.tablet}) and (max-height: 900px) and (${device.laptop}) {
+    margin-top: 12px;
   }
 `;
 

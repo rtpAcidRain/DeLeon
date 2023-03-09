@@ -40,10 +40,11 @@ const Title = styled.div`
   }
 
   h2 {
-    font-size: 28px;
+    font-size: 24px;
+    word-break: break-word;
   }
 
-  @media (${device.mobileM}) {
+  @media (${device.mobileL}) {
     h2 {
       font-size: 38px;
     }
@@ -111,12 +112,10 @@ const Price = styled.span<{ color: string }>`
 `;
 
 const Text = styled.div`
-  max-height: 368px;
-  min-height: 368px;
+  height: 358px;
   overflow-y: scroll;
   width: 100%;
   background-color: #fff;
-  height: 100%;
   color: #000;
   font-weight: 400;
   font-size: 20px;

@@ -135,6 +135,18 @@ const Wrapper = styled.div`
       margin-bottom: 60px;
     }
   }
+
+  @media (${device.laptop}) {
+    .coin-image {
+      display: none;
+    }
+  }
+
+  @media (${device.laptopL}) {
+    .coin-image {
+      display: block;
+    }
+  }
 `;
 
 const Container = styled.div`

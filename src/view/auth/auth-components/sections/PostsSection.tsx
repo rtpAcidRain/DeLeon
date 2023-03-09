@@ -1,7 +1,5 @@
-import React from "react";
+import React, { FC, memo, useRef, useState } from "react";
 import { H3 } from "../UI/Heading";
-import { Navigation, Pagination } from "swiper";
-import { SwiperButton } from "../UI/Buttons";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Section from "../layouts/Section";
 import styled from "styled-components";
@@ -10,6 +8,11 @@ import coinWebp from "../../auth-assets/images/cryptocoin.webp";
 import { motion } from "framer-motion";
 import MediaQuery from "react-responsive";
 import PostItem from "../UI/PostItem/PostItem";
+
+import { ScrollButIco } from "../../auth-assets/svg/icons";
+import { LeftButton, RightButton } from "../../../../styles/auth/Buttons";
+
+import { Navigation, Pagination, Swiper as SwiperType } from "swiper";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -34,6 +37,11 @@ const PostWrapper = styled.div`
     max-height: 687px;
     width: 100%;
     max-width: 610px;
+  }
+
+  @media (min-height: 720px) and (max-height: 900px) and (min-width: 1024px) {
+    height: 90%;
+    margin-top: 10px;
   }
 `;
 
@@ -107,19 +115,78 @@ const mockPosts = [
   },
 ];
 
+export const CustomPagination = () => {
+  return (
+    <div className="wrapper-bullets">
+      <span className="custom-bullet"></span>
+      <span className="custom-bullet"></span>
+      <span className="custom-bullet"></span>
+      <span className="custom-bullet"></span>
+    </div>
+  );
+};
+
+interface SwiperButProps {
+  vector: "left" | "right";
+  prevSlide: () => void;
+  nextSlide: () => void;
+}
+
+export const CustomizeSwiperButton: FC<SwiperButProps> = memo(
+  ({ vector, prevSlide, nextSlide }) => {
+    if (vector === "right") {
+      return (
+        <RightButton
+          type="button"
+          className={`button__scroll button__scroll--${vector} posts-slider-button--${vector}`}
+          onClick={nextSlide}
+        >
+          <ScrollButIco />
+        </RightButton>
+      );
+    }
+    return (
+      <LeftButton
+        type="button"
+        className={`button__scroll button__scroll--${vector} posts-slider-button--${vector}`}
+        onClick={prevSlide}
+      >
+        <ScrollButIco />
+      </LeftButton>
+    );
+  }
+);
+
 const PostsSection = () => {
+  const swiperRef = useRef<SwiperType | null>(null);
+
+  const nextSlide = () => {
+    swiperRef.current?.slideNext();
+  };
+
+  const prevSlide = () => {
+    swiperRef.current?.slidePrev();
+  };
+
   return (
     <Section>
       <H3>Их жизнь не станет прежней</H3>
+      <CustomizeSwiperButton
+        vector="left"
+        prevSlide={prevSlide}
+        nextSlide={nextSlide}
+      />
       <Swiper
+        onSwiper={(swiper) => swiper}
         spaceBetween={10}
         className="posts-slider"
         pagination={{ clickable: true }}
         loop
-        modules={[Pagination]}
+        modules={[Pagination, Navigation]}
+        onBeforeInit={(swiper) => {
+          swiperRef.current = swiper;
+        }}
       >
-        <SwiperButton vector="left" />
-        <SwiperButton vector="right" />
         {mockPosts.map((post) => (
           <SwiperSlide key={post.id}>
             <PostWrapper>
@@ -149,7 +216,14 @@ const PostsSection = () => {
             </PostWrapper>
           </SwiperSlide>
         ))}
+        <div style={{ height: 50 }} />
       </Swiper>
+
+      <CustomizeSwiperButton
+        prevSlide={prevSlide}
+        nextSlide={nextSlide}
+        vector="right"
+      />
     </Section>
   );
 };

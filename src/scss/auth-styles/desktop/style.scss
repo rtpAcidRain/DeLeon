@@ -4,10 +4,21 @@
 
 .posts-slider {
   max-width: 1319px;
+  width: 90%;
   margin: auto;
-  width: 100%;
-  min-height: 710px;
   z-index: 1;
+}
+
+.reviews__items #reviewSwiper {
+  width: 90%;
+}
+
+.posts-slider-button--left {
+  margin-top: 60px;
+}
+
+.posts-slider-button--right {
+  margin-top: 60px;
 }
 
 .swiper-pagination {
@@ -29,6 +40,30 @@
 @media (min-width: 768px) {
   .swiper-pagination {
     display: block;
+  }
+}
+
+@media (min-width: 1024px) {
+  .posts-slider-button--left {
+    display: none !important;
+  }
+
+  .posts-slider-button--right {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1920px) {
+  .posts-slider-button--left {
+    display: block;
+    margin-top: 0;
+    left: 70px !important;
+  }
+
+  .posts-slider-button--right {
+    display: block;
+    margin-top: 0;
+    right: 70px !important;
   }
 }
 
@@ -185,12 +220,25 @@
     height: 300px;
   }
 
-  .posts-slider {
-    margin: 40px auto 0 auto;
-  }
-
   .gift-image {
     max-width: 300px;
     max-height: 300px;
+  }
+}
+
+// AdaptiveHeigth
+
+@media (min-height: 720px) and (max-height: 900px) and (min-width: 1024px) {
+  .bonuses-section {
+    height: 36%;
+  }
+
+  .gift-wrapper {
+    height: 85%;
+  }
+
+  .gift-image {
+    width: 90%;
+    height: 90%;
   }
 }

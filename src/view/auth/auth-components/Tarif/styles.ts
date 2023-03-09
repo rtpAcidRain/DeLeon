@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { H4 } from "../UI/Heading";
 
 import { SectionButton } from "../../../../styles/auth/Buttons";
-import { device } from "../../../../styles/auth/breackpoints";
+import { device, deviceForHeight } from "../../../../styles/auth/breackpoints";
 
 export type ColorsType = {
   lower: LevelColorType;
@@ -49,6 +49,10 @@ export const TarifWrapper = styled.article<{ colors: LevelColorType }>`
 
   @media (${device.laptop}) {
     height: 100%;
+  }
+
+  @media (${deviceForHeight.tablet}) and (max-height: 900px) and (${device.laptop}) {
+    padding: 0.4em 0.625em;
   }
 `;
 
@@ -118,6 +122,11 @@ export const Icon = styled.div<{ colors: LevelColorType }>`
     );
     border-radius: 50%;
     z-index: 1;
+  }
+
+  @media (${deviceForHeight.tablet}) and (max-height: 900px) and (${device.laptop}) {
+    width: 130px;
+    height: 130px;
   }
 `;
 

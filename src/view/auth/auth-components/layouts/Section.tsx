@@ -11,11 +11,9 @@ type Props = {
 const SectionLay = styled.section`
   width: 100%;
   display: flex;
+  position: relative;
   overflow-x: hidden;
   margin: 24px auto;
-  :first-child {
-    min-height: 100vh;
-  }
 
   &::-webkit-scrollbar {
     width: 0;
@@ -40,7 +38,6 @@ const Container = styled.div`
 
   @media (${device.laptop}) {
     ${isDesktop && "height: 100vh;"}
-    ${isDesktop && "max-height: 800px;"}
     width: 100%;
   }
 `;

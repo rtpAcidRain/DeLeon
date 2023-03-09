@@ -1,13 +1,14 @@
 import { CSSProperties, FC, ReactNode } from "react";
 import OverlayModal from "../OverlayModal/OverlayModal";
 import styled from "styled-components";
+import { LevelColorType } from "../../Tarif/styles";
 
 const Container = styled.div`
   position: relative;
   width: 100%;
 `;
 
-const Close = styled.button`
+const Close = styled.button<{ color?: string }>`
   cursor: pointer;
   position: absolute;
   top: 20px;
@@ -19,7 +20,7 @@ const Close = styled.button`
     position: absolute;
     width: 24px;
     height: 4px;
-    background: gray;
+    background: ${(props) => (props.color ? props.color : "gray")};
     top: 0;
     right: 0;
   }
@@ -44,6 +45,7 @@ interface ModalProps {
     className: string;
     style: CSSProperties;
   };
+  colorButtonClose?: string;
 }
 
 const Modal: FC<ModalProps> = ({
@@ -54,12 +56,13 @@ const Modal: FC<ModalProps> = ({
   onClose,
   hideCloseIcon = false,
   children,
+  colorButtonClose,
 }) => {
   return (
     <OverlayModal isOpen={isOpen} onClose={onClose} className={overlayProps}>
       <Container className={className}>
         {children}
-        {!hideCloseIcon && <Close onClick={onClose} />}
+        {!hideCloseIcon && <Close color={colorButtonClose} onClick={onClose} />}
       </Container>
     </OverlayModal>
   );

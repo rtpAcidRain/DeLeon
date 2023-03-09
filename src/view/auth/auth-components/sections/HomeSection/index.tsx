@@ -1,15 +1,15 @@
+import { isDesktop } from "react-device-detect";
 import Section from "../../layouts/Section";
 import { H1 } from "../../UI/Heading";
 
 import coin from "../../../auth-assets/images/cryptocoin.png";
 import coinWebp from "../../../auth-assets/images/cryptocoin.webp";
-import timer from "../../../auth-assets/images/timer.png";
 
 import React, { FC } from "react";
 import {
   Home,
   HomeButtons,
-  Button,
+  HomeButton,
   Content,
   ContentText,
   List,
@@ -18,13 +18,15 @@ import {
 } from "./style";
 import { motion } from "framer-motion";
 import styled from "styled-components";
-import { device } from "../../../../../styles/auth/breackpoints";
-
+import {
+  device,
+  deviceForHeight,
+} from "../../../../../styles/auth/breackpoints";
+import { TimerComponent } from "../../TimerComponent";
 const Title = styled.p`
   font-weight: 500;
   font-size: 24px;
-  text-align: center;
-  margin-bottom: 28px;
+  margin-bottom: 40px;
 
   @media (${device.mobileL}) {
     font-size: 34px;
@@ -33,16 +35,16 @@ const Title = styled.p`
   @media (${device.tablet}) {
     font-size: 40px;
     line-height: 49px;
-    text-align: start;
   }
 `;
 
 const WrapperDiscount = styled.div`
   display: flex;
   align-items: center;
-  margin: 28px 0;
   flex-direction: column;
+  flex-wrap: wrap;
   gap: 14px;
+  margin-bottom: 48px;
 
   .time-image {
     max-width: 348px;
@@ -51,10 +53,16 @@ const WrapperDiscount = styled.div`
     width: 100%;
   }
 
-  @media (${device.tablet}) {
+  @media (${device.laptop}) {
     flex-direction: row;
     gap: 28px;
   }
+
+  ${!isDesktop &&
+  `
+  @media (${deviceForHeight.tablet}) and (max-height: 900px) {
+    margin-bottom: 12px;
+  }`}
 `;
 
 const DiscountPrice = styled.div`
@@ -100,17 +108,17 @@ type Props = {
 const HomeSection: FC<Props> = React.memo(({ ChangeSection }) => {
   return (
     <Section>
-      <Home>
-        <Content
-          as={motion.div}
-          initial={{ y: -20, scale: 0 }}
-          animate={{ y: 0, scale: 1 }}
-          transition={{
-            type: "spring",
-            stiffness: 260,
-            damping: 35,
-          }}
-        >
+      <Home
+        as={motion.div}
+        initial={{ y: -20, scale: 0 }}
+        animate={{ y: 0, scale: 1 }}
+        transition={{
+          type: "spring",
+          stiffness: 260,
+          damping: 35,
+        }}
+      >
+        <Content>
           <ContentText className="content__text">
             <H1>КриптоСтарт</H1>
             <Title>
@@ -118,7 +126,7 @@ const HomeSection: FC<Props> = React.memo(({ ChangeSection }) => {
               ЗАРАБОТКУ НА КРИПТОВАЛЮТЕ
             </Title>
             <WrapperDiscount>
-              <img className="time-image" alt="" src={timer} />
+              <TimerComponent />
               <OriginPrice>25000₽</OriginPrice>
               <DiscountPrice>7500₽</DiscountPrice>
             </WrapperDiscount>
@@ -140,8 +148,12 @@ const HomeSection: FC<Props> = React.memo(({ ChangeSection }) => {
             </p>
           </ContentText>
           <HomeButtons>
-            <Button onClick={() => ChangeSection(4)}>Программа курса</Button>
-            <Button onClick={() => ChangeSection(5)}>Записаться на курс</Button>
+            <HomeButton onClick={() => ChangeSection(4)}>
+              Программа курса
+            </HomeButton>
+            <HomeButton onClick={() => ChangeSection(5)}>
+              Записаться на курс
+            </HomeButton>
           </HomeButtons>
         </Content>
         <Picture>

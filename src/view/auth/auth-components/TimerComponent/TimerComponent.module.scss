@@ -1,0 +1,47 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
+  gap: 16px;
+}
+
+.blockItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  gap: 6px;
+}
+
+.count {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+  width: 100%;
+}
+
+.countItem {
+  background: linear-gradient(138.6deg, #3562B8 -0.11%, #18B7B2 100%);
+  border-radius: 5px;
+  font-weight: 700;
+  width: 100%;
+  font-size: 40px;
+  line-height: 49px;
+  color: #fff;
+  padding: 2px 4px;
+}
+
+.descriptionItem {
+  text-transform: uppercase;
+  background: #FFFFFF;
+  border-radius: 0 0 5px 5px;
+  width: 100%;
+  padding: 2px 0;
+  font-weight: 400;
+  font-size: 9.84112px;
+  line-height: 12px;
+  color: #222222;
+}

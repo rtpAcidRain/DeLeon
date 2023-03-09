@@ -104,7 +104,6 @@ const FreeLessonModal = () => {
 
   return (
     <Modal
-      hideCloseIcon
       title="Бесплатный урок"
       isOpen={isOpenModal}
       onClose={onClose}

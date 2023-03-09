@@ -35,9 +35,15 @@ interface BonusItemProps {
   bonus: { title: string; id: number };
   max: number;
   isSelected: boolean;
+  onChangeBonus: (id: number, title: string) => void;
 }
 
-const BonusItem: FC<BonusItemProps> = ({ bonus, max, isSelected }) => {
+const BonusItem: FC<BonusItemProps> = ({
+  bonus,
+  max,
+  isSelected,
+  onChangeBonus,
+}) => {
   const [selectedBonuses, setSelectedBonuses] = useAtom(bonusesAtoms);
   const [isOpen, setIsOpen] = useState(isSelected);
 
@@ -51,7 +57,8 @@ const BonusItem: FC<BonusItemProps> = ({ bonus, max, isSelected }) => {
   const onClick = () => {
     if (max === selectedBonuses.length) return;
 
-    setSelectedBonuses((prev) => [...prev, 5]);
+    setSelectedBonuses((prev) => [...prev, bonus.id]);
+    onChangeBonus(bonus.id, bonus.title);
   };
 
   useEffect(() => {

@@ -1,5 +1,11 @@
-import React, { FC } from "react";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import React, { FC, memo, useRef } from "react";
+import {
+  Navigation,
+  Pagination,
+  Scrollbar,
+  A11y,
+  Swiper as SwiperType,
+} from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Section from "../layouts/Section";
 import { H3 } from "../UI/Heading";
@@ -20,9 +26,11 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import { SwiperButton } from "../UI/Buttons";
 import styled from "styled-components";
 import { device } from "../../../../styles/auth/breackpoints";
+import { LeftButton, RightButton } from "../../../../styles/auth/Buttons";
+import { ScrollButIco } from "../../auth-assets/svg/icons";
+import { CustomizeSwiperButton } from "./PostsSection";
 
 const images = [
   { src: avatar1, webp: avatar1Webp },
@@ -62,9 +70,29 @@ const Reviews = styled.div`
 `;
 
 const ReviewSection: FC = React.memo(() => {
+  const swiperRef = useRef<SwiperType | null>(null);
+
+  const nextSlide = () => {
+    swiperRef.current?.slideNext();
+  };
+
+  const prevSlide = () => {
+    swiperRef.current?.slidePrev();
+  };
+
   return (
     <Section>
       <H3>Отзывы</H3>
+      <CustomizeSwiperButton
+        nextSlide={nextSlide}
+        prevSlide={prevSlide}
+        vector="left"
+      />
+      <CustomizeSwiperButton
+        nextSlide={nextSlide}
+        prevSlide={prevSlide}
+        vector="right"
+      />
       <Reviews>
         <div className="reviews__items">
           <Swiper
@@ -75,9 +103,10 @@ const ReviewSection: FC = React.memo(() => {
             loopAdditionalSlides={4}
             loop
             modules={[Navigation, Pagination, Scrollbar, A11y]}
+            onBeforeInit={(swiper) => {
+              swiperRef.current = swiper;
+            }}
           >
-            <SwiperButton vector="left" />
-            <SwiperButton vector="right" />
             {reviews.map((el) => (
               <SwiperSlide key={el.id}>
                 <Review

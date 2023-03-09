@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import { device } from '../../../styles/auth/breackpoints';
+import React from "react";
+import styled from "styled-components";
+import { device } from "../../../styles/auth/breackpoints";
 
 type Props = {
   name: string;
@@ -18,14 +18,9 @@ const ReviewStyle = styled.article`
   margin: auto;
   display: flex;
   flex-direction: column;
-  max-width: 215px;
   height: 100%;
-  @media (${device.mobileM}) {
-    max-width: 225px;
-  }
-  @media (${device.tablet}) {
-    max-width: 235px;
-  }
+  max-width: 100%;
+
   @media (${device.laptop}) {
     max-width: 249px;
   }
@@ -67,9 +62,13 @@ const Autor = styled.div`
 `;
 
 const Text = styled.p`
-  font-size: 1em;
-  line-height: 1.2em;
+  font-size: 1.4em;
+  line-height: 1.25em;
   overflow: auto;
+
+  @media (${device.laptop}) {
+    font-size: 1.2em;
+  }
 `;
 
 const Review: React.FC<Props> = React.memo(({ name, img, text }) => {
@@ -77,7 +76,13 @@ const Review: React.FC<Props> = React.memo(({ name, img, text }) => {
     <ReviewStyle>
       <Header>
         <Avatar>
-          <img loading="lazy" decoding="async" className="avatar__image" src={img} alt="avatar" />
+          <img
+            loading="lazy"
+            decoding="async"
+            className="avatar__image"
+            src={img}
+            alt="avatar"
+          />
         </Avatar>
         <Autor>
           <p className="autor__name">{name}</p>

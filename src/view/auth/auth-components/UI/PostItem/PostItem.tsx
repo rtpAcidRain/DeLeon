@@ -2,8 +2,6 @@ import React, { FC } from "react";
 import { H2 } from "../Heading";
 import { isDesktop } from "react-device-detect";
 import { device } from "../../../../../styles/auth/breackpoints";
-import logo from "../../../auth-assets/images/logo.png";
-import logoMobile from "../../../auth-assets/images/logo-mobile.png";
 import styled from "styled-components";
 
 const Title = styled.div`
@@ -132,9 +130,23 @@ interface PostItemProps {
   title: string;
   link: string;
   text: string;
+  coin: string;
+  purchasePrice: string;
+  investment: string;
+  newsPrice: string;
+  earn: string;
 }
 
-const PostItem: FC<PostItemProps> = ({ title, text, link }) => {
+const PostItem: FC<PostItemProps> = ({
+  title,
+  text,
+  link,
+  coin,
+  investment,
+  purchasePrice,
+  newsPrice,
+  earn,
+}) => {
   return (
     <Wrapper>
       <Title>
@@ -147,29 +159,29 @@ const PostItem: FC<PostItemProps> = ({ title, text, link }) => {
       <WrapperCoins>
         <Item>
           <picture className="item-coin-image">
-            {isDesktop && <source media={device.laptop} srcSet={logo} />}
+            {isDesktop && <source media={device.laptop} srcSet={coin} />}
             <img
               height="100%"
               width="100%"
               loading="lazy"
               decoding="async"
-              src={logoMobile}
+              src={coin}
               alt="logo"
             />
           </picture>
           Монета
         </Item>
         <Item>
-          <Price color="#0CE364">3000</Price>Стоимость в момент новости
+          <Price color="#0CE364">{newsPrice}</Price>Стоимость в момент новости
         </Item>
         <Item>
-          <Price color="#D01A1A">500</Price>Стоимость при покупке
+          <Price color="#D01A1A">{purchasePrice}</Price>Стоимость при покупке
         </Item>
         <Item>
-          <Price color="#DFE30C">3 000 000</Price>Заработок
+          <Price color="#DFE30C">{earn}</Price>Заработок
         </Item>
         <Item>
-          <Price color="#DFE30C">100$</Price>Вложения
+          <Price color="#DFE30C">{investment}</Price>Вложения
         </Item>
       </WrapperCoins>
     </Wrapper>
